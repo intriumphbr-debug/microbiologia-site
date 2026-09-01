@@ -34,14 +34,14 @@ function goToCheckout(url: string) {
 
 export function PricingSection() {
   return (
-    <section id="checkout" className="w-full py-16 md:py-24 lg:py-32" style={{ backgroundColor: '#FAFAF8' }}>
+    <section id="checkout" className="w-full py-16 md:py-24 lg:py-32" style={{ backgroundColor: '#FFFFFF' }}>
       <div className="mobile-content">
         {/* Cabeçalho */}
         <div className="flex flex-col items-center text-center gap-3 md:gap-4 mb-10 md:mb-14">
-          <h2 className="font-grotesk text-3xl sm:text-4xl md:text-5xl leading-tight text-pretty" style={{ color: '#2B145F' }}>
+          <h2 className="font-grotesk text-3xl sm:text-4xl md:text-5xl leading-tight text-pretty" style={{ color: '#5A3D82' }}>
             Escolha Como Você Quer Acessar
           </h2>
-          <p className="text-sm sm:text-base md:text-lg leading-relaxed max-w-2xl" style={{ color: '#43505C' }}>
+          <p className="text-sm sm:text-base md:text-lg leading-relaxed max-w-2xl" style={{ color: '#6B6872' }}>
             Comece pelo essencial ou tenha acesso ao sistema completo de revisão visual.
           </p>
         </div>
@@ -53,31 +53,31 @@ export function PricingSection() {
             className="flex w-full flex-col rounded-[20px] p-6 sm:p-8"
             style={{ backgroundColor: '#FFFFFF', border: '1px solid #D8D4E4' }}
           >
-            <h3 className="font-grotesk text-lg sm:text-xl" style={{ color: '#3C3253' }}>
+            <h3 className="font-grotesk text-lg sm:text-xl" style={{ color: '#24242A' }}>
               Plano Básico
             </h3>
             <div className="mt-3 flex items-baseline gap-2">
-              <span className="font-grotesk text-3xl sm:text-4xl" style={{ color: '#3C3253' }}>
+              <span className="font-grotesk text-3xl sm:text-4xl" style={{ color: '#24242A' }}>
                 {BASIC_PRICE}
               </span>
             </div>
-            <p className="mt-1 text-xs" style={{ color: '#6B7883' }}>Pagamento único</p>
+            <p className="mt-1 text-xs" style={{ color: '#6B6872' }}>Pagamento único</p>
 
             <ul className="mt-6 space-y-3">
               <li className="flex items-start gap-2.5">
                 <span
                   className="mt-0.5 flex shrink-0 items-center justify-center rounded-full"
-                  style={{ width: '18px', height: '18px', backgroundColor: '#F0ECF7', color: '#4B1F78' }}
+                  style={{ width: '18px', height: '18px', backgroundColor: '#F3F0F5', color: '#5A3D82' }}
                 >
                   <Check size={12} strokeWidth={3} aria-hidden="true" />
                 </span>
-                <span className="text-sm" style={{ color: '#34313F' }}>
+                <span className="text-sm" style={{ color: '#24242A' }}>
                   <span className="font-bold">40</span> Mapas Visuais de Microbiologia
                 </span>
               </li>
             </ul>
 
-            <p className="mt-5 text-sm leading-relaxed" style={{ color: '#34313F' }}>
+            <p className="mt-5 text-sm leading-relaxed" style={{ color: '#24242A' }}>
               Uma opção direta para quem quer começar pelos mapas visuais e consultar os principais assuntos de microbiologia.
             </p>
 
@@ -86,17 +86,17 @@ export function PricingSection() {
               className="mt-6 w-full rounded-full py-3 px-6 text-sm font-bold active:scale-95"
               style={{
                 backgroundColor: 'transparent',
-                color: '#4B1F78',
-                border: '1.5px solid #4B1F78',
+                color: '#5A3D82',
+                border: '1.5px solid #5A3D82',
                 transition: 'all 200ms ease',
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = '#4B1F78';
+                e.currentTarget.style.backgroundColor = '#5A3D82';
                 e.currentTarget.style.color = '#FFFFFF';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.backgroundColor = 'transparent';
-                e.currentTarget.style.color = '#4B1F78';
+                e.currentTarget.style.color = '#5A3D82';
               }}
             >
               QUERO O PLANO BÁSICO
@@ -107,24 +107,24 @@ export function PricingSection() {
           <div
             className="pricing-complete relative flex w-full flex-col rounded-[22px] p-6 pt-9 sm:p-8 sm:pt-10"
             style={{
-              background: 'linear-gradient(180deg, #321866 0%, #24114F 100%)',
-              border: '2px solid #D6A62E',
-              boxShadow: '0 24px 55px rgba(31, 15, 69, 0.45)',
+              background: 'linear-gradient(180deg, #1D1A2B 0%, #1D1A2B 100%)',
+              border: '2px solid #C9A34A',
+              boxShadow: '0 24px 55px rgba(29, 26, 43, 0.45)',
             }}
           >
             {/* Selo */}
             <div
               className="absolute left-1/2 top-0 flex -translate-x-1/2 -translate-y-1/2 items-center gap-1.5 whitespace-nowrap rounded-full px-4 py-1.5 text-[11px] font-bold uppercase tracking-wide"
-              style={{ backgroundColor: '#D6A62E', color: '#1F0F45', boxShadow: '0 6px 16px rgba(214, 166, 46, 0.4)' }}
+              style={{ backgroundColor: '#C9A34A', color: '#1D1A2B', boxShadow: '0 6px 16px rgba(201, 163, 74, 0.4)' }}
             >
-              <Star size={12} strokeWidth={2.5} fill="#1F0F45" aria-hidden="true" />
+              <Star size={12} strokeWidth={2.5} fill="#1D1A2B" aria-hidden="true" />
               Mais escolhido
             </div>
 
             <h3 className="font-grotesk text-xl sm:text-2xl" style={{ color: '#FFFFFF' }}>
               Plano Completo
             </h3>
-            <p className="mt-1 font-grotesk text-sm uppercase tracking-wide" style={{ color: '#D6A62E' }}>
+            <p className="mt-1 font-grotesk text-sm uppercase tracking-wide" style={{ color: '#C9A34A' }}>
               Microbiologia Visual Completo
             </p>
 
@@ -134,14 +134,14 @@ export function PricingSection() {
                 className="flex w-full max-w-[220px] flex-col items-center justify-center gap-1.5 rounded-xl text-center"
                 style={{
                   aspectRatio: '4 / 3',
-                  border: '1.5px dashed rgba(214, 166, 46, 0.55)',
+                  border: '1.5px dashed rgba(201, 163, 74, 0.55)',
                   backgroundColor: 'rgba(255,255,255,0.04)',
                   padding: '14px',
                 }}
               >
                 <span
                   className="flex items-center justify-center rounded-full text-base"
-                  style={{ width: '38px', height: '38px', backgroundColor: 'rgba(214,166,46,0.15)', color: '#D6A62E', border: '1px solid rgba(214,166,46,0.5)' }}
+                  style={{ width: '38px', height: '38px', backgroundColor: 'rgba(201,163,74,0.15)', color: '#C9A34A', border: '1px solid rgba(201,163,74,0.5)' }}
                   aria-hidden="true"
                 >
                   +
@@ -156,7 +156,7 @@ export function PricingSection() {
                 <li key={feature} className="flex items-start gap-2.5">
                   <span
                     className="mt-0.5 flex shrink-0 items-center justify-center rounded-full"
-                    style={{ width: '20px', height: '20px', backgroundColor: '#D6A62E', color: '#1F0F45' }}
+                    style={{ width: '20px', height: '20px', backgroundColor: '#C9A34A', color: '#1D1A2B' }}
                   >
                     <Check size={13} strokeWidth={3} aria-hidden="true" />
                   </span>
@@ -168,11 +168,11 @@ export function PricingSection() {
               <li className="flex items-start gap-2.5">
                 <span
                   className="mt-0.5 flex shrink-0 items-center justify-center rounded-full"
-                  style={{ width: '20px', height: '20px', backgroundColor: '#D6A62E', color: '#1F0F45' }}
+                  style={{ width: '20px', height: '20px', backgroundColor: '#C9A34A', color: '#1D1A2B' }}
                 >
                   <Gift size={12} strokeWidth={2.5} aria-hidden="true" />
                 </span>
-                <span className="text-sm sm:text-base font-bold" style={{ color: '#D6A62E' }}>
+                <span className="text-sm sm:text-base font-bold" style={{ color: '#C9A34A' }}>
                   {completeBonus}
                 </span>
               </li>
@@ -184,9 +184,9 @@ export function PricingSection() {
 
             <div
               className="mt-6 rounded-xl px-4 py-3 text-center"
-              style={{ backgroundColor: 'rgba(10, 108, 120, 0.35)', border: '1px solid rgba(214, 166, 46, 0.35)' }}
+              style={{ backgroundColor: 'rgba(47, 115, 122, 0.35)', border: '1px solid rgba(201, 163, 74, 0.35)' }}
             >
-              <p className="font-grotesk text-lg" style={{ color: '#D6A62E' }}>+140 RECURSOS VISUAIS</p>
+              <p className="font-grotesk text-lg" style={{ color: '#C9A34A' }}>+140 RECURSOS VISUAIS</p>
               <p className="mt-1 text-xs font-semibold" style={{ color: 'rgba(255,255,255,0.92)' }}>
                 + bônus exclusivos incluídos
               </p>
@@ -209,18 +209,18 @@ export function PricingSection() {
               onClick={() => goToCheckout(COMPLETE_CHECKOUT_URL)}
               className="mt-6 w-full rounded-full py-4 px-6 text-base font-bold active:scale-95 cta-animate"
               style={{
-                background: '#16C766',
+                background: '#14C979',
                 color: '#0A2A16',
-                border: '1px solid #16C766',
-                boxShadow: '0 10px 26px rgba(22, 199, 102, 0.5)',
+                border: '1px solid #14C979',
+                boxShadow: '0 10px 26px rgba(20, 201, 121, 0.5)',
                 transition: 'all 200ms ease',
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.background = '#12A85A';
+                e.currentTarget.style.background = '#10A862';
                 e.currentTarget.style.transform = 'translateY(-2px)';
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.background = '#16C766';
+                e.currentTarget.style.background = '#14C979';
                 e.currentTarget.style.transform = 'translateY(0)';
               }}
             >
@@ -230,17 +230,17 @@ export function PricingSection() {
         </div>
 
         {/* Comparação rápida de valor */}
-        <p className="mt-8 text-center text-sm" style={{ color: '#43505C' }}>
-          <span className="font-bold" style={{ color: '#2B145F' }}>Básico</span> {BASIC_PRICE} · 40 recursos
-          <span className="mx-2" style={{ color: '#D6A62E' }}>→</span>
-          <span className="font-bold" style={{ color: '#2B145F' }}>Completo</span> {COMPLETE_PRICE} · 140 recursos
+        <p className="mt-8 text-center text-sm" style={{ color: '#6B6872' }}>
+          <span className="font-bold" style={{ color: '#5A3D82' }}>Básico</span> {BASIC_PRICE} · 40 recursos
+          <span className="mx-2" style={{ color: '#C9A34A' }}>→</span>
+          <span className="font-bold" style={{ color: '#5A3D82' }}>Completo</span> {COMPLETE_PRICE} · 140 recursos
         </p>
 
         {/* Linha de segurança */}
         <div className="mt-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
           {securityItems.map(([Icon, label]) => (
-            <div key={label} className="flex items-center gap-1.5 text-xs sm:text-sm font-medium" style={{ color: '#43505C' }}>
-              <Icon size={15} strokeWidth={2} style={{ color: '#0A6C78' }} aria-hidden="true" />
+            <div key={label} className="flex items-center gap-1.5 text-xs sm:text-sm font-medium" style={{ color: '#6B6872' }}>
+              <Icon size={15} strokeWidth={2} style={{ color: '#2F737A' }} aria-hidden="true" />
               {label}
             </div>
           ))}

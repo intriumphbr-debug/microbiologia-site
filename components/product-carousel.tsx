@@ -35,32 +35,32 @@ function CarouselCard({ title, image, tag }: { title: string; image: string; tag
   return (
     <div
       className="relative w-full h-full rounded-2xl flex flex-col items-center justify-center gap-3 p-4"
-      style={{ backgroundColor: '#FFFFFF', border: '1.5px dashed #D5A62E', boxShadow: '0 8px 22px rgba(18, 63, 74, 0.08)' }}
+      style={{ backgroundColor: '#FFFFFF', border: '1.5px dashed #C9A34A', boxShadow: '0 8px 22px rgba(29, 26, 43, 0.08)' }}
     >
       {tag && (
         <span
           className="absolute top-3 left-3 rounded-full px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wide"
-          style={{ backgroundColor: '#F3EFF8', color: '#176776', border: '1px solid rgba(23, 103, 118, 0.25)' }}
+          style={{ backgroundColor: '#F3F0F5', color: '#2F737A', border: '1px solid rgba(47, 115, 122, 0.25)' }}
         >
           {tag}
         </span>
       )}
       <span
         className="flex items-center justify-center rounded-full text-lg"
-        style={{ width: '44px', height: '44px', backgroundColor: 'rgba(213, 166, 46, 0.12)', color: '#D5A62E', border: '1px solid rgba(213, 166, 46, 0.5)' }}
+        style={{ width: '44px', height: '44px', backgroundColor: 'rgba(201, 163, 74, 0.12)', color: '#C9A34A', border: '1px solid rgba(201, 163, 74, 0.5)' }}
         aria-hidden="true"
       >
         +
       </span>
-      <p className="text-center font-grotesk text-sm sm:text-base leading-snug" style={{ color: '#123F4A' }}>
+      <p className="text-center font-grotesk text-sm sm:text-base leading-snug" style={{ color: '#1D1A2B' }}>
         {title}
       </p>
-      <p className="text-center text-[10px] sm:text-xs leading-snug" style={{ color: '#667177' }}>
+      <p className="text-center text-[10px] sm:text-xs leading-snug" style={{ color: '#6B6872' }}>
         Página em breve
       </p>
       <div
         className="absolute bottom-0 left-0 right-0 h-0.5 rounded-b-2xl"
-        style={{ backgroundColor: '#D5A62E' }}
+        style={{ backgroundColor: '#C9A34A' }}
       />
     </div>
   );
@@ -84,14 +84,14 @@ export function ProductCarousel({ title, subtitle, note, flowSteps, items, rever
       <div className="mobile-content">
         {/* Título e Subtítulo */}
         <div className="flex flex-col items-center text-center space-y-3 md:space-y-4 mb-12 md:mb-16">
-          <h2 className="font-grotesk text-3xl sm:text-4xl md:text-5xl leading-tight text-pretty" style={{ color: '#123F4A' }}>
+          <h2 className="font-grotesk text-3xl sm:text-4xl md:text-5xl leading-tight text-pretty" style={{ color: '#1D1A2B' }}>
             {title}
           </h2>
-          <p className="text-sm sm:text-base md:text-lg leading-relaxed text-center max-w-2xl" style={{ color: '#667177' }}>
+          <p className="text-sm sm:text-base md:text-lg leading-relaxed text-center max-w-2xl" style={{ color: '#6B6872' }}>
             {subtitle}
           </p>
           {note && (
-            <p className="text-xs sm:text-sm leading-relaxed text-center max-w-2xl" style={{ color: '#667177' }}>
+            <p className="text-xs sm:text-sm leading-relaxed text-center max-w-2xl" style={{ color: '#6B6872' }}>
               {note}
             </p>
           )}
@@ -105,8 +105,8 @@ export function ProductCarousel({ title, subtitle, note, flowSteps, items, rever
                   <div
                     className="w-full rounded-2xl px-5 py-3.5 text-center"
                     style={{
-                      background: idx % 2 === 0 ? 'linear-gradient(135deg, #4B2A7B 0%, #3B2063 100%)' : 'linear-gradient(135deg, #176776 0%, #123F4A 100%)',
-                      boxShadow: '0 8px 20px rgba(18, 63, 74, 0.14)',
+                      background: idx % 2 === 0 ? 'linear-gradient(135deg, #5A3D82 0%, #5A3D82 100%)' : 'linear-gradient(135deg, #2F737A 0%, #1D1A2B 100%)',
+                      boxShadow: '0 8px 20px rgba(29, 26, 43, 0.14)',
                     }}
                   >
                     <p className="font-grotesk text-sm sm:text-base font-bold uppercase tracking-wide" style={{ color: '#FFFFFF' }}>
@@ -117,7 +117,7 @@ export function ProductCarousel({ title, subtitle, note, flowSteps, items, rever
                     </p>
                   </div>
                   {idx < flowSteps.length - 1 && (
-                    <ArrowDown size={18} strokeWidth={2.5} style={{ color: '#D5A62E' }} aria-hidden="true" />
+                    <ArrowDown size={18} strokeWidth={2.5} style={{ color: '#C9A34A' }} aria-hidden="true" />
                   )}
                 </div>
               ))}

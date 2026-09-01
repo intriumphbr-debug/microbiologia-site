@@ -43,7 +43,7 @@ export default function Page() {
   const offerRef = useRef<HTMLDivElement>(null);
   const handleCtaClick = () => offerRef.current?.scrollIntoView({ behavior: 'smooth' });
   return (
-    <main className="min-h-screen" style={{ backgroundColor: '#F8F8F5' }}>
+    <main className="min-h-screen" style={{ backgroundColor: '#F7F6F2' }}>
       <TopBar />
       <HeroSection onCtaClick={handleCtaClick} />
       <ProductCarousel
@@ -68,7 +68,7 @@ export default function Page() {
         ]}
         items={carrossel2}
         reverse={true}
-        bg="#F3EFF8"
+        bg="#F3F0F5"
       />
       <ForWhomSection />
       <Testimonials />

@@ -8,13 +8,13 @@ export function WhatYouGet() {
   ];
 
   return (
-    <section className="w-full py-16 md:py-24" style={{ backgroundColor: '#FAFAF8' }}>
+    <section className="w-full py-16 md:py-24" style={{ backgroundColor: '#F7F6F2' }}>
       <div className="mobile-content">
         <div className="mx-auto mb-10 flex max-w-3xl flex-col items-center gap-4 text-center md:mb-12">
-          <h2 className="font-grotesk text-3xl leading-tight text-pretty sm:text-4xl md:text-5xl" style={{ color: '#2B145F' }}>
-            <span style={{ color: '#0A6C78' }}>140 Recursos Visuais</span> Organizados em 5 Coleções
+          <h2 className="font-grotesk text-3xl leading-tight text-pretty sm:text-4xl md:text-5xl" style={{ color: '#5A3D82' }}>
+            <span style={{ color: '#2F737A' }}>140 Recursos Visuais</span> Organizados em 5 Coleções
           </h2>
-          <p className="max-w-2xl text-sm leading-relaxed sm:text-base md:text-lg" style={{ color: '#43505C' }}>
+          <p className="max-w-2xl text-sm leading-relaxed sm:text-base md:text-lg" style={{ color: '#6B6872' }}>
             Cada coleção cumpre uma função diferente no estudo, mas todas trabalham juntas para levar você do entendimento inicial à revisão e à fixação.
           </p>
         </div>
@@ -23,24 +23,24 @@ export function WhatYouGet() {
           {colecoes.map(([count, title, description, funcao]) => (
             <article
               key={title}
-              className="group relative flex min-h-[220px] flex-col rounded-[18px] border bg-white p-6 shadow-[0_8px_24px_rgba(43,20,95,0.06)] transition-all duration-250 hover:-translate-y-1 hover:border-[#D6A62E] hover:shadow-[0_14px_30px_rgba(43,20,95,0.12)]"
+              className="group relative flex min-h-[220px] flex-col rounded-[18px] border bg-white p-6 shadow-[0_8px_24px_rgba(29,26,43,0.06)] transition-all duration-250 hover:-translate-y-1 hover:border-[#C9A34A] hover:shadow-[0_14px_30px_rgba(29,26,43,0.12)]"
               style={{ borderColor: '#E4DEEF' }}
             >
-              <div className="absolute inset-x-6 top-0 h-1 rounded-b-full bg-[#D6A62E] opacity-70 transition-opacity duration-250 group-hover:opacity-100" />
+              <div className="absolute inset-x-6 top-0 h-1 rounded-b-full bg-[#C9A34A] opacity-70 transition-opacity duration-250 group-hover:opacity-100" />
               <div className="flex items-baseline gap-2">
-                <span className="font-grotesk text-4xl leading-none sm:text-5xl" style={{ color: '#0A6C78' }}>
+                <span className="font-grotesk text-4xl leading-none sm:text-5xl" style={{ color: '#2F737A' }}>
                   {count}
                 </span>
-                <span className="text-xs font-bold uppercase tracking-wider" style={{ color: '#4B1F78' }}>
+                <span className="text-xs font-bold uppercase tracking-wider" style={{ color: '#5A3D82' }}>
                   Recursos
                 </span>
               </div>
               <div className="mt-4 flex flex-1 flex-col">
-                <h3 className="font-grotesk text-lg leading-tight text-pretty sm:text-xl" style={{ color: '#2B145F' }}>{title}</h3>
-                <p className="mt-3 text-sm leading-relaxed" style={{ color: '#43505C' }}>{description}</p>
+                <h3 className="font-grotesk text-lg leading-tight text-pretty sm:text-xl" style={{ color: '#5A3D82' }}>{title}</h3>
+                <p className="mt-3 text-sm leading-relaxed" style={{ color: '#6B6872' }}>{description}</p>
               </div>
-              <p className="mt-5 border-t pt-4 text-xs sm:text-sm" style={{ color: '#43505C', borderColor: '#EFEAF6' }}>
-                <span className="font-bold uppercase tracking-wide" style={{ color: '#0A6C78' }}>Função:</span>{' '}
+              <p className="mt-5 border-t pt-4 text-xs sm:text-sm" style={{ color: '#6B6872', borderColor: '#EFEAF6' }}>
+                <span className="font-bold uppercase tracking-wide" style={{ color: '#2F737A' }}>Função:</span>{' '}
                 {funcao}
               </p>
             </article>
