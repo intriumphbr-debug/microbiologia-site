@@ -20,7 +20,8 @@ export function HeroSection({ onCtaClick }: { onCtaClick: () => void }) {
               <span style={{ color: '#4F46A8' }}>Visual</span>
             </span>
             <h1 className="font-grotesk text-4xl sm:text-5xl md:text-6xl leading-[1.05] text-balance text-center max-w-2xl" style={{ color: '#1D252C' }}>
-              +140 recursos visuais de Microbiologia
+              <span style={{ color: '#4F46A8' }}>+140</span> recursos{' '}
+              <span style={{ color: '#4F46A8' }}>visuais</span> de Microbiologia
             </h1>
             <p className="text-sm sm:text-base leading-relaxed text-pretty text-center max-w-md sm:max-w-lg" style={{ color: '#667179' }}>
               Mapas visuais, comparativos, fichas de revisão, resumos express e testes de memória para estudar, revisar e entender microbiologia de forma mais visual e organizada.
@@ -28,10 +29,11 @@ export function HeroSection({ onCtaClick }: { onCtaClick: () => void }) {
           </div>
           <div className="w-full flex justify-center py-2 sm:py-4 md:py-6 overflow-visible">
             <div className="w-full max-w-2xl flex justify-center items-center">
-              <ImagePlaceholder
-                label="Mockup do Microbiologia Visual"
-                ratio="4 / 3"
-                variant="light"
+              <img
+                src="/images/mockup-hero.webp"
+                alt="Mockup do Microbiologia Visual: guia principal, fichas de revisão e os três bônus"
+                className="w-full h-auto object-contain"
+                style={{ filter: 'drop-shadow(0 24px 45px rgba(79, 70, 168, 0.22))' }}
               />
             </div>
           </div>
@@ -69,49 +71,5 @@ export function HeroSection({ onCtaClick }: { onCtaClick: () => void }) {
         </div>
       </div>
     </section>
-  );
-}
-
-function ImagePlaceholder({
-  label,
-  ratio = '4 / 3',
-  variant = 'light',
-}: {
-  label: string;
-  ratio?: string;
-  variant?: 'light' | 'dark';
-}) {
-  const dark = variant === 'dark';
-  return (
-    <div
-      className="w-full max-w-lg flex flex-col items-center justify-center gap-2 rounded-2xl text-center"
-      style={{
-        aspectRatio: ratio,
-        border: `1.5px dashed ${dark ? 'rgba(225, 179, 67, 0.55)' : '#E1B343'}`,
-        backgroundColor: dark ? 'rgba(255,255,255,0.04)' : '#FFFFFF',
-        boxShadow: dark ? 'none' : '0 12px 30px rgba(29, 26, 43, 0.12)',
-        padding: '20px',
-      }}
-    >
-      <span
-        className="flex items-center justify-center rounded-full text-lg"
-        style={{
-          width: '46px',
-          height: '46px',
-          backgroundColor: dark ? 'rgba(225, 179, 67, 0.15)' : '#F7F7F5',
-          color: '#E1B343',
-          border: '1px solid rgba(225, 179, 67, 0.5)',
-        }}
-        aria-hidden="true"
-      >
-        +
-      </span>
-      <p className="font-grotesk text-sm sm:text-base" style={{ color: dark ? 'rgba(255,255,255,0.92)' : '#1D252C' }}>
-        {label}
-      </p>
-      <p className="text-[11px] sm:text-xs" style={{ color: dark ? 'rgba(255,255,255,0.7)' : '#667179' }}>
-        Imagem em breve
-      </p>
-    </div>
   );
 }
