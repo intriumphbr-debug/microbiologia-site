@@ -5,25 +5,25 @@ import { Star } from 'lucide-react';
 const bonuses = [
   {
     label: 'BÔNUS 1',
-    name: 'Checklist Visual de Biossegurança em Microbiologia',
+    name: 'Plano de Revisão de Microbiologia em 21 Dias',
     description:
-      'Um material prático para consultar rapidamente cuidados com EPIs, prevenção de contaminação, descarte correto, organização da bancada e boas práticas na rotina microbiológica.',
+      'Um roteiro prático para organizar seus estudos ao longo de 21 dias, indicando o que revisar, quais coleções utilizar e quando testar sua memória para manter uma sequência de estudo mais clara.',
     oldPrice: 'De R$ 19,90',
     image: '/images/bonus/bonus-biosseguranca.png',
   },
   {
     label: 'BÔNUS 2',
-    name: 'Tabela Rápida de Meios de Cultura',
+    name: '30 Flashcards Essenciais de Microbiologia',
     description:
-      'Um guia visual complementar para revisar os principais meios de cultura, suas finalidades, aplicações, seletividade, diferencial e usos mais frequentes.',
+      'Uma seleção de perguntas e respostas rápidas com conceitos, estruturas, microrganismos e diferenças importantes para revisar em poucos minutos e reforçar a memorização.',
     oldPrice: 'De R$ 27,00',
     image: '/images/bonus/bonus-meios-cultura.png',
   },
   {
     label: 'BÔNUS 3',
-    name: 'Guia Visual de Erros Frequentes em Microbiologia',
+    name: 'Glossário Rápido de Microbiologia — 50 Termos Essenciais',
     description:
-      'Um material complementar para revisar erros comuns em colorações, interpretação, coleta, isolamento, leitura de resultados e confusões recorrentes no estudo de microbiologia.',
+      'Um guia de consulta com 50 termos e expressões importantes da microbiologia explicados de forma simples e direta para recorrer sempre que surgir alguma dúvida durante os estudos.',
     oldPrice: 'De R$ 24,90',
     image: '/images/bonus/bonus-erros-frequentes.png',
   },
