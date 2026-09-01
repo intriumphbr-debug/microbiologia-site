@@ -21,7 +21,7 @@ const bonuses = [
   },
   {
     label: 'BÔNUS 3',
-    name: 'Glossário Rápido de Microbiologia — 50 Termos Essenciais',
+    name: 'Glossário de Microbiologia',
     description:
       'Um guia de consulta com 50 termos e expressões importantes da microbiologia explicados de forma simples e direta para recorrer sempre que surgir alguma dúvida durante os estudos.',
     oldPrice: 'De R$ 24,90',
