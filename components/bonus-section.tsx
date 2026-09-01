@@ -33,7 +33,7 @@ function StarRow() {
   return (
     <div className="flex items-center gap-0.5" aria-hidden="true">
       {Array.from({ length: 5 }).map((_, i) => (
-        <Star key={i} size={14} fill="#C9A34A" strokeWidth={0} />
+        <Star key={i} size={14} fill="#E1B343" strokeWidth={0} />
       ))}
     </div>
   );
@@ -41,17 +41,17 @@ function StarRow() {
 
 export function BonusSection() {
   return (
-    <section className="w-full py-16 md:py-24 lg:py-32" style={{ backgroundColor: '#F7F6F2' }}>
+    <section className="w-full py-16 md:py-24 lg:py-32" style={{ backgroundColor: '#4F46A8' }}>
       <div className="mobile-content">
         {/* Cabeçalho */}
         <div className="flex flex-col items-center text-center gap-3 md:gap-4 mb-10 md:mb-14">
-          <span className="font-grotesk text-xs sm:text-sm font-bold uppercase tracking-[0.2em]" style={{ color: '#C9A34A' }}>
+          <span className="font-grotesk text-xs sm:text-sm font-bold uppercase tracking-[0.2em]" style={{ color: '#E1B343' }}>
             Exclusivo do Plano Completo
           </span>
-          <h2 className="font-grotesk text-3xl sm:text-4xl md:text-5xl leading-tight text-balance" style={{ color: '#1D1A2B' }}>
+          <h2 className="font-grotesk text-3xl sm:text-4xl md:text-5xl leading-tight text-balance" style={{ color: '#FFFFFF' }}>
             Receba 3 Bônus para Completar Sua Revisão
           </h2>
-          <p className="text-sm sm:text-base md:text-lg leading-relaxed max-w-2xl" style={{ color: '#6B6872' }}>
+          <p className="text-sm sm:text-base md:text-lg leading-relaxed max-w-2xl" style={{ color: 'rgba(255,255,255,0.90)' }}>
             Materiais complementares para agilizar a consulta, reforçar a fixação e tornar sua revisão de microbiologia ainda mais prática.
           </p>
         </div>
@@ -64,7 +64,7 @@ export function BonusSection() {
               className="bonus-card flex w-full flex-col rounded-[20px] p-5 sm:p-6"
               style={{
                 backgroundColor: '#FFFFFF',
-                border: '1px solid #E4DEEF',
+                border: '1px solid rgba(79,70,168,0.15)',
                 boxShadow: '0 12px 30px rgba(29, 26, 43, 0.08)',
                 transition: 'all 250ms ease',
               }}
@@ -72,7 +72,7 @@ export function BonusSection() {
               {/* Badge */}
               <span
                 className="self-start rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-wide"
-                style={{ backgroundColor: '#5A3D82', color: '#FFFFFF' }}
+                style={{ backgroundColor: '#4F46A8', color: '#FFFFFF' }}
               >
                 {bonus.label}
               </span>
@@ -81,7 +81,7 @@ export function BonusSection() {
               <div className="mt-4 flex justify-center">
                 <div
                   className="w-full max-w-[240px] overflow-hidden rounded-xl"
-                  style={{ aspectRatio: '4 / 3', border: '1px solid #E4DEEF', backgroundColor: '#F3F0F5' }}
+                  style={{ aspectRatio: '4 / 3', border: '1px solid rgba(79,70,168,0.15)', backgroundColor: '#F7F7F5' }}
                 >
                   <img
                     src={bonus.image || '/placeholder.svg'}
@@ -98,23 +98,23 @@ export function BonusSection() {
               </div>
 
               {/* Nome */}
-              <h3 className="mt-3 font-grotesk text-base sm:text-lg leading-snug" style={{ color: '#5A3D82' }}>
+              <h3 className="mt-3 font-grotesk text-base sm:text-lg leading-snug" style={{ color: '#4F46A8' }}>
                 {bonus.name}
               </h3>
 
               {/* Descrição */}
-              <p className="mt-2 flex-1 text-sm leading-relaxed" style={{ color: '#6B6872' }}>
+              <p className="mt-2 flex-1 text-sm leading-relaxed" style={{ color: '#667179' }}>
                 {bonus.description}
               </p>
 
               {/* Preço + selo */}
-              <div className="mt-5 flex items-center justify-between gap-3 border-t pt-4" style={{ borderColor: '#E4DEEF' }}>
-                <span className="text-sm line-through" style={{ color: '#6B6872' }}>
+              <div className="mt-5 flex items-center justify-between gap-3 border-t pt-4" style={{ borderColor: 'rgba(79,70,168,0.15)' }}>
+                <span className="text-sm line-through" style={{ color: '#667179' }}>
                   {bonus.oldPrice}
                 </span>
                 <span
                   className="rounded-full px-3 py-1.5 text-xs font-bold uppercase tracking-wide"
-                  style={{ backgroundColor: '#14C979', color: '#0A2A16' }}
+                  style={{ backgroundColor: '#16C784', color: '#FFFFFF' }}
                 >
                   Hoje grátis
                 </span>
@@ -124,16 +124,16 @@ export function BonusSection() {
         </div>
 
         {/* Reforço de inclusão */}
-        <p className="mt-10 text-center text-sm sm:text-base" style={{ color: '#6B6872' }}>
+        <p className="mt-10 text-center text-sm sm:text-base" style={{ color: 'rgba(255,255,255,0.90)' }}>
           {' '}
-          <span className="font-bold" style={{ color: '#C9A34A' }}></span>
+          <span className="font-bold" style={{ color: '#E1B343' }}></span>
         </p>
       </div>
 
       <style>{`
         bonus-card:hover {
           transform: translateY(-4px);
-          border-color: #C9A34A;
+          border-color: #E1B343;
           box-shadow: 0 20px 42px rgba(29, 26, 43, 0.14);
         }
       `}</style>

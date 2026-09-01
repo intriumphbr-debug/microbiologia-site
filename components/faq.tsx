@@ -65,7 +65,7 @@ export function FAQ() {
       <div className="mobile-content">
         <h2
           className="font-grotesk text-center uppercase"
-          style={{ color: '#5A3D82', fontSize: '32px', fontWeight: 700, marginBottom: '28px', lineHeight: 1.2 }}
+          style={{ color: '#4F46A8', fontSize: '32px', fontWeight: 700, marginBottom: '28px', lineHeight: 1.2 }}
         >
           Perguntas Frequentes
         </h2>
@@ -78,7 +78,7 @@ export function FAQ() {
                 key={idx}
                 style={{
                   backgroundColor: '#FFFFFF',
-                  border: '1px solid rgba(90,61,130,0.18)',
+                  border: '1px solid rgba(79,70,168,0.18)',
                   borderRadius: '16px',
                   overflow: 'hidden',
                   boxShadow: '0 5px 14px rgba(29, 26, 43, 0.08)',
@@ -94,7 +94,7 @@ export function FAQ() {
                   <span
                     className="text-left"
                     style={{
-                      color: '#24242A',
+                      color: '#1D252C',
                       fontSize: '15px',
                       fontWeight: 700,
                       lineHeight: 1.35,
@@ -106,7 +106,7 @@ export function FAQ() {
                   <span
                     className="transition-transform duration-200"
                     style={{
-                      color: '#5A3D82',
+                      color: '#4F46A8',
                       fontSize: '20px',
                       fontWeight: 700,
                       flexShrink: 0,
@@ -128,14 +128,14 @@ export function FAQ() {
                 >
                   <div
                     style={{
-                      borderTop: '1px solid rgba(90,61,130,0.18)',
-                      backgroundColor: '#F3F0F5',
+                      borderTop: '1px solid rgba(79,70,168,0.18)',
+                      backgroundColor: '#F7F7F5',
                       padding: '19px 18px',
                     }}
                   >
                     <p
                       className="text-left"
-                      style={{ color: '#24242A', fontSize: '15px', lineHeight: 1.6 }}
+                      style={{ color: '#1D252C', fontSize: '15px', lineHeight: 1.6 }}
                     >
                       {item.a}
                     </p>
