@@ -1,13 +1,37 @@
 'use client';
 
-import { Check, Star } from 'lucide-react';
+import { Check, Star, X } from 'lucide-react';
+import { useEffect, useRef, useState } from 'react';
 
 /* ===== Constantes de preço e checkout (fáceis de editar) ===== */
 const BASIC_PRICE = 'R$ 10,00';
 const COMPLETE_PRICE = 'R$ 24,90';
 const COMPLETE_TOTAL_PRICE = 'R$ 89,70';
+const COMPLETE_DISCOUNT_PRICE = 'R$ 16,00';
 const BASIC_CHECKOUT_URL = '#';
 const COMPLETE_CHECKOUT_URL = '#';
+const COMPLETE_DISCOUNT_CHECKOUT_URL = '#';
+
+/* Itens do Plano Básico */
+const basicFeatures = [
+  '40 Mapas Visuais de Microbiologia',
+  'Fundamentos de Microbiologia',
+  'Estrutura e Morfologia Bacteriana',
+  'Gram-positivas e Gram-negativas',
+  'Crescimento e Nutrição Microbiana',
+  'Bacteriologia, Micologia e Virologia',
+  'Acesso imediato ao material',
+];
+
+/* O que o usuário ganha a mais no popup de upsell */
+const upsellExtras = [
+  '+100 recursos visuais adicionais',
+  '30 Não Confunda',
+  '40 Fichas Visuais',
+  '15 Revisões Express',
+  '15 Teste sua Memória',
+  '3 Bônus Exclusivos',
+];
 
 /* Cada item: [número em destaque, restante do texto] */
 const completeFeatures: [string, string][] = [
@@ -33,6 +57,45 @@ function goToCheckout(url: string) {
 }
 
 export function PricingSection() {
+  const [upsellOpen, setUpsellOpen] = useState(false);
+  const basicBtnRef = useRef<HTMLButtonElement>(null);
+  const dialogRef = useRef<HTMLDivElement>(null);
+
+  /* Bloqueia scroll do body enquanto o popup está aberto e foca o modal */
+  useEffect(() => {
+    if (!upsellOpen) return;
+
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+
+    // Foco inicial no modal
+    const focusTimer = window.setTimeout(() => {
+      dialogRef.current?.focus();
+    }, 0);
+
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') closeUpsell();
+    };
+    document.addEventListener('keydown', onKeyDown);
+
+    return () => {
+      document.body.style.overflow = prevOverflow;
+      window.clearTimeout(focusTimer);
+      document.removeEventListener('keydown', onKeyDown);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [upsellOpen]);
+
+  function openUpsell() {
+    setUpsellOpen(true);
+  }
+
+  function closeUpsell() {
+    setUpsellOpen(false);
+    // Devolve o foco ao botão do Plano Básico
+    window.setTimeout(() => basicBtnRef.current?.focus(), 0);
+  }
+
   return (
     <section id="checkout" className="w-full py-16 md:py-24 lg:py-32" style={{ backgroundColor: '#FFFFFF' }}>
       <div className="mobile-content">
@@ -50,54 +113,71 @@ export function PricingSection() {
         <div className="pricing-grid mx-auto flex max-w-4xl flex-col items-stretch gap-6 lg:flex-row lg:items-center lg:gap-6">
           {/* ===== PLANO BÁSICO (secundário) ===== */}
           <div
-            className="flex w-full flex-col rounded-[20px] p-6 sm:p-8"
-            style={{ backgroundColor: '#FFFFFF', border: '1px solid rgba(79,70,168,0.15)' }}
+            className="flex w-full flex-col rounded-[24px] p-6 sm:p-8"
+            style={{
+              backgroundColor: '#FFFFFF',
+              border: '1px solid rgba(79,70,168,0.16)',
+              boxShadow: '0 8px 24px rgba(29, 26, 43, 0.06)',
+            }}
           >
-            <h3 className="font-grotesk text-lg sm:text-xl" style={{ color: '#1D252C' }}>
-              Plano Básico
-            </h3>
-            <div className="mt-3 flex items-baseline gap-2">
-              <span className="font-grotesk text-3xl sm:text-4xl" style={{ color: '#1D252C' }}>
-                {BASIC_PRICE}
-              </span>
+            {/* Títulos */}
+            <div className="text-center">
+              <p className="font-grotesk text-2xl sm:text-3xl leading-tight" style={{ color: '#1D252C' }}>
+                Plano Básico
+              </p>
+              <p className="mt-1.5 text-lg" style={{ color: '#667179' }}>
+                Microbiologia Visual — Mapas Visuais
+              </p>
             </div>
-            <p className="mt-1 text-xs" style={{ color: '#667179' }}>Pagamento único</p>
 
-            <ul className="mt-6 space-y-3">
-              <li className="flex items-start gap-2.5">
-                <span
-                  className="mt-0.5 flex shrink-0 items-center justify-center rounded-full"
-                  style={{ width: '18px', height: '18px', backgroundColor: '#F7F7F5', color: '#4F46A8' }}
-                >
-                  <Check size={12} strokeWidth={3} aria-hidden="true" />
-                </span>
-                <span className="text-sm" style={{ color: '#1D252C' }}>
-                  <span className="font-bold">40</span> Mapas Visuais de Microbiologia
-                </span>
-              </li>
-            </ul>
-
-            <p className="mt-5 text-sm leading-relaxed" style={{ color: '#1D252C' }}>
-              Uma opção direta para quem quer começar pelos mapas visuais e consultar os principais assuntos de microbiologia.
+            {/* Texto de apoio */}
+            <p className="mt-4 text-center text-[15px] leading-relaxed" style={{ color: '#667179' }}>
+              Uma opção direta para quem quer começar pelos mapas visuais e consultar os principais assuntos de microbiologia de forma clara e organizada.
             </p>
 
+            {/* Lista do que está incluído */}
+            <ul className="mt-6 space-y-3.5">
+              {basicFeatures.map((feature) => (
+                <li key={feature} className="flex items-start gap-3">
+                  <span
+                    className="mt-0.5 flex shrink-0 items-center justify-center rounded-full"
+                    style={{ width: '20px', height: '20px', backgroundColor: 'rgba(22,199,132,0.12)', color: '#16C784' }}
+                  >
+                    <Check size={13} strokeWidth={3} aria-hidden="true" />
+                  </span>
+                  <span className="text-[15px] leading-snug" style={{ color: '#1D252C' }}>
+                    {feature}
+                  </span>
+                </li>
+              ))}
+            </ul>
+
+            {/* Separador */}
+            <div className="mt-7 mb-6 h-px w-full" style={{ backgroundColor: 'rgba(79,70,168,0.12)' }} />
+
+            {/* Área de preço */}
+            <div className="text-center">
+              <p className="font-grotesk text-xs uppercase tracking-[0.16em]" style={{ color: '#667179' }}>
+                Acesso ao Plano Básico
+              </p>
+              <p className="mt-2 font-grotesk text-5xl sm:text-6xl leading-none" style={{ color: '#1D252C' }}>
+                {BASIC_PRICE}
+              </p>
+              <p className="mt-2 text-sm font-medium" style={{ color: '#667179' }}>
+                Pagamento único
+              </p>
+            </div>
+
+            {/* Botão que abre o popup de upsell */}
             <button
-              onClick={() => goToCheckout(BASIC_CHECKOUT_URL)}
-              className="mt-6 w-full rounded-full py-3 px-6 text-sm font-bold active:scale-95"
+              ref={basicBtnRef}
+              onClick={openUpsell}
+              className="mt-6 w-full rounded-full px-6 text-base font-bold active:scale-95"
               style={{
-                backgroundColor: '#16C784',
+                minHeight: '52px',
+                backgroundColor: '#1D1D1D',
                 color: '#FFFFFF',
-                border: '1.5px solid #16C784',
-                boxShadow: '0 8px 22px rgba(22, 199, 132, 0.4)',
                 transition: 'all 200ms ease',
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = '#12B876';
-                e.currentTarget.style.borderColor = '#12B876';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = '#16C784';
-                e.currentTarget.style.borderColor = '#16C784';
               }}
             >
               QUERO O PLANO BÁSICO
@@ -222,6 +302,149 @@ export function PricingSection() {
           </div>
         </div>
       </div>
+
+      {/* ===== POPUP DE UPSELL DO PLANO COMPLETO ===== */}
+      {upsellOpen && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center"
+          style={{ backgroundColor: 'rgba(0,0,0,0.55)', padding: '16px' }}
+          onClick={closeUpsell}
+        >
+          <div
+            ref={dialogRef}
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="upsell-title"
+            tabIndex={-1}
+            className="relative flex flex-col rounded-[24px] outline-none"
+            style={{
+              backgroundColor: '#FFFFFF',
+              width: 'calc(100% - 32px)',
+              maxWidth: '460px',
+              maxHeight: 'calc(100vh - 32px)',
+              overflowY: 'auto',
+              padding: '22px',
+              boxShadow: '0 24px 60px rgba(0,0,0,0.35)',
+            }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Botão fechar (X) */}
+            <button
+              onClick={closeUpsell}
+              aria-label="Fechar oferta"
+              className="absolute right-2 top-2 flex items-center justify-center rounded-full"
+              style={{ width: '44px', height: '44px', color: '#667179' }}
+            >
+              <X size={22} strokeWidth={2.5} aria-hidden="true" />
+            </button>
+
+            {/* Badge */}
+            <div className="flex justify-center pt-2">
+              <span
+                className="inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-wide"
+                style={{ backgroundColor: '#E1B343', color: '#1D252C' }}
+              >
+                🎁 Oferta Especial
+              </span>
+            </div>
+
+            {/* Headline */}
+            <h3
+              id="upsell-title"
+              className="mt-4 text-center font-grotesk leading-tight text-balance"
+              style={{ color: '#1D252C', fontSize: '30px' }}
+            >
+              Antes de continuar...
+            </h3>
+            <p className="mt-2 text-center font-grotesk leading-tight text-balance" style={{ color: '#1D252C', fontSize: '22px' }}>
+              Leve o <span style={{ color: '#4F46A8' }}>Plano Completo</span> por apenas{' '}
+              <span style={{ color: '#16C784' }}>{COMPLETE_DISCOUNT_PRICE}</span>
+            </p>
+
+            {/* Subheadline */}
+            <p className="mt-4 text-center text-[17px] font-semibold leading-relaxed" style={{ color: '#1D252C' }}>
+              Por apenas R$ 6,00 a mais, você leva as 5 coleções completas + os 3 bônus exclusivos.
+            </p>
+
+            {/* Comparação vertical */}
+            <div
+              className="mt-5 flex flex-col items-center gap-2 rounded-2xl px-4 py-5 text-center"
+              style={{ backgroundColor: '#F7F7F5' }}
+            >
+              <p className="font-grotesk text-sm uppercase tracking-wide" style={{ color: '#667179' }}>
+                Plano Básico
+              </p>
+              <p className="font-grotesk text-2xl" style={{ color: '#1D252C' }}>{BASIC_PRICE}</p>
+              <p className="text-sm" style={{ color: '#667179' }}>40 recursos</p>
+
+              <span className="my-1 text-lg" style={{ color: '#E1B343' }} aria-hidden="true">↓</span>
+
+              <p
+                className="rounded-full px-4 py-1.5 font-grotesk text-sm font-bold"
+                style={{ backgroundColor: '#E1B343', color: '#1D252C' }}
+              >
+                Por apenas + R$ 6,00
+              </p>
+
+              <span className="my-1 text-lg" style={{ color: '#E1B343' }} aria-hidden="true">↓</span>
+
+              <p className="font-grotesk text-sm uppercase tracking-wide" style={{ color: '#4F46A8' }}>
+                Plano Completo
+              </p>
+              <p className="font-grotesk text-3xl" style={{ color: '#16C784' }}>{COMPLETE_DISCOUNT_PRICE}</p>
+              <p className="text-sm" style={{ color: '#667179' }}>140 recursos + 3 bônus</p>
+            </div>
+
+            {/* Lista do que ganha a mais */}
+            <ul className="mt-5 space-y-3">
+              {upsellExtras.map((extra) => (
+                <li key={extra} className="flex items-start gap-3">
+                  <span
+                    className="mt-0.5 flex shrink-0 items-center justify-center rounded-full"
+                    style={{ width: '20px', height: '20px', backgroundColor: '#16C784', color: '#FFFFFF' }}
+                  >
+                    <Check size={13} strokeWidth={3} aria-hidden="true" />
+                  </span>
+                  <span className="text-[15px] leading-snug" style={{ color: '#1D252C' }}>
+                    {extra}
+                  </span>
+                </li>
+              ))}
+            </ul>
+
+            {/* Destaque de economia */}
+            <p className="mt-5 text-center text-sm leading-relaxed" style={{ color: '#667179' }}>
+              Preço normal do Plano Completo:{' '}
+              <span className="line-through">{COMPLETE_PRICE}</span> • Oferta especial:{' '}
+              <span className="font-bold" style={{ color: '#1D252C' }}>{COMPLETE_DISCOUNT_PRICE}</span> • Você economiza R$ 8,90
+            </p>
+
+            {/* CTA principal */}
+            <button
+              onClick={() => goToCheckout(COMPLETE_DISCOUNT_CHECKOUT_URL)}
+              className="mt-5 w-full rounded-full px-6 text-base font-bold active:scale-95"
+              style={{
+                minHeight: '52px',
+                backgroundColor: '#16C784',
+                color: '#FFFFFF',
+                boxShadow: '0 10px 26px rgba(22, 199, 132, 0.35)',
+                transition: 'all 200ms ease',
+              }}
+            >
+              SIM! QUERO O COMPLETO POR {COMPLETE_DISCOUNT_PRICE}
+            </button>
+
+            {/* Recusar e seguir com o Básico */}
+            <button
+              onClick={() => goToCheckout(BASIC_CHECKOUT_URL)}
+              className="mt-4 mb-1 w-full px-4 py-2 text-center text-sm underline"
+              style={{ color: '#667179' }}
+            >
+              Não, obrigado. Quero continuar com o Plano Básico.
+            </button>
+          </div>
+        </div>
+      )}
 
       <style>{`
         @media (min-width: 1024px) {
