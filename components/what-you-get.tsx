@@ -1,10 +1,10 @@
 export function WhatYouGet() {
   const colecoes = [
-    ['40', 'MAPAS VISUAIS', 'Estude visualmente temas como estrutura da célula bacteriana, Gram-positivas e Gram-negativas, morfologia, crescimento microbiano, nutrição, oxigênio, Staphylococcus, Streptococcus, enterobactérias, virulência, meios de cultura, micologia, virologia e outros assuntos fundamentais.', 'Entender e organizar o assunto.'],
-    ['30', 'NÃO CONFUNDA', 'Compare lado a lado conceitos e microrganismos que costumam gerar dúvida: Staphylococcus x Streptococcus, Salmonella x Shigella, exotoxina x endotoxina, esterilização x desinfecção x antissepsia, vírus DNA x RNA, leveduras x fungos filamentosos e muito mais.', 'Diferenciar conceitos parecidos.'],
-    ['40', 'FICHAS VISUAIS', 'Aprofunde e revise microrganismos específicos como Staphylococcus aureus, Streptococcus pyogenes, E. coli, Klebsiella pneumoniae, Salmonella, Pseudomonas aeruginosa, Mycobacterium tuberculosis, Candida albicans, Aspergillus fumigatus, HIV, HPV, Influenza e outros.', 'Memorizar características e pontos-chave.'],
-    ['15', 'REVISÃO EXPRESS', 'Revise grandes blocos de microbiologia em uma única página: fundamentos, estrutura bacteriana, Gram e colorações, crescimento, cocos Gram-positivos, enterobactérias, resistência antimicrobiana, meios de cultura, micologia, virologia e outros.', 'Revisar rapidamente antes de provas e estudos.'],
-    ['15', 'TESTE SUA MEMÓRIA', 'Coloque o conteúdo em prática com identificação visual, verdadeiro ou falso, associação de conceitos, tabelas para completar e desafios sobre Gram, crescimento, enterobactérias, virulência, meios de cultura, testes bioquímicos, fungos, vírus e resistência.', 'Recuperar e fixar o conteúdo estudado.'],
+    ['40', 'MAPAS VISUAIS', 'Estude visualmente estrutura bacteriana, Gram, morfologia, crescimento microbiano, Staphylococcus, Streptococcus, enterobactérias, virulência, meios de cultura, micologia, virologia e outros temas essenciais.', 'Entender e organizar o assunto.'],
+    ['30', 'NÃO CONFUNDA', 'Compare lado a lado conceitos e microrganismos que costumam gerar dúvida, como Staphylococcus x Streptococcus, Salmonella x Shigella, exotoxina x endotoxina, vírus DNA x RNA e leveduras x fungos filamentosos.', 'Diferenciar conceitos parecidos.'],
+    ['40', 'FICHAS VISUAIS', 'Revise microrganismos importantes como Staphylococcus aureus, E. coli, Klebsiella pneumoniae, Salmonella, Pseudomonas, Mycobacterium tuberculosis, Candida albicans, HIV, HPV, Influenza e outros.', 'Memorizar características e pontos-chave.'],
+    ['15', 'REVISÃO EXPRESS', 'Revise grandes temas de microbiologia em uma única página, incluindo fundamentos, estrutura bacteriana, Gram, crescimento, enterobactérias, resistência antimicrobiana, meios de cultura, micologia e virologia.'],
+    ['15', 'TESTE SUA MEMÓRIA', 'Teste o que você aprendeu com identificação visual, verdadeiro ou falso, associação, tabelas para completar e desafios sobre os principais temas do material.', 'Recuperar e fixar o conteúdo estudado.'],
   ];
 
   return (
