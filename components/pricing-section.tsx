@@ -1,6 +1,6 @@
 'use client';
 
-import { Check, Star, Lock, CreditCard, Zap, ShieldCheck, Gift } from 'lucide-react';
+import { Check, Star, Lock, CreditCard, Zap, ShieldCheck } from 'lucide-react';
 
 /* ===== Constantes de preço e checkout (fáceis de editar) ===== */
 const BASIC_PRICE = 'R$ 10,00';
@@ -115,9 +115,9 @@ export function PricingSection() {
           <div
             className="pricing-complete relative flex w-full flex-col rounded-[22px] p-6 pt-10 sm:p-8 sm:pt-11"
             style={{
-              backgroundColor: '#FFFFFF',
-              border: '1.5px solid rgba(79,70,168,0.18)',
-              boxShadow: '0 24px 55px rgba(29, 26, 43, 0.14)',
+              backgroundColor: '#4F46A8',
+              border: '2px solid #E1B343',
+              boxShadow: '0 24px 55px rgba(29, 26, 43, 0.45)',
             }}
           >
             {/* Selo MAIS ESCOLHIDO */}
@@ -131,10 +131,10 @@ export function PricingSection() {
 
             {/* Títulos */}
             <div className="text-center">
-              <p className="font-grotesk text-xs sm:text-sm uppercase tracking-[0.18em]" style={{ color: '#4F46A8' }}>
+              <p className="font-grotesk text-xs sm:text-sm uppercase tracking-[0.18em]" style={{ color: '#E1B343' }}>
                 Plano Completo
               </p>
-              <h3 className="mt-1 font-grotesk text-2xl sm:text-3xl leading-tight text-balance" style={{ color: '#1D252C' }}>
+              <h3 className="mt-1 font-grotesk text-2xl sm:text-3xl leading-tight text-balance" style={{ color: '#FFFFFF' }}>
                 Microbiologia Visual Completo
               </h3>
             </div>
@@ -155,11 +155,11 @@ export function PricingSection() {
                 <li key={rest} className="flex items-start gap-3">
                   <span
                     className="mt-0.5 flex shrink-0 items-center justify-center rounded-full"
-                    style={{ width: '22px', height: '22px', backgroundColor: 'rgba(22,199,132,0.12)', color: '#16C784' }}
+                    style={{ width: '22px', height: '22px', backgroundColor: '#E1B343', color: '#1D252C' }}
                   >
                     <Check size={14} strokeWidth={3} aria-hidden="true" />
                   </span>
-                  <span className="text-sm sm:text-base leading-snug" style={{ color: '#1D252C' }}>
+                  <span className="text-sm sm:text-base leading-snug" style={{ color: '#FFFFFF' }}>
                     <span className="font-bold">{num}</span> {rest}
                   </span>
                 </li>
@@ -170,13 +170,10 @@ export function PricingSection() {
             <ul className="mt-5 space-y-3">
               {completeBonuses.map((bonus) => (
                 <li key={bonus} className="flex items-start gap-3">
-                  <span
-                    className="mt-0.5 flex shrink-0 items-center justify-center rounded-full"
-                    style={{ width: '22px', height: '22px', backgroundColor: 'rgba(225,179,67,0.15)', color: '#E1B343' }}
-                  >
-                    <Gift size={13} strokeWidth={2.5} aria-hidden="true" />
+                  <span className="mt-0.5 shrink-0 text-base leading-none" aria-hidden="true">
+                    🎁
                   </span>
-                  <span className="text-sm sm:text-base font-semibold leading-snug" style={{ color: '#1D252C' }}>
+                  <span className="text-sm sm:text-base font-semibold leading-snug" style={{ color: '#FFFFFF' }}>
                     {bonus}
                   </span>
                 </li>
@@ -184,25 +181,25 @@ export function PricingSection() {
             </ul>
 
             {/* Texto de apoio */}
-            <p className="mt-5 text-sm leading-relaxed" style={{ color: '#667179' }}>
+            <p className="mt-5 text-sm leading-relaxed" style={{ color: 'rgba(255,255,255,0.80)' }}>
               Tenha acesso ao sistema completo com mapas, comparações, fichas, revisões e atividades visuais para estudar microbiologia de forma mais clara, organizada e prática.
             </p>
 
             {/* Separador antes da área de preço */}
-            <div className="mt-6 mb-5 h-px w-full" style={{ backgroundColor: 'rgba(79,70,168,0.12)' }} />
+            <div className="mt-6 mb-5 h-px w-full" style={{ backgroundColor: 'rgba(255,255,255,0.18)' }} />
 
             {/* Área de preço */}
             <div className="text-center">
-              <p className="text-sm" style={{ color: '#667179' }}>
+              <p className="text-sm" style={{ color: 'rgba(255,255,255,0.75)' }}>
                 Valor total: <span className="line-through">{COMPLETE_TOTAL_PRICE}</span>
               </p>
-              <p className="mt-3 font-grotesk text-xs sm:text-sm uppercase tracking-[0.16em]" style={{ color: '#4F46A8' }}>
+              <p className="mt-3 font-grotesk text-xs sm:text-sm uppercase tracking-[0.16em]" style={{ color: '#E1B343' }}>
                 Hoje por apenas
               </p>
               <p className="mt-1 font-grotesk text-6xl sm:text-7xl leading-none" style={{ color: '#16C784' }}>
                 {COMPLETE_PRICE}
               </p>
-              <p className="mt-3 text-xs sm:text-sm font-medium" style={{ color: '#667179' }}>
+              <p className="mt-3 text-xs sm:text-sm font-medium" style={{ color: 'rgba(255,255,255,0.75)' }}>
                 Pagamento único • Sem mensalidade
               </p>
             </div>
@@ -233,8 +230,8 @@ export function PricingSection() {
             {/* Linha de confiança */}
             <div className="mt-5 flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
               {securityItems.map(([Icon, label]) => (
-                <div key={label} className="flex items-center gap-1.5 text-xs font-medium" style={{ color: '#667179' }}>
-                  <Icon size={14} strokeWidth={2} style={{ color: '#4F46A8' }} aria-hidden="true" />
+                <div key={label} className="flex items-center gap-1.5 text-xs font-medium" style={{ color: 'rgba(255,255,255,0.80)' }}>
+                  <Icon size={14} strokeWidth={2} style={{ color: '#E1B343' }} aria-hidden="true" />
                   {label}
                 </div>
               ))}
