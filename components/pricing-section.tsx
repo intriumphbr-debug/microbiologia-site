@@ -1,6 +1,6 @@
 'use client';
 
-import { Check, Star, Lock, CreditCard, Zap, ShieldCheck } from 'lucide-react';
+import { Check, Star } from 'lucide-react';
 
 /* ===== Constantes de preço e checkout (fáceis de editar) ===== */
 const BASIC_PRICE = 'R$ 10,00';
@@ -24,13 +24,6 @@ const completeBonuses = [
   'Bônus #2 — Flashcards Essenciais de Microbiologia',
   'Bônus #3 — Glossário Rápido de Microbiologia',
 ];
-
-const securityItems = [
-  [Lock, 'Compra segura'],
-  [CreditCard, 'Pagamento protegido'],
-  [Zap, 'Acesso imediato'],
-  [ShieldCheck, '7 dias de garantia'],
-] as const;
 
 function goToCheckout(url: string) {
   if (!url || url === '#') return;
@@ -155,7 +148,7 @@ export function PricingSection() {
                 <li key={rest} className="flex items-start gap-3">
                   <span
                     className="mt-0.5 flex shrink-0 items-center justify-center rounded-full"
-                    style={{ width: '22px', height: '22px', backgroundColor: '#E1B343', color: '#1D252C' }}
+                    style={{ width: '22px', height: '22px', backgroundColor: '#16C784', color: '#FFFFFF' }}
                   >
                     <Check size={14} strokeWidth={3} aria-hidden="true" />
                   </span>
@@ -179,11 +172,6 @@ export function PricingSection() {
                 </li>
               ))}
             </ul>
-
-            {/* Texto de apoio */}
-            <p className="mt-5 text-sm leading-relaxed" style={{ color: 'rgba(255,255,255,0.80)' }}>
-              Tenha acesso ao sistema completo com mapas, comparações, fichas, revisões e atividades visuais para estudar microbiologia de forma mais clara, organizada e prática.
-            </p>
 
             {/* Separador antes da área de preço */}
             <div className="mt-6 mb-5 h-px w-full" style={{ backgroundColor: 'rgba(255,255,255,0.18)' }} />
@@ -228,32 +216,10 @@ export function PricingSection() {
             </button>
 
             {/* Linha de confiança */}
-            <div className="mt-5 flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
-              {securityItems.map(([Icon, label]) => (
-                <div key={label} className="flex items-center gap-1.5 text-xs font-medium" style={{ color: 'rgba(255,255,255,0.80)' }}>
-                  <Icon size={14} strokeWidth={2} style={{ color: '#E1B343' }} aria-hidden="true" />
-                  {label}
-                </div>
-              ))}
-            </div>
+            <p className="mt-5 text-center text-xs sm:text-sm font-medium leading-relaxed" style={{ color: 'rgba(255,255,255,0.85)' }}>
+              🔒 Compra segura • 💳 Pagamento protegido • ⚡ Acesso imediato • ✅ 7 dias de garantia
+            </p>
           </div>
-        </div>
-
-        {/* Comparação rápida de valor */}
-        <p className="mt-8 text-center text-sm" style={{ color: '#667179' }}>
-          <span className="font-bold" style={{ color: '#4F46A8' }}>Básico</span> {BASIC_PRICE} · 40 recursos
-          <span className="mx-2" style={{ color: '#E1B343' }}>→</span>
-          <span className="font-bold" style={{ color: '#4F46A8' }}>Completo</span> {COMPLETE_PRICE} · 140 recursos
-        </p>
-
-        {/* Linha de segurança */}
-        <div className="mt-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
-          {securityItems.map(([Icon, label]) => (
-            <div key={label} className="flex items-center gap-1.5 text-xs sm:text-sm font-medium" style={{ color: '#667179' }}>
-              <Icon size={15} strokeWidth={2} style={{ color: '#4F46A8' }} aria-hidden="true" />
-              {label}
-            </div>
-          ))}
         </div>
       </div>
 
