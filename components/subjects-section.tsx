@@ -148,10 +148,10 @@ export function SubjectsSection() {
       <div className="mobile-content">
         <div className="mx-auto mb-10 flex max-w-3xl flex-col items-center gap-4 text-center md:mb-14">
           <h2 className="font-grotesk text-3xl leading-tight text-pretty sm:text-4xl md:text-5xl" style={{ color: '#4F46A8' }}>
-            Veja Alguns dos Assuntos que Você Vai Encontrar
+            Microbiologia Organizada para Facilitar Seus Estudos
           </h2>
           <p className="max-w-2xl text-sm leading-relaxed sm:text-base md:text-lg" style={{ color: '#667179' }}>
-            O conteúdo percorre diferentes áreas da microbiologia para que você consiga estudar fundamentos, reconhecer microrganismos importantes e revisar temas laboratoriais e clínicos sem depender de dezenas de fontes diferentes.
+            Fundamentos, bacteriologia, laboratório, resistência, micologia e virologia organizados por tema para facilitar seus estudos.
           </p>
         </div>
 
