@@ -7,7 +7,6 @@ import { ProductCarousel } from '@/components/product-carousel';
 import { HowItWorks } from '@/components/how-it-works';
 import { WhatYouGet } from '@/components/what-you-get';
 import { SubjectsSection } from '@/components/subjects-section';
-import { ForWhomSection } from '@/components/for-whom-section';
 import { PricingSection } from '@/components/pricing-section';
 import { BonusSection } from '@/components/bonus-section';
 import { Testimonials } from '@/components/testimonials';
@@ -70,7 +69,6 @@ export default function Page() {
         reverse={true}
         bg="#FFFFFF"
       />
-      <ForWhomSection />
       <Testimonials />
       <BonusSection />
       <div ref={offerRef}><PricingSection /></div>
