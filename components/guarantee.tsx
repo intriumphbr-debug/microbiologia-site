@@ -23,7 +23,7 @@ export function Guarantee() {
 
             <div className="space-y-3 sm:space-y-4 text-sm sm:text-base" style={{ color: '#667179' }}>
               <p className="leading-relaxed">
-                Após acessar o Microbiologia Visual, você terá 7 dias para avaliar o conteúdo. Caso entenda que o material não atende às suas expectativas, poderá solicitar o reembolso dentro do prazo de garantia, conforme as condições da plataforma de pagamento.
+                Acesse o Microbiologia Visual, explore o conteúdo e veja se ele faz sentido para você. Se dentro de 7 dias entender que o material não atende às suas expectativas, poderá solicitar o reembolso dentro do prazo de garantia.
               </p>
             </div>
           </div>
