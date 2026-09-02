@@ -23,16 +23,6 @@ const basicFeatures = [
   'Acesso imediato ao material',
 ];
 
-/* O que o usuário ganha a mais no popup de upsell */
-const upsellExtras = [
-  '+100 recursos visuais adicionais',
-  '30 Não Confunda',
-  '40 Fichas Visuais',
-  '15 Revisões Express',
-  '15 Teste sua Memória',
-  '3 Bônus Exclusivos',
-];
-
 /* Cada item: [número em destaque, restante do texto] */
 const completeFeatures: [string, string][] = [
   ['+140', 'Recursos Visuais de Microbiologia'],
@@ -316,14 +306,12 @@ export function PricingSection() {
             aria-modal="true"
             aria-labelledby="upsell-title"
             tabIndex={-1}
-            className="relative flex flex-col rounded-[24px] outline-none"
+            className="relative flex flex-col rounded-[26px] outline-none"
             style={{
               backgroundColor: '#FFFFFF',
               width: 'calc(100% - 32px)',
-              maxWidth: '460px',
-              maxHeight: 'calc(100vh - 32px)',
-              overflowY: 'auto',
-              padding: '22px',
+              maxWidth: '400px',
+              padding: '28px 24px 24px',
               boxShadow: '0 24px 60px rgba(0,0,0,0.35)',
             }}
             onClick={(e) => e.stopPropagation()}
@@ -332,17 +320,17 @@ export function PricingSection() {
             <button
               onClick={closeUpsell}
               aria-label="Fechar oferta"
-              className="absolute right-2 top-2 flex items-center justify-center rounded-full"
-              style={{ width: '44px', height: '44px', color: '#667179' }}
+              className="absolute right-2.5 top-2.5 flex items-center justify-center rounded-full"
+              style={{ width: '44px', height: '44px', color: '#9AA0A6' }}
             >
               <X size={22} strokeWidth={2.5} aria-hidden="true" />
             </button>
 
             {/* Badge */}
-            <div className="flex justify-center pt-2">
+            <div className="flex justify-center">
               <span
                 className="inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-wide"
-                style={{ backgroundColor: '#E1B343', color: '#1D252C' }}
+                style={{ backgroundColor: '#F6E3B0', color: '#1D252C' }}
               >
                 🎁 Oferta Especial
               </span>
@@ -351,80 +339,27 @@ export function PricingSection() {
             {/* Headline */}
             <h3
               id="upsell-title"
-              className="mt-4 text-center font-grotesk leading-tight text-balance"
-              style={{ color: '#1D252C', fontSize: '30px' }}
+              className="mt-5 text-center font-grotesk uppercase tracking-wide"
+              style={{ color: '#667179', fontSize: '13px' }}
             >
               Antes de continuar...
             </h3>
-            <p className="mt-2 text-center font-grotesk leading-tight text-balance" style={{ color: '#1D252C', fontSize: '22px' }}>
-              Leve o <span style={{ color: '#4F46A8' }}>Plano Completo</span> por apenas{' '}
+            <p className="mt-2 text-center font-grotesk leading-tight text-balance" style={{ color: '#1D252C', fontSize: '25px' }}>
+              Leve o <span style={{ color: '#4F46A8' }}>Plano Completo</span> por{' '}
               <span style={{ color: '#16C784' }}>{COMPLETE_DISCOUNT_PRICE}</span>
             </p>
 
             {/* Subheadline */}
-            <p className="mt-4 text-center text-[17px] font-semibold leading-relaxed" style={{ color: '#1D252C' }}>
-              Por apenas R$ 6,00 a mais, você leva as 5 coleções completas + os 3 bônus exclusivos.
-            </p>
-
-            {/* Comparação vertical */}
-            <div
-              className="mt-5 flex flex-col items-center gap-2 rounded-2xl px-4 py-5 text-center"
-              style={{ backgroundColor: '#F7F7F5' }}
-            >
-              <p className="font-grotesk text-sm uppercase tracking-wide" style={{ color: '#667179' }}>
-                Plano Básico
-              </p>
-              <p className="font-grotesk text-2xl" style={{ color: '#1D252C' }}>{BASIC_PRICE}</p>
-              <p className="text-sm" style={{ color: '#667179' }}>40 recursos</p>
-
-              <span className="my-1 text-lg" style={{ color: '#E1B343' }} aria-hidden="true">↓</span>
-
-              <p
-                className="rounded-full px-4 py-1.5 font-grotesk text-sm font-bold"
-                style={{ backgroundColor: '#E1B343', color: '#1D252C' }}
-              >
-                Por apenas + R$ 6,00
-              </p>
-
-              <span className="my-1 text-lg" style={{ color: '#E1B343' }} aria-hidden="true">↓</span>
-
-              <p className="font-grotesk text-sm uppercase tracking-wide" style={{ color: '#4F46A8' }}>
-                Plano Completo
-              </p>
-              <p className="font-grotesk text-3xl" style={{ color: '#16C784' }}>{COMPLETE_DISCOUNT_PRICE}</p>
-              <p className="text-sm" style={{ color: '#667179' }}>140 recursos + 3 bônus</p>
-            </div>
-
-            {/* Lista do que ganha a mais */}
-            <ul className="mt-5 space-y-3">
-              {upsellExtras.map((extra) => (
-                <li key={extra} className="flex items-start gap-3">
-                  <span
-                    className="mt-0.5 flex shrink-0 items-center justify-center rounded-full"
-                    style={{ width: '20px', height: '20px', backgroundColor: '#16C784', color: '#FFFFFF' }}
-                  >
-                    <Check size={13} strokeWidth={3} aria-hidden="true" />
-                  </span>
-                  <span className="text-[15px] leading-snug" style={{ color: '#1D252C' }}>
-                    {extra}
-                  </span>
-                </li>
-              ))}
-            </ul>
-
-            {/* Destaque de economia */}
-            <p className="mt-5 text-center text-sm leading-relaxed" style={{ color: '#667179' }}>
-              Preço normal do Plano Completo:{' '}
-              <span className="line-through">{COMPLETE_PRICE}</span> • Oferta especial:{' '}
-              <span className="font-bold" style={{ color: '#1D252C' }}>{COMPLETE_DISCOUNT_PRICE}</span> • Você economiza R$ 8,90
+            <p className="mt-3 text-center text-[15px] leading-relaxed" style={{ color: '#667179' }}>
+              Por apenas R$ 6,00 a mais, você libera as 5 coleções completas + 3 bônus exclusivos.
             </p>
 
             {/* CTA principal */}
             <button
               onClick={() => goToCheckout(COMPLETE_DISCOUNT_CHECKOUT_URL)}
-              className="mt-5 w-full rounded-full px-6 text-base font-bold active:scale-95"
+              className="mt-6 w-full rounded-full px-6 text-base font-bold active:scale-95"
               style={{
-                minHeight: '52px',
+                minHeight: '54px',
                 backgroundColor: '#16C784',
                 color: '#FFFFFF',
                 boxShadow: '0 10px 26px rgba(22, 199, 132, 0.35)',
@@ -437,10 +372,10 @@ export function PricingSection() {
             {/* Recusar e seguir com o Básico */}
             <button
               onClick={() => goToCheckout(BASIC_CHECKOUT_URL)}
-              className="mt-4 mb-1 w-full px-4 py-2 text-center text-sm underline"
+              className="mt-4 w-full px-4 py-1 text-center text-sm underline"
               style={{ color: '#667179' }}
             >
-              Não, obrigado. Quero continuar com o Plano Básico.
+              Não, obrigado. Quero continuar com o Plano Básico
             </button>
           </div>
         </div>
