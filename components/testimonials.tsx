@@ -45,10 +45,10 @@ export function Testimonials() {
       <div className="mobile-content">
         <div className="flex flex-col items-center text-center gap-4 mb-12 md:mb-16">
           <h2 className="font-grotesk text-3xl sm:text-4xl md:text-5xl leading-tight text-pretty" style={{ color: '#4F46A8' }}>
-            Quem Estuda Microbiologia Também Sente a Diferença
+            Relatos de quem já utiliza o microbiologia visual
           </h2>
           <p className="text-sm sm:text-base md:text-lg leading-relaxed max-w-2xl" style={{ color: '#667179' }}>
-            Veja como um material visual e organizado pode deixar a revisão muito mais prática.
+            Veja as experiências de quem passou a estudar e revisar microbiologia com mais clareza.  
           </p>
         </div>
 
