@@ -9,7 +9,7 @@ const bonuses = [
     description:
       'Um roteiro prático para organizar seus estudos ao longo de 21 dias, indicando o que revisar, quais coleções utilizar e quando testar sua memória para manter uma sequência de estudo mais clara.',
     oldPrice: 'De R$ 19,90',
-    image: '/images/bonus/bonus-biosseguranca.png',
+    image: '/images/bonus/capa-bonus-01.jpg',
   },
   {
     label: 'BÔNUS 2',
@@ -17,7 +17,7 @@ const bonuses = [
     description:
       'Uma seleção de perguntas e respostas rápidas com conceitos, estruturas, microrganismos e diferenças importantes para revisar em poucos minutos e reforçar a memorização.',
     oldPrice: 'De R$ 27,00',
-    image: '/images/bonus/bonus-meios-cultura.png',
+    image: '/images/bonus/capa-bonus-02.jpg',
   },
   {
     label: 'BÔNUS 3',
@@ -25,7 +25,7 @@ const bonuses = [
     description:
       'Um guia de consulta com 50 termos e expressões importantes da microbiologia explicados de forma simples e direta para recorrer sempre que surgir alguma dúvida durante os estudos.',
     oldPrice: 'De R$ 24,90',
-    image: '/images/bonus/bonus-erros-frequentes.png',
+    image: '/images/bonus/capa-bonus-03.jpg',
   },
 ];
 
@@ -80,13 +80,13 @@ export function BonusSection() {
               {/* Mockup */}
               <div className="mt-4 flex justify-center">
                 <div
-                  className="w-full max-w-[240px] overflow-hidden rounded-xl"
-                  style={{ aspectRatio: '4 / 3', border: '1px solid rgba(79,70,168,0.15)', backgroundColor: '#F7F7F5' }}
+                  className="w-full max-w-[220px] overflow-hidden rounded-xl"
+                  style={{ aspectRatio: '3 / 4', border: '1px solid rgba(79,70,168,0.15)', backgroundColor: '#F7F7F5' }}
                 >
                   <img
                     src={bonus.image || '/placeholder.svg'}
                     alt={`Mini capa do bônus: ${bonus.name}`}
-                    className="h-full w-full object-cover"
+                    className="h-full w-full object-contain"
                     loading="lazy"
                   />
                 </div>
