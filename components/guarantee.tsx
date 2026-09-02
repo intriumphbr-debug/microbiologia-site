@@ -1,6 +1,6 @@
 export function Guarantee() {
   return (
-    <section className="w-full py-16 md:py-24 lg:py-32" style={{ backgroundColor: '#F7F7F5' }}>
+    <section className="w-full py-16 md:py-24 lg:py-32" style={{ backgroundColor: '#4F46A8' }}>
       <div className="mobile-content">
         <div
           className="max-w-2xl mx-auto bg-card p-6 sm:p-8 md:p-12 lg:p-16 border relative"
@@ -9,7 +9,7 @@ export function Guarantee() {
           {/* Selo */}
           <div className="absolute -top-12 sm:-top-16 left-1/2 transform -translate-x-1/2 w-28 h-28 sm:w-40 sm:h-40 flex items-center justify-center">
             <img
-              src="/images/selo-garantia-7-dias.png"
+              src="/images/selo-garantia-7-dias.webp"
               alt="Garantia de 7 Dias"
               className="w-full h-full object-contain drop-shadow-lg"
               loading="lazy"

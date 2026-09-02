@@ -61,11 +61,11 @@ export function FAQ() {
   ];
 
   return (
-    <section className="w-full py-14 px-0" style={{ backgroundColor: '#FFFFFF' }}>
+    <section className="w-full py-14 px-0" style={{ backgroundColor: '#4F46A8' }}>
       <div className="mobile-content">
         <h2
           className="font-grotesk text-center uppercase"
-          style={{ color: '#4F46A8', fontSize: '32px', fontWeight: 700, marginBottom: '28px', lineHeight: 1.2 }}
+          style={{ color: '#FFFFFF', fontSize: '32px', fontWeight: 700, marginBottom: '28px', lineHeight: 1.2 }}
         >
           Perguntas Frequentes
         </h2>

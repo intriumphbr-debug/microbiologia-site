@@ -135,9 +135,9 @@ export function PricingSection() {
             {/* Mockup grande */}
             <div className="mt-5 flex justify-center">
               <img
-                src="/images/mockup-hero.webp"
-                alt="Mockup do Microbiologia Visual Completo com o produto principal e os três bônus"
-                className="w-full max-w-[380px] h-auto object-contain drop-shadow-xl"
+                src="/images/mockup-completo-garantia.png"
+                alt="Mockup do Microbiologia Visual Completo com o produto principal, os três bônus e o selo de garantia de 7 dias"
+                className="w-full max-w-[440px] h-auto object-contain drop-shadow-xl"
                 loading="lazy"
               />
             </div>
