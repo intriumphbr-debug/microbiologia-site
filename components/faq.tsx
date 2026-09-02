@@ -8,64 +8,36 @@ export function FAQ() {
   const faqItems = [
     {
       q: 'Qual é a diferença entre o Plano Básico e o Plano Completo?',
-      a: 'Sim. O Plano Básico inclui os 40 Mapas Visuais. Já o Plano Completo libera as 5 coleções, totalizando mais de 140 recursos visuais entre mapas, comparativos, fichas, revisões express e testes de memória.',
+      a: 'O Plano Básico inclui os 40 Mapas Visuais de Microbiologia. Já o Plano Completo dá acesso às 5 coleções, com mais de 140 recursos visuais, além dos 3 bônus exclusivos.',
     },
     {
-      q: 'O Microbiologia Visual é um produto físico?',
-      a: 'Não. Todo o material é 100% digital, para você consultar e revisar quando precisar, sem receber nada impresso pelos correios.',
+      q: 'O material é físico ou digital?',
+      a: 'O Microbiologia Visual é um produto 100% digital. Nenhum material físico será enviado para o seu endereço.',
     },
     {
-      q: 'Como receberei o material?',
-      a: 'Após a confirmação do pagamento, você recebe as instruções de acesso imediatamente pelo e-mail cadastrado na compra.',
+      q: 'Como receberei o acesso?',
+      a: 'Após a confirmação do pagamento, você receberá as instruções de acesso ao material de forma digital.',
     },
     {
-      q: 'Posso acessar pelo celular?',
-      a: 'Sim. O material foi pensado para ser consultado com facilidade no celular, no tablet ou no computador, sempre que você precisar estudar ou revisar.',
-    },
-    {
-      q: 'Posso imprimir as páginas?',
-      a: 'Sim. Você pode imprimir as páginas que quiser para estudar no papel, além de utilizá-las digitalmente sempre que preferir.',
-    },
-    {
-      q: 'O Plano Completo possui realmente mais de 140 recursos?',
-      a: 'Sim. O Plano Completo reúne as 5 coleções: 40 Mapas Visuais, 30 Não Confunda, 40 Fichas Visuais, 15 Revisões Express e 15 Teste sua Memória, totalizando mais de 140 recursos visuais.',
-    },
-    {
-      q: 'Os bônus estão incluídos em qual plano?',
-      a: 'Os 3 bônus complementares estão incluídos no Plano Completo. O Plano Básico inclui apenas os 40 Mapas Visuais.',
-    },
-    {
-      q: 'Quais assuntos de microbiologia aparecem no material?',
-      a: 'O Microbiologia Visual aborda fundamentos de microbiologia, estrutura e morfologia bacteriana, Gram, crescimento e metabolismo, bacteriologia, meios de cultura, testes bioquímicos, identificação microbiológica, virulência, toxinas, resistência antimicrobiana, micologia, virologia e diversos microrganismos importantes. Os temas aparecem distribuídos entre mapas, comparativos, fichas, revisões e testes.',
-    },
-    {
-      q: 'Como o material é organizado?',
-      a: 'O conteúdo é dividido em 5 coleções que se complementam, permitindo encontrar o assunto, entender visualmente, comparar informações parecidas, revisar rapidamente e testar a memória.',
-    },
-    {
-      q: 'O material pode ser utilizado para revisão?',
-      a: 'Sim. Além do conteúdo completo, há páginas de Revisão Express e testes de memória pensados justamente para revisões rápidas e recuperação ativa do conteúdo.',
-    },
-    {
-      q: 'Preciso já dominar microbiologia para utilizar?',
-      a: 'Não. O material ajuda tanto quem está começando a organizar o conteúdo quanto quem já estuda e quer revisar de forma mais visual e prática.',
+      q: 'Posso acessar pelo celular e imprimir as páginas?',
+      a: 'Sim. Você pode acessar o material pelo celular, tablet ou computador e também imprimir as páginas para uso nos seus estudos, caso prefira.',
     },
     {
       q: 'Por quanto tempo terei acesso?',
-      a: 'O pagamento é único e você poderá consultar o material sempre que precisar, conforme as condições da plataforma de pagamento.',
+      a: 'O acesso ao material é vitalício, permitindo que você volte aos conteúdos sempre que precisar estudar ou revisar.',
     },
     {
-      q: 'Existe garantia?',
-      a: 'Sim. Você tem 7 dias para conhecer o material. Caso não atenda às suas expectativas, poderá solicitar o reembolso dentro do prazo da garantia.',
+      q: 'Como funciona a garantia de 7 dias?',
+      a: 'Você terá 7 dias para conhecer o material. Se dentro desse prazo entender que ele não atende às suas expectativas, poderá solicitar o reembolso dentro do período de garantia.',
     },
   ];
 
   return (
-    <section className="w-full py-14 px-0" style={{ backgroundColor: '#FAFAF8' }}>
+    <section className="w-full py-14 px-0" style={{ backgroundColor: '#4F46A8' }}>
       <div className="mobile-content">
         <h2
           className="font-grotesk text-center uppercase"
-          style={{ color: '#2B145F', fontSize: '32px', fontWeight: 700, marginBottom: '28px', lineHeight: 1.2 }}
+          style={{ color: '#FFFFFF', fontSize: '32px', fontWeight: 700, marginBottom: '28px', lineHeight: 1.2 }}
         >
           Perguntas Frequentes
         </h2>
@@ -78,10 +50,10 @@ export function FAQ() {
                 key={idx}
                 style={{
                   backgroundColor: '#FFFFFF',
-                  border: '1px solid rgba(75,31,120,0.18)',
+                  border: '1px solid rgba(79,70,168,0.18)',
                   borderRadius: '16px',
                   overflow: 'hidden',
-                  boxShadow: '0 5px 14px rgba(43, 20, 95, 0.08)',
+                  boxShadow: '0 5px 14px rgba(29, 26, 43, 0.08)',
                   width: '100%',
                 }}
               >
@@ -94,7 +66,7 @@ export function FAQ() {
                   <span
                     className="text-left"
                     style={{
-                      color: '#24303A',
+                      color: '#1D252C',
                       fontSize: '15px',
                       fontWeight: 700,
                       lineHeight: 1.35,
@@ -106,7 +78,7 @@ export function FAQ() {
                   <span
                     className="transition-transform duration-200"
                     style={{
-                      color: '#4B1F78',
+                      color: '#4F46A8',
                       fontSize: '20px',
                       fontWeight: 700,
                       flexShrink: 0,
@@ -128,14 +100,14 @@ export function FAQ() {
                 >
                   <div
                     style={{
-                      borderTop: '1px solid rgba(75,31,120,0.18)',
-                      backgroundColor: '#F7F3FB',
+                      borderTop: '1px solid rgba(79,70,168,0.18)',
+                      backgroundColor: '#F7F7F5',
                       padding: '19px 18px',
                     }}
                   >
                     <p
                       className="text-left"
-                      style={{ color: '#24303A', fontSize: '15px', lineHeight: 1.6 }}
+                      style={{ color: '#1D252C', fontSize: '15px', lineHeight: 1.6 }}
                     >
                       {item.a}
                     </p>

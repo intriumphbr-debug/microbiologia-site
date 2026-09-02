@@ -1,15 +1,15 @@
 export function Guarantee() {
   return (
-    <section className="w-full py-16 md:py-24 lg:py-32" style={{ backgroundColor: '#24114F' }}>
+    <section className="w-full py-16 md:py-24 lg:py-32" style={{ backgroundColor: '#4F46A8' }}>
       <div className="mobile-content">
         <div
           className="max-w-2xl mx-auto bg-card p-6 sm:p-8 md:p-12 lg:p-16 border relative"
-          style={{ backgroundColor: '#FFFFFF', borderColor: 'rgba(214,166,46,0.5)', boxShadow: '0 8px 24px rgba(31,15,69,.28)', borderRadius: '20px' }}
+          style={{ backgroundColor: '#FFFFFF', borderColor: 'rgba(225,179,67,0.5)', boxShadow: '0 8px 24px rgba(29,26,43,.28)', borderRadius: '20px' }}
         >
           {/* Selo */}
           <div className="absolute -top-12 sm:-top-16 left-1/2 transform -translate-x-1/2 w-28 h-28 sm:w-40 sm:h-40 flex items-center justify-center">
             <img
-              src="/images/selo-garantia-7-dias.png"
+              src="/images/selo-garantia-7-dias.webp"
               alt="Garantia de 7 Dias"
               className="w-full h-full object-contain drop-shadow-lg"
               loading="lazy"
@@ -17,13 +17,13 @@ export function Guarantee() {
           </div>
 
           <div className="text-center space-y-6 sm:space-y-8 pt-12 sm:pt-16">
-            <h2 className="font-grotesk text-3xl sm:text-4xl md:text-5xl leading-tight text-pretty" style={{ color: '#2B145F' }}>
+            <h2 className="font-grotesk text-3xl sm:text-4xl md:text-5xl leading-tight text-pretty" style={{ color: '#4F46A8' }}>
               Você Tem 7 Dias para Conhecer o Material
             </h2>
 
-            <div className="space-y-3 sm:space-y-4 text-sm sm:text-base" style={{ color: '#43505C' }}>
+            <div className="space-y-3 sm:space-y-4 text-sm sm:text-base" style={{ color: '#667179' }}>
               <p className="leading-relaxed">
-                Após acessar o Microbiologia Visual, você terá 7 dias para avaliar o conteúdo. Caso entenda que o material não atende às suas expectativas, poderá solicitar o reembolso dentro do prazo de garantia, conforme as condições da plataforma de pagamento.
+                Acesse o Microbiologia Visual, explore o conteúdo e veja se ele faz sentido para você. Se dentro de 7 dias entender que o material não atende às suas expectativas, poderá solicitar o reembolso dentro do prazo de garantia.
               </p>
             </div>
           </div>

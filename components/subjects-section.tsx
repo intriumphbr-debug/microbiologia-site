@@ -14,7 +14,7 @@ const blocks: Block[] = [
     badge: 'FUNDAMENTOS',
     title: 'Fundamentos de Microbiologia',
     icon: Dna,
-    accent: '#2B145F',
+    accent: '#4F46A8',
     items: [
       'Estrutura da célula bacteriana',
       'Morfologia bacteriana',
@@ -34,7 +34,7 @@ const blocks: Block[] = [
     badge: 'BACTERIOLOGIA',
     title: 'Bacteriologia',
     icon: Microscope,
-    accent: '#0A6C78',
+    accent: '#4F46A8',
     items: [
       'Staphylococcus',
       'Streptococcus',
@@ -57,7 +57,7 @@ const blocks: Block[] = [
     badge: 'LABORATÓRIO',
     title: 'Identificação Laboratorial',
     icon: FlaskConical,
-    accent: '#2B145F',
+    accent: '#4F46A8',
     items: [
       'Microscopia',
       'Coloração de Gram',
@@ -81,7 +81,7 @@ const blocks: Block[] = [
     badge: 'VIRULÊNCIA & RESISTÊNCIA',
     title: 'Virulência, Infecção e Resistência',
     icon: Biohazard,
-    accent: '#0A6C78',
+    accent: '#4F46A8',
     items: [
       'Fatores de virulência',
       'Cápsula',
@@ -101,7 +101,7 @@ const blocks: Block[] = [
     badge: 'MICOLOGIA',
     title: 'Micologia',
     icon: Sprout,
-    accent: '#2B145F',
+    accent: '#4F46A8',
     items: [
       'Reino Fungi',
       'Estrutura dos fungos',
@@ -123,7 +123,7 @@ const blocks: Block[] = [
     badge: 'VIROLOGIA',
     title: 'Virologia',
     icon: Atom,
-    accent: '#0A6C78',
+    accent: '#4F46A8',
     items: [
       'Estrutura viral',
       'DNA x RNA',
@@ -144,14 +144,14 @@ const blocks: Block[] = [
 
 export function SubjectsSection() {
   return (
-    <section className="w-full py-16 md:py-24" style={{ backgroundColor: '#FAFAF8' }}>
+    <section className="w-full py-16 md:py-24" style={{ backgroundColor: '#F7F7F5' }}>
       <div className="mobile-content">
         <div className="mx-auto mb-10 flex max-w-3xl flex-col items-center gap-4 text-center md:mb-14">
-          <h2 className="font-grotesk text-3xl leading-tight text-pretty sm:text-4xl md:text-5xl" style={{ color: '#2B145F' }}>
-            Veja Alguns dos Assuntos que Você Vai Encontrar
+          <h2 className="font-grotesk text-3xl leading-tight text-pretty sm:text-4xl md:text-5xl" style={{ color: '#4F46A8' }}>
+            Microbiologia Organizada para Facilitar Seus Estudos
           </h2>
-          <p className="max-w-2xl text-sm leading-relaxed sm:text-base md:text-lg" style={{ color: '#43505C' }}>
-            O conteúdo percorre diferentes áreas da microbiologia para que você consiga estudar fundamentos, reconhecer microrganismos importantes e revisar temas laboratoriais e clínicos sem depender de dezenas de fontes diferentes.
+          <p className="max-w-2xl text-sm leading-relaxed sm:text-base md:text-lg" style={{ color: '#667179' }}>
+            Fundamentos, bacteriologia, laboratório, resistência, micologia e virologia organizados por tema para facilitar seus estudos.
           </p>
         </div>
 
@@ -162,7 +162,7 @@ export function SubjectsSection() {
               <article
                 key={block.badge}
                 className="flex flex-col rounded-[18px] border bg-white p-6 sm:p-7"
-                style={{ borderColor: '#E4DEEF', boxShadow: '0 8px 24px rgba(43,20,95,0.06)' }}
+                style={{ borderColor: 'rgba(79,70,168,0.15)', boxShadow: '0 8px 24px rgba(29,26,43,0.06)' }}
               >
                 <div className="flex items-center gap-3">
                   <span
@@ -178,7 +178,7 @@ export function SubjectsSection() {
                     >
                       {block.badge}
                     </span>
-                    <h3 className="font-grotesk text-lg leading-tight sm:text-xl" style={{ color: '#2B145F' }}>
+                    <h3 className="font-grotesk text-lg leading-tight sm:text-xl" style={{ color: '#4F46A8' }}>
                       {block.title}
                     </h3>
                   </div>
@@ -186,7 +186,7 @@ export function SubjectsSection() {
 
                 <ul className="mt-5 grid grid-cols-1 gap-x-4 gap-y-2 sm:grid-cols-2">
                   {block.items.map((item) => (
-                    <li key={item} className="flex items-start gap-2 text-sm" style={{ color: '#34313F' }}>
+                    <li key={item} className="flex items-start gap-2 text-sm" style={{ color: '#1D252C' }}>
                       <span
                         className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full"
                         style={{ backgroundColor: block.accent }}
@@ -197,7 +197,7 @@ export function SubjectsSection() {
                   ))}
                 </ul>
 
-                <p className="mt-5 border-t pt-4 text-sm leading-relaxed" style={{ color: '#43505C', borderColor: '#EFEAF6' }}>
+                <p className="mt-5 border-t pt-4 text-sm leading-relaxed" style={{ color: '#667179', borderColor: 'rgba(79,70,168,0.15)' }}>
                   {block.description}
                 </p>
               </article>

@@ -4,7 +4,7 @@ function StarRow() {
   return (
     <div className="flex items-center gap-1" aria-label="Avaliação de 5 estrelas">
       {Array.from({ length: 5 }).map((_, i) => (
-        <svg key={i} width="16" height="16" viewBox="0 0 24 24" fill="#FFB800" aria-hidden="true">
+        <svg key={i} width="16" height="16" viewBox="0 0 24 24" fill="#E1B343" aria-hidden="true">
           <path d="M12 2.5l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8-6.2-3.7-6.2 3.7 1.6-6.8-5.2-4.6 6.9-.6z" />
         </svg>
       ))}
@@ -41,14 +41,14 @@ export function Testimonials() {
   ];
 
   return (
-    <section className="w-full py-16 md:py-24 lg:py-32" style={{ backgroundColor: '#FAFAF8' }}>
+    <section className="w-full py-16 md:py-24 lg:py-32" style={{ backgroundColor: '#F7F7F5' }}>
       <div className="mobile-content">
         <div className="flex flex-col items-center text-center gap-4 mb-12 md:mb-16">
-          <h2 className="font-grotesk text-3xl sm:text-4xl md:text-5xl leading-tight text-pretty" style={{ color: '#2B145F' }}>
-            Quem Estuda Microbiologia Também Sente a Diferença
+          <h2 className="font-grotesk text-3xl sm:text-4xl md:text-5xl leading-tight text-pretty" style={{ color: '#4F46A8' }}>
+            Relatos de quem já utiliza o microbiologia visual
           </h2>
-          <p className="text-sm sm:text-base md:text-lg leading-relaxed max-w-2xl" style={{ color: '#43505C' }}>
-            Veja como um material visual e organizado pode deixar a revisão muito mais prática.
+          <p className="text-sm sm:text-base md:text-lg leading-relaxed max-w-2xl" style={{ color: '#667179' }}>
+            Veja as experiências de quem passou a estudar e revisar microbiologia com mais clareza.  
           </p>
         </div>
 
@@ -57,18 +57,18 @@ export function Testimonials() {
             <div
               key={item.name}
               className="flex flex-col gap-5 p-8 md:p-9"
-              style={{ backgroundColor: '#FFFFFF', border: '1px solid #E4DEEF', borderRadius: '20px', boxShadow: '0 8px 24px rgba(43,20,95,0.07)' }}
+              style={{ backgroundColor: '#FFFFFF', border: '1px solid rgba(79,70,168,0.15)', borderRadius: '20px', boxShadow: '0 8px 24px rgba(29,26,43,0.07)' }}
             >
               <StarRow />
 
-              <p className="text-sm md:text-base leading-relaxed" style={{ color: '#43505C' }}>
+              <p className="text-sm md:text-base leading-relaxed" style={{ color: '#667179' }}>
                 &ldquo;{item.quote}&rdquo;
               </p>
 
               <div className="mt-auto pt-2 flex items-center gap-3">
                 <div
                   className="relative w-11 h-11 rounded-full flex-shrink-0 overflow-hidden"
-                  style={{ border: '2px solid #0A6C78' }}
+                  style={{ border: '2px solid #4F46A8' }}
                 >
                   <Image
                     src={item.photo || "/placeholder.svg"}
@@ -80,10 +80,10 @@ export function Testimonials() {
                   />
                 </div>
                 <div className="flex flex-col text-left">
-                  <span className="font-semibold text-sm" style={{ color: '#2B145F' }}>
+                  <span className="font-semibold text-sm" style={{ color: '#4F46A8' }}>
                     {item.name}
                   </span>
-                  <span className="text-xs" style={{ color: '#6B7883' }}>
+                  <span className="text-xs" style={{ color: '#667179' }}>
                     {item.role}
                   </span>
                 </div>
