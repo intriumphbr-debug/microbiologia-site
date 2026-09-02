@@ -29,14 +29,14 @@ const carrossel1 = [
 ];
 
 const carrossel2 = [
-  { image: '', title: 'Ficha Visual', tag: 'Fichas Visuais' },
-  { image: '', title: 'Revisão Express', tag: 'Revisão' },
-  { image: '', title: 'Mapa Visual', tag: 'Mapas Visuais' },
-  { image: '', title: 'Teste sua Memória', tag: 'Teste' },
-  { image: '', title: 'Não Confunda', tag: 'Comparativo' },
-  { image: '', title: 'Revisão Express', tag: 'Revisão' },
-  { image: '', title: 'Mapa Visual', tag: 'Mapas Visuais' },
-  { image: '', title: 'Ficha Visual', tag: 'Fichas Visuais' },
+  { image: '/images/carrossel2-fungos-clinicos.png', title: 'Fungos de Importância Clínica', tag: 'Revisão Express' },
+  { image: '/images/carrossel2-virulencia-toxinas.png', title: 'Virulência, Toxinas e Relação Hospedeiro', tag: 'Revisão Express' },
+  { image: '/images/carrossel2-endogena-exogena.png', title: 'Infecção Endógena vs Exógena', tag: 'Não Confunda' },
+  { image: '/images/carrossel2-cocos-gram-positivos.png', title: 'Estafilococos vs Estreptococos vs Enterococos', tag: 'Não Confunda' },
+  { image: '/images/carrossel2-gram-coloracoes.png', title: 'Gram e Colorações Microbiológicas', tag: 'Revisão Express' },
+  { image: '/images/carrossel2-teste-memoria-virologia.png', title: 'Teste sua Memória: Virologia Essencial', tag: 'Teste sua Memória' },
+  { image: '/images/carrossel2-teste-memoria-final.png', title: 'Teste sua Memória: Desafio Final', tag: 'Teste sua Memória' },
+  { image: '/images/carrossel2-dengue.png', title: 'Vírus da Dengue', tag: 'Ficha Visual' },
 ];
 
 export default function Page() {
@@ -57,14 +57,14 @@ export default function Page() {
       <WhatYouGet />
       <SubjectsSection />
       <ProductCarousel
-        title="Do Conteúdo Completo à Revisão de Última Hora"
-        subtitle="O mesmo assunto pode aparecer de maneiras diferentes ao longo do sistema. Primeiro você entende visualmente, depois compara pontos que costumam gerar confusão, aprofunda características importantes, faz uma revisão rápida e finalmente testa o que conseguiu lembrar."
+        title="Cada Etapa Ajuda Você a Fixar Melhor o Conteúdo"
+        subtitle="O conteúdo aparece em diferentes formatos para facilitar a compreensão, a revisão e a memorização ao longo do estudo."
         flowSteps={[
           ['Mapa Visual', 'Entenda o assunto.'],
           ['Não Confunda', 'Separe conceitos parecidos.'],
           ['Ficha Visual', 'Memorize características importantes.'],
           ['Revisão Express', 'Recupere rapidamente os pontos principais.'],
-          ['Teste sua Memória', 'Descubra o que realmente ficou.'],
+          ['Teste sua Memória', 'Reforce o conteúdo estudado.'],
         ]}
         items={carrossel2}
         reverse={true}
