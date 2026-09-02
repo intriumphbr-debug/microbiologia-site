@@ -5,18 +5,25 @@ import { Check, Star, Lock, CreditCard, Zap, ShieldCheck, Gift } from 'lucide-re
 /* ===== Constantes de preço e checkout (fáceis de editar) ===== */
 const BASIC_PRICE = 'R$ 10,00';
 const COMPLETE_PRICE = 'R$ 24,90';
+const COMPLETE_TOTAL_PRICE = 'R$ 89,70';
 const BASIC_CHECKOUT_URL = '#';
 const COMPLETE_CHECKOUT_URL = '#';
 
-const completeFeatures = [
-  '40 Mapas Visuais',
-  '30 Não Confunda',
-  '40 Fichas Visuais',
-  '15 Revisões Express',
-  '15 Teste sua Memória',
+/* Cada item: [número em destaque, restante do texto] */
+const completeFeatures: [string, string][] = [
+  ['+140', 'Recursos Visuais de Microbiologia'],
+  ['40', 'Mapas Visuais'],
+  ['30', 'Não Confunda'],
+  ['40', 'Fichas Visuais'],
+  ['15', 'Revisões Express'],
+  ['15', 'Teste sua Memória'],
 ];
 
-const completeBonus = '+ 3 Bônus Exclusivos';
+const completeBonuses = [
+  'Bônus #1 — Plano Visual de Revisão em 21 Dias',
+  'Bônus #2 — Flashcards Essenciais de Microbiologia',
+  'Bônus #3 — Glossário Rápido de Microbiologia',
+];
 
 const securityItems = [
   [Lock, 'Compra segura'],
@@ -104,16 +111,16 @@ export function PricingSection() {
             </button>
           </div>
 
-          {/* ===== PLANO COMPLETO (destaque) ===== */}
+          {/* ===== PLANO COMPLETO (oferta premium) ===== */}
           <div
-            className="pricing-complete relative flex w-full flex-col rounded-[22px] p-6 pt-9 sm:p-8 sm:pt-10"
+            className="pricing-complete relative flex w-full flex-col rounded-[22px] p-6 pt-10 sm:p-8 sm:pt-11"
             style={{
-              background: '#4F46A8',
-              border: '2px solid #E1B343',
-              boxShadow: '0 24px 55px rgba(29, 26, 43, 0.45)',
+              backgroundColor: '#FFFFFF',
+              border: '1.5px solid rgba(79,70,168,0.18)',
+              boxShadow: '0 24px 55px rgba(29, 26, 43, 0.14)',
             }}
           >
-            {/* Selo */}
+            {/* Selo MAIS ESCOLHIDO */}
             <div
               className="absolute left-1/2 top-0 flex -translate-x-1/2 -translate-y-1/2 items-center gap-1.5 whitespace-nowrap rounded-full px-4 py-1.5 text-[11px] font-bold uppercase tracking-wide"
               style={{ backgroundColor: '#E1B343', color: '#1D252C', boxShadow: '0 6px 16px rgba(225, 179, 67, 0.4)' }}
@@ -122,90 +129,85 @@ export function PricingSection() {
               Mais escolhido
             </div>
 
-            <h3 className="font-grotesk text-xl sm:text-2xl" style={{ color: '#FFFFFF' }}>
-              Plano Completo
-            </h3>
-            <p className="mt-1 font-grotesk text-sm uppercase tracking-wide" style={{ color: '#E1B343' }}>
-              Microbiologia Visual Completo
-            </p>
-
-            {/* Mockup */}
-            <div className="mt-5 flex justify-center">
-              <div
-                className="flex w-full max-w-[220px] flex-col items-center justify-center gap-1.5 rounded-xl text-center"
-                style={{
-                  aspectRatio: '4 / 3',
-                  border: '1.5px dashed rgba(225, 179, 67, 0.55)',
-                  backgroundColor: 'rgba(255,255,255,0.04)',
-                  padding: '14px',
-                }}
-              >
-                <span
-                  className="flex items-center justify-center rounded-full text-base"
-                  style={{ width: '38px', height: '38px', backgroundColor: 'rgba(225,179,67,0.15)', color: '#E1B343', border: '1px solid rgba(225,179,67,0.5)' }}
-                  aria-hidden="true"
-                >
-                  +
-                </span>
-                <p className="font-grotesk text-xs" style={{ color: 'rgba(255,255,255,0.92)' }}>Mockup completo</p>
-                <p className="text-[10px]" style={{ color: 'rgba(255,255,255,0.7)' }}>Imagem em breve</p>
-              </div>
+            {/* Títulos */}
+            <div className="text-center">
+              <p className="font-grotesk text-xs sm:text-sm uppercase tracking-[0.18em]" style={{ color: '#4F46A8' }}>
+                Plano Completo
+              </p>
+              <h3 className="mt-1 font-grotesk text-2xl sm:text-3xl leading-tight text-balance" style={{ color: '#1D252C' }}>
+                Microbiologia Visual Completo
+              </h3>
             </div>
 
-            <ul className="mt-6 space-y-3">
-              {completeFeatures.map((feature) => (
-                <li key={feature} className="flex items-start gap-2.5">
+            {/* Mockup grande */}
+            <div className="mt-5 flex justify-center">
+              <img
+                src="/images/mockup-hero.webp"
+                alt="Mockup do Microbiologia Visual Completo com o produto principal e os três bônus"
+                className="w-full max-w-[380px] h-auto object-contain drop-shadow-xl"
+                loading="lazy"
+              />
+            </div>
+
+            {/* Lista do que está incluído */}
+            <ul className="mt-6 space-y-3.5">
+              {completeFeatures.map(([num, rest]) => (
+                <li key={rest} className="flex items-start gap-3">
                   <span
                     className="mt-0.5 flex shrink-0 items-center justify-center rounded-full"
-                    style={{ width: '20px', height: '20px', backgroundColor: '#E1B343', color: '#1D252C' }}
+                    style={{ width: '22px', height: '22px', backgroundColor: 'rgba(22,199,132,0.12)', color: '#16C784' }}
                   >
-                    <Check size={13} strokeWidth={3} aria-hidden="true" />
+                    <Check size={14} strokeWidth={3} aria-hidden="true" />
                   </span>
-                  <span className="text-sm sm:text-base font-medium" style={{ color: '#FFFFFF' }}>
-                    {feature}
+                  <span className="text-sm sm:text-base leading-snug" style={{ color: '#1D252C' }}>
+                    <span className="font-bold">{num}</span> {rest}
                   </span>
                 </li>
               ))}
-              <li className="flex items-start gap-2.5">
-                <span
-                  className="mt-0.5 flex shrink-0 items-center justify-center rounded-full"
-                  style={{ width: '20px', height: '20px', backgroundColor: '#E1B343', color: '#1D252C' }}
-                >
-                  <Gift size={12} strokeWidth={2.5} aria-hidden="true" />
-                </span>
-                <span className="text-sm sm:text-base font-bold" style={{ color: '#E1B343' }}>
-                  {completeBonus}
-                </span>
-              </li>
             </ul>
 
-            <p className="mt-4 text-xs leading-relaxed" style={{ color: 'rgba(255,255,255,0.7)' }}>
-              São mais de 140 recursos cobrindo desde estrutura bacteriana e Gram até meios de cultura, testes bioquímicos, fungos, vírus e resistência antimicrobiana.
+            {/* Bônus */}
+            <ul className="mt-5 space-y-3">
+              {completeBonuses.map((bonus) => (
+                <li key={bonus} className="flex items-start gap-3">
+                  <span
+                    className="mt-0.5 flex shrink-0 items-center justify-center rounded-full"
+                    style={{ width: '22px', height: '22px', backgroundColor: 'rgba(225,179,67,0.15)', color: '#E1B343' }}
+                  >
+                    <Gift size={13} strokeWidth={2.5} aria-hidden="true" />
+                  </span>
+                  <span className="text-sm sm:text-base font-semibold leading-snug" style={{ color: '#1D252C' }}>
+                    {bonus}
+                  </span>
+                </li>
+              ))}
+            </ul>
+
+            {/* Texto de apoio */}
+            <p className="mt-5 text-sm leading-relaxed" style={{ color: '#667179' }}>
+              Tenha acesso ao sistema completo com mapas, comparações, fichas, revisões e atividades visuais para estudar microbiologia de forma mais clara, organizada e prática.
             </p>
 
-            <div
-              className="mt-6 rounded-xl px-4 py-3 text-center"
-              style={{ backgroundColor: 'rgba(79, 70, 168, 0.35)', border: '1px solid rgba(225, 179, 67, 0.35)' }}
-            >
-              <p className="font-grotesk text-lg" style={{ color: '#E1B343' }}>+140 RECURSOS VISUAIS</p>
-              <p className="mt-1 text-xs font-semibold" style={{ color: 'rgba(255,255,255,0.92)' }}>
-                + bônus exclusivos incluídos
+            {/* Separador antes da área de preço */}
+            <div className="mt-6 mb-5 h-px w-full" style={{ backgroundColor: 'rgba(79,70,168,0.12)' }} />
+
+            {/* Área de preço */}
+            <div className="text-center">
+              <p className="text-sm" style={{ color: '#667179' }}>
+                Valor total: <span className="line-through">{COMPLETE_TOTAL_PRICE}</span>
               </p>
-            </div>
-
-            <p className="mt-5 text-sm leading-relaxed" style={{ color: 'rgba(255,255,255,0.78)' }}>
-              Tenha acesso ao sistema completo com conteúdos de fundamentos, bacteriologia, identificação laboratorial, virulência, resistência antimicrobiana, micologia e virologia distribuídos em 5 coleções complementares.
-            </p>
-
-            <div className="mt-6 text-center">
-              <span className="font-grotesk text-5xl sm:text-6xl" style={{ color: '#FFFFFF' }}>
+              <p className="mt-3 font-grotesk text-xs sm:text-sm uppercase tracking-[0.16em]" style={{ color: '#4F46A8' }}>
+                Hoje por apenas
+              </p>
+              <p className="mt-1 font-grotesk text-6xl sm:text-7xl leading-none" style={{ color: '#16C784' }}>
                 {COMPLETE_PRICE}
-              </span>
-              <p className="mt-2 text-xs sm:text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.78)' }}>
+              </p>
+              <p className="mt-3 text-xs sm:text-sm font-medium" style={{ color: '#667179' }}>
                 Pagamento único • Sem mensalidade
               </p>
             </div>
 
+            {/* CTA */}
             <button
               onClick={() => goToCheckout(COMPLETE_CHECKOUT_URL)}
               className="mt-6 w-full rounded-full py-4 px-6 text-base font-bold active:scale-95 cta-animate"
@@ -213,7 +215,7 @@ export function PricingSection() {
                 background: '#16C784',
                 color: '#FFFFFF',
                 border: '1px solid #16C784',
-                boxShadow: '0 10px 26px rgba(22, 199, 132, 0.5)',
+                boxShadow: '0 10px 26px rgba(22, 199, 132, 0.35)',
                 transition: 'all 200ms ease',
               }}
               onMouseEnter={(e) => {
@@ -227,6 +229,16 @@ export function PricingSection() {
             >
               QUERO O MICROBIOLOGIA VISUAL COMPLETO
             </button>
+
+            {/* Linha de confiança */}
+            <div className="mt-5 flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
+              {securityItems.map(([Icon, label]) => (
+                <div key={label} className="flex items-center gap-1.5 text-xs font-medium" style={{ color: '#667179' }}>
+                  <Icon size={14} strokeWidth={2} style={{ color: '#4F46A8' }} aria-hidden="true" />
+                  {label}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
