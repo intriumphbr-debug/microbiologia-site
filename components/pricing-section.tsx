@@ -22,7 +22,7 @@ const completeFeatures: [string, string][] = [
 const completeBonuses = [
   'Bônus #1 — Plano Visual de Revisão em 21 Dias',
   'Bônus #2 — Flashcards Essenciais de Microbiologia',
-  'Bônus #3 — Glossário Rápido de Microbiologia',
+  'Bônus #3 — Glossário de Microbiologia',
 ];
 
 function goToCheckout(url: string) {
