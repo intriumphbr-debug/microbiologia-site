@@ -15,6 +15,7 @@ interface ProductCarouselProps {
   }>;
   reverse?: boolean;
   bg?: string;
+  landscape?: boolean;
 }
 
 function CarouselCard({ title, image, tag }: { title: string; image: string; tag?: string }) {
@@ -66,7 +67,7 @@ function CarouselCard({ title, image, tag }: { title: string; image: string; tag
   );
 }
 
-export function ProductCarousel({ title, subtitle, note, flowSteps, items, reverse = false, bg = '#FFFFFF' }: ProductCarouselProps) {
+export function ProductCarousel({ title, subtitle, note, flowSteps, items, reverse = false, bg = '#FFFFFF', landscape = false }: ProductCarouselProps) {
   useEffect(() => {
     items.forEach((item) => {
       if (item.image) {
@@ -153,12 +154,18 @@ export function ProductCarousel({ title, subtitle, note, flowSteps, items, rever
             height: auto;
             aspect-ratio: 3 / 4;
           }
+          .carousel-item.landscape {
+            width: 300px;
+            aspect-ratio: 3 / 2;
+          }
           @media (min-width: 641px) and (max-width: 1024px) {
             .carousel-item { width: 240px; }
+            .carousel-item.landscape { width: 400px; }
             .carousel-track { gap: 1.5rem; }
           }
           @media (min-width: 1025px) {
             .carousel-item { width: 280px; }
+            .carousel-item.landscape { width: 460px; }
             .carousel-track { gap: 2rem; }
           }
         `}</style>
@@ -167,7 +174,7 @@ export function ProductCarousel({ title, subtitle, note, flowSteps, items, rever
           <div className="absolute left-0 top-0 bottom-0 w-8 sm:w-16 md:w-24 z-20 pointer-events-none" style={{ background: `linear-gradient(to right, ${bg}, transparent)` }} />
           <div className={`carousel-track ${reverse ? 'backward' : 'forward'}`}>
             {trackItems.map((item, idx) => (
-              <div key={idx} className="carousel-item">
+              <div key={idx} className={`carousel-item${landscape ? ' landscape' : ''}`}>
                 <CarouselCard title={item.title} image={item.image} tag={item.tag} />
               </div>
             ))}

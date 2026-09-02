@@ -18,14 +18,14 @@ import { Footer } from '@/components/footer';
 
 // Páginas reais das coleções (substitua `image` pelos arquivos do Microbiologia Visual)
 const carrossel1 = [
-  { image: '', title: 'Mapa Visual', tag: 'Mapas Visuais' },
-  { image: '', title: 'Não Confunda', tag: 'Comparativo' },
-  { image: '', title: 'Ficha Visual', tag: 'Fichas Visuais' },
-  { image: '', title: 'Revisão Express', tag: 'Revisão' },
-  { image: '', title: 'Teste sua Memória', tag: 'Teste' },
-  { image: '', title: 'Mapa Visual', tag: 'Mapas Visuais' },
-  { image: '', title: 'Ficha Visual', tag: 'Fichas Visuais' },
-  { image: '', title: 'Não Confunda', tag: 'Comparativo' },
+  { image: '/images/carrossel-classificacao-bacterias.webp', title: 'Classificação Geral das Bactérias', tag: 'Mapa Visual' },
+  { image: '/images/carrossel-micoses.webp', title: 'Classificação das Micoses', tag: 'Mapa Visual' },
+  { image: '/images/carrossel-virulencia.webp', title: 'Fatores de Virulência', tag: 'Mapa Visual' },
+  { image: '/images/carrossel-meios-cultura.webp', title: 'Meios de Cultura Microbiológicos', tag: 'Mapa Visual' },
+  { image: '/images/carrossel-endosporos.webp', title: 'Formação de Endósporos', tag: 'Mapa Visual' },
+  { image: '/images/carrossel-microrganismos.webp', title: 'Classificação dos Microrganismos', tag: 'Mapa Visual' },
+  { image: '/images/carrossel-virus.webp', title: 'Vírus Envelopados x Não Envelopados', tag: 'Mapa Visual' },
+  { image: '/images/carrossel-enterobacterias.webp', title: 'Enterobactérias (Enterobacterales)', tag: 'Mapa Visual' },
 ];
 
 const carrossel2 = [
@@ -48,9 +48,9 @@ export default function Page() {
       <HeroSection onCtaClick={handleCtaClick} />
       <ProductCarousel
         title="Conheça o Microbiologia Visual por Dentro"
-        subtitle="Você não recebe apenas páginas bonitas. O Microbiologia Visual organiza os principais assuntos de microbiologia em mapas, comparações, fichas, revisões e atividades para que seja mais fácil compreender como os conceitos se relacionam e voltar ao conteúdo quando precisar revisar."
-        note="Da estrutura bacteriana à virologia, o material percorre fundamentos, microrganismos importantes, identificação laboratorial, virulência, micologia, resistência antimicrobiana e outros temas recorrentes no estudo de microbiologia."
+        subtitle="Tudo organizado visualmente para você entender melhor, revisar mais rápido e encontrar o que precisa com facilidade."
         items={carrossel1}
+        landscape={true}
         bg="#FFFFFF"
       />
       <HowItWorks />
