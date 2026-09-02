@@ -7,10 +7,10 @@ import { useEffect, useRef, useState } from 'react';
 const BASIC_PRICE = 'R$ 10,00';
 const COMPLETE_PRICE = 'R$ 24,90';
 const COMPLETE_TOTAL_PRICE = 'R$ 89,70';
-const COMPLETE_DISCOUNT_PRICE = 'R$ 16,00';
-const BASIC_CHECKOUT_URL = '#';
+const COMPLETE_DISCOUNT_PRICE = 'R$ 19,90';
+const BASIC_CHECKOUT_URL = 'https://pay.cakto.com.br/34iw7zr_1047917?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=';
 const COMPLETE_CHECKOUT_URL = '#';
-const COMPLETE_DISCOUNT_CHECKOUT_URL = '#';
+const COMPLETE_DISCOUNT_CHECKOUT_URL = 'https://pay.cakto.com.br/39bvpqj?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=';
 
 /* Itens do Plano Básico */
 const basicFeatures = [
@@ -339,19 +339,16 @@ export function PricingSection() {
             {/* Headline */}
             <h3
               id="upsell-title"
-              className="mt-5 text-center font-grotesk uppercase tracking-wide"
-              style={{ color: '#667179', fontSize: '13px' }}
+              className="mt-6 text-center font-grotesk leading-tight text-balance"
+              style={{ color: '#1D252C', fontSize: '26px' }}
             >
-              Antes de continuar...
-            </h3>
-            <p className="mt-2 text-center font-grotesk leading-tight text-balance" style={{ color: '#1D252C', fontSize: '25px' }}>
-              Leve o <span style={{ color: '#4F46A8' }}>Plano Completo</span> por{' '}
+              Leve o PLANO COMPLETO por{' '}
               <span style={{ color: '#16C784' }}>{COMPLETE_DISCOUNT_PRICE}</span>
-            </p>
+            </h3>
 
             {/* Subheadline */}
-            <p className="mt-3 text-center text-[15px] leading-relaxed" style={{ color: '#667179' }}>
-              Por apenas R$ 6,00 a mais, você libera as 5 coleções completas + 3 bônus exclusivos.
+            <p className="mt-3 text-center text-[15px] leading-relaxed" style={{ color: '#4A5158' }}>
+              Todos os bônus + atualizações futuras. Esta condição desaparece ao fechar esta janela.
             </p>
 
             {/* CTA principal */}
@@ -375,7 +372,7 @@ export function PricingSection() {
               className="mt-4 w-full px-4 py-1 text-center text-sm underline"
               style={{ color: '#667179' }}
             >
-              Não, obrigado. Quero continuar com o Plano Básico
+              Não, obrigado. Quero continuar com o básico
             </button>
           </div>
         </div>
