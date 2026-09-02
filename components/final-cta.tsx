@@ -9,7 +9,7 @@ export function FinalCta() {
         <div className="mobile-content flex flex-col items-center gap-4">
           <div className="text-center space-y-3 mb-4 w-full">
             <h2 className="w-full font-grotesk text-2xl sm:text-3xl md:text-4xl leading-tight text-pretty" style={{ color: '#FFFFFF', boxSizing: 'border-box' }}>
-              Pare de Depender de Anotações Espalhadas para Revisar Microbiologia
+              Chega de Estudar Microbiologia de Forma Bagunçada
             </h2>
             <p className="text-sm sm:text-base md:text-lg max-w-2xl" style={{ color: 'rgba(255,255,255,0.78)' }}>
               Tenha mapas, comparações, fichas, revisões e testes organizados visualmente em um único material.
