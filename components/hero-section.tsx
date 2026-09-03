@@ -29,7 +29,7 @@ export function HeroSection({ onCtaClick }: { onCtaClick: () => void }) {
           </div>
           <div className="w-full flex justify-center py-2 sm:py-4 md:py-6 overflow-visible">
             <div className="w-full max-w-2xl flex justify-center items-center">
-              <img
+              <img:
                 src="/images/mockup-hero.webp"
                 alt="Mockup do Microbiologia Visual: guia principal, fichas de revisão e os três bônus"
                 className="w-full h-auto object-contain"
