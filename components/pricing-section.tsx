@@ -92,10 +92,10 @@ export function PricingSection() {
         {/* Cabeçalho */}
         <div className="flex flex-col items-center text-center gap-3 md:gap-4 mb-10 md:mb-14">
           <h2 className="font-grotesk text-3xl sm:text-4xl md:text-5xl leading-tight text-pretty" style={{ color: '#4F46A8' }}>
-            Escolha Como Você Quer Acessar
+            Escolha A Opção Ideal Para Você
           </h2>
           <p className="text-sm sm:text-base md:text-lg leading-relaxed max-w-2xl" style={{ color: '#667179' }}>
-            Comece pelo essencial ou tenha acesso ao sistema completo de revisão visual.
+            
           </p>
         </div>
 
