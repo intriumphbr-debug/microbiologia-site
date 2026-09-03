@@ -16,7 +16,7 @@ export function Testimonials() {
   const testimonials = [
     {
       quote:
-        'Eu sempre me perdia quando precisava revisar porque tinha resumo em um lugar, anotação em outro e ainda confundia vários nomes. O que eu mais gostei foi conseguir abrir um assunto e visualizar tudo de forma muito mais organizada.',
+        'Eu tinha muita coisa anotada em lugares diferentes e, quando ia revisar, acabava me perdendo. Com o material ficou bem mais fácil bater o olho no assunto e lembrar do que eu já tinha estudado.',
       name: 'Mariana Alves',
       role: 'Estudante da área da saúde',
       photo: '/images/depoimento-02.webp',
@@ -24,7 +24,7 @@ export function Testimonials() {
     },
     {
       quote:
-        'Os comparativos foram a parte que mais me ajudou. Eu entendia vários conteúdos separados, mas na hora de diferenciar um do outro acabava confundindo. Visualmente ficou muito mais fácil de revisar.',
+        'Pra mim, a parte dos comparativos foi a melhor. Eu sempre confundia alguns conceitos que pareciam muito parecidos e ver tudo lado a lado ajudou bastante na hora de revisar.',
       name: 'Lucas Martins',
       role: 'Estudante de Microbiologia',
       photo: '/images/depoimento-01.webp',
@@ -32,7 +32,7 @@ export function Testimonials() {
     },
     {
       quote:
-        'Gostei principalmente das fichas e das revisões rápidas. Quando não tenho tempo de reler tudo, consigo abrir o material e lembrar dos pontos principais sem precisar voltar para várias anotações.',
+        'Uso mais as fichas e as revisões rápidas. Quando estou sem muito tempo, consigo revisar os pontos principais sem ter que voltar para um monte de resumo e anotação.',
       name: 'Camila Ferreira',
       role: 'Estudante da área da saúde',
       photo: '/images/depoimento-03.webp',
