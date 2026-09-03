@@ -11,7 +11,7 @@ export function HeroSection({ onCtaClick }: { onCtaClick: () => void }) {
         <div className="w-full flex flex-col items-center gap-6 sm:gap-8 md:gap-12">
           <div className="text-center">
             <p className="text-xs sm:text-sm font-bold inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full border" style={{ backgroundColor: 'rgba(79, 70, 168, 0.06)', color: '#4F46A8', borderColor: 'rgba(79, 70, 168, 0.30)' }}>
-              COMPRA 100% SEGURA E PROTEGIDA
+              🔒 COMPRA 100% SEGURA E PROTEGIDA
             </p>
           </div>
           <div className="w-full flex flex-col items-center gap-3 sm:gap-4">
