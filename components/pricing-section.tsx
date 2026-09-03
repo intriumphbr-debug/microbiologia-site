@@ -8,9 +8,9 @@ const BASIC_PRICE = 'R$ 10,00';
 const COMPLETE_PRICE = 'R$ 24,90';
 const COMPLETE_TOTAL_PRICE = 'R$ 89,70';
 const COMPLETE_DISCOUNT_PRICE = 'R$ 16,00';
-const BASIC_CHECKOUT_URL = 'https://pay.cakto.com.br/34iw7zr_1047917?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=';
+const BASIC_CHECKOUT_URL = 'https://pay.cakto.com.br/mn53ikz_1082144';
 const COMPLETE_CHECKOUT_URL = '#';
-const COMPLETE_DISCOUNT_CHECKOUT_URL = 'https://pay.cakto.com.br/39bvpqj?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=';
+const COMPLETE_DISCOUNT_CHECKOUT_URL = 'https://pay.cakto.com.br/3vv5xt3_1082158';
 
 /* Itens do Plano Básico */
 const basicFeatures = [
