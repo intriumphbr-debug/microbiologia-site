@@ -19,24 +19,24 @@ export function Testimonials() {
         'Eu sempre me perdia quando precisava revisar porque tinha resumo em um lugar, anotação em outro e ainda confundia vários nomes. O que eu mais gostei foi conseguir abrir um assunto e visualizar tudo de forma muito mais organizada.',
       name: 'Mariana Alves',
       role: 'Estudante da área da saúde',
-      photo: '/images/depoimentos/mariana-alves.png',
-      objectPosition: '50% 22%',
+      photo: '/images/depoimento-02.webp',
+      objectPosition: '50% 32%',
     },
     {
       quote:
         'Os comparativos foram a parte que mais me ajudou. Eu entendia vários conteúdos separados, mas na hora de diferenciar um do outro acabava confundindo. Visualmente ficou muito mais fácil de revisar.',
       name: 'Lucas Martins',
       role: 'Estudante de Microbiologia',
-      photo: '/images/depoimentos/lucas-martins.png',
-      objectPosition: '50% 26%',
+      photo: '/images/depoimento-01.webp',
+      objectPosition: '50% 40%',
     },
     {
       quote:
         'Gostei principalmente das fichas e das revisões rápidas. Quando não tenho tempo de reler tudo, consigo abrir o material e lembrar dos pontos principais sem precisar voltar para várias anotações.',
       name: 'Camila Ferreira',
       role: 'Estudante da área da saúde',
-      photo: '/images/depoimentos/camila-ferreira.png',
-      objectPosition: '50% 26%',
+      photo: '/images/depoimento-03.webp',
+      objectPosition: '50% 30%',
     },
   ];
 
@@ -66,10 +66,7 @@ export function Testimonials() {
               </p>
 
               <div className="mt-auto pt-2 flex items-center gap-3">
-                <div
-                  className="relative w-11 h-11 rounded-full flex-shrink-0 overflow-hidden"
-                  style={{ border: '2px solid #4F46A8' }}
-                >
+                <div className="relative w-11 h-11 rounded-full flex-shrink-0 overflow-hidden">
                   <Image
                     src={item.photo || "/placeholder.svg"}
                     alt={item.name}
