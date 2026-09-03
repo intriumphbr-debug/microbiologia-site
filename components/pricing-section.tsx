@@ -9,7 +9,7 @@ const COMPLETE_PRICE = 'R$ 24,90';
 const COMPLETE_TOTAL_PRICE = 'R$ 89,70';
 const COMPLETE_DISCOUNT_PRICE = 'R$ 16,00';
 const BASIC_CHECKOUT_URL = 'https://pay.cakto.com.br/mn53ikz_1082144';
-const COMPLETE_CHECKOUT_URL = '#';
+const COMPLETE_CHECKOUT_URL = 'https://pay.cakto.com.br/buy5dpo_1080833';
 const COMPLETE_DISCOUNT_CHECKOUT_URL = 'https://pay.cakto.com.br/3vv5xt3_1082158';
 
 /* Itens do Plano Básico */
