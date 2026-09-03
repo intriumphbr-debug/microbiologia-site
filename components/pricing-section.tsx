@@ -128,7 +128,7 @@ export function PricingSection() {
             </div>
 
             {/* Lista do que está incluído */}
-            <p className="mt-5 font-grotesk text-xs uppercase tracking-[0.16em]" style={{ color: '#4F46A8' }}>
+            <p className="mt-7 font-grotesk text-xs uppercase tracking-[0.16em]" style={{ color: '#4F46A8' }}>
               Inclui:
             </p>
             <ul className="mt-3 space-y-3.5">
