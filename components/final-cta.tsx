@@ -1,8 +1,16 @@
 'use client';
 
+const COMPLETE_CHECKOUT_URL = 'https://pay.cakto.com.br/buy5dpo_1080833';
+
 export function FinalCta() {
-  const scrollToPlans = () =>
-    document.getElementById('checkout')?.scrollIntoView({ behavior: 'smooth' });
+  const goToCheckout = () => {
+    if (typeof window === 'undefined') return;
+    const params = window.location.search;
+    const separator = COMPLETE_CHECKOUT_URL.includes('?') ? '&' : '?';
+    window.location.href = params
+      ? `${COMPLETE_CHECKOUT_URL}${separator}${params.slice(1)}`
+      : COMPLETE_CHECKOUT_URL;
+  };
 
   return (
       <section className="w-full py-12 md:py-16 lg:py-20" style={{ backgroundColor: '#4F46A8' }}>
@@ -17,7 +25,7 @@ export function FinalCta() {
           </div>
 
         <button
-          onClick={scrollToPlans}
+          onClick={goToCheckout}
           className="w-full font-bold py-3 sm:py-4 px-8 sm:px-12 rounded-full text-base sm:text-lg active:scale-95 cta-animate"
           style={{
             maxWidth: '100%',
