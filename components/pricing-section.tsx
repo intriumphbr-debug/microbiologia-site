@@ -123,20 +123,12 @@ export function PricingSection() {
             {/* Títulos */}
             <div className="text-center">
               <p className="font-grotesk text-2xl sm:text-3xl leading-tight" style={{ color: '#1D252C' }}>
-                Plano Básico
-              </p>
-              <p className="mt-1.5 text-lg" style={{ color: '#667179' }}>
-                Microbiologia Visual — Mapas Visuais
+                Microbiologia Visual
               </p>
             </div>
 
-            {/* Texto de apoio */}
-            <p className="mt-4 text-center text-[15px] leading-relaxed" style={{ color: '#667179' }}>
-              Uma opção direta para quem quer começar pelos mapas visuais e consultar os principais assuntos de microbiologia de forma clara e organizada.
-            </p>
-
             {/* Lista do que está incluído */}
-            <p className="mt-6 font-grotesk text-xs uppercase tracking-[0.16em]" style={{ color: '#4F46A8' }}>
+            <p className="mt-5 font-grotesk text-xs uppercase tracking-[0.16em]" style={{ color: '#4F46A8' }}>
               Inclui:
             </p>
             <ul className="mt-3 space-y-3.5">
