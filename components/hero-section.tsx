@@ -24,7 +24,7 @@ export function HeroSection({ onCtaClick }: { onCtaClick: () => void }) {
               <span style={{ color: '#4F46A8' }}>visuais</span> de Microbiologia
             </h1>
             <p className="text-sm sm:text-base leading-relaxed text-pretty text-center max-w-md sm:max-w-lg" style={{ color: '#667179' }}>
-              Mapas visuais, comparativos, fichas de revisão, resumos express e testes de memória para estudar, revisar e entender microbiologia de forma mais visual e organizada.
+              Tenha os principais conteúdos de microbiologia organizados visualmente para estudar e revisar com mais clareza.
             </p>
           </div>
           <div className="w-full flex justify-center py-2 sm:py-4 md:py-6 overflow-visible">

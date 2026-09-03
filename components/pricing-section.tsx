@@ -23,6 +23,16 @@ const basicFeatures = [
   'Acesso imediato ao material',
 ];
 
+/* O que NÃO está incluído no Plano Básico (reservado ao Completo) */
+const basicNotIncluded = [
+  '30 recursos da coleção Não Confunda',
+  '40 Fichas Visuais',
+  '15 Revisões Express',
+  '15 Testes sua Memória',
+  '3 bônus exclusivos',
+  'Sistema completo com +140 recursos visuais',
+];
+
 /* Cada item: [número em destaque, restante do texto] */
 const completeFeatures: [string, string][] = [
   ['+140', 'Recursos Visuais de Microbiologia'],
@@ -113,20 +123,15 @@ export function PricingSection() {
             {/* Títulos */}
             <div className="text-center">
               <p className="font-grotesk text-2xl sm:text-3xl leading-tight" style={{ color: '#1D252C' }}>
-                Plano Básico
-              </p>
-              <p className="mt-1.5 text-lg" style={{ color: '#667179' }}>
-                Microbiologia Visual — Mapas Visuais
+                Microbiologia Visual
               </p>
             </div>
 
-            {/* Texto de apoio */}
-            <p className="mt-4 text-center text-[15px] leading-relaxed" style={{ color: '#667179' }}>
-              Uma opção direta para quem quer começar pelos mapas visuais e consultar os principais assuntos de microbiologia de forma clara e organizada.
-            </p>
-
             {/* Lista do que está incluído */}
-            <ul className="mt-6 space-y-3.5">
+            <p className="mt-7 font-grotesk text-xs uppercase tracking-[0.16em]" style={{ color: '#4F46A8' }}>
+              Inclui:
+            </p>
+            <ul className="mt-3 space-y-3.5">
               {basicFeatures.map((feature) => (
                 <li key={feature} className="flex items-start gap-3">
                   <span
@@ -137,6 +142,26 @@ export function PricingSection() {
                   </span>
                   <span className="text-[15px] leading-snug" style={{ color: '#1D252C' }}>
                     {feature}
+                  </span>
+                </li>
+              ))}
+            </ul>
+
+            {/* Não inclui (reservado ao Plano Completo) */}
+            <p className="mt-6 font-grotesk text-xs uppercase tracking-[0.16em]" style={{ color: '#9AA0A6' }}>
+              Não inclui:
+            </p>
+            <ul className="mt-3 space-y-3">
+              {basicNotIncluded.map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <span
+                    className="mt-0.5 flex shrink-0 items-center justify-center rounded-full"
+                    style={{ width: '20px', height: '20px', backgroundColor: 'rgba(79,70,168,0.08)', color: '#A6A2C4' }}
+                  >
+                    <X size={12} strokeWidth={2.5} aria-hidden="true" />
+                  </span>
+                  <span className="text-[14px] leading-snug" style={{ color: '#9AA0A6' }}>
+                    {item}
                   </span>
                 </li>
               ))}
