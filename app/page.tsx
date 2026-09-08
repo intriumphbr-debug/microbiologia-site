@@ -15,59 +15,59 @@ import { FAQ } from '@/components/faq';
 import { FinalCta } from '@/components/final-cta';
 import { Footer } from '@/components/footer';
 
-// Páginas reais das coleções (substitua `image` pelos arquivos do Microbiologia Visual)
+// Páginas internas reais da coleção de Osteologia Veterinária
 const carrossel1 = [
-  { image: '/images/carrossel-classificacao-bacterias.webp', title: 'Classificação Geral das Bactérias', tag: 'Mapa Visual' },
-  { image: '/images/carrossel-micoses.webp', title: 'Classificação das Micoses', tag: 'Mapa Visual' },
-  { image: '/images/carrossel-virulencia.webp', title: 'Fatores de Virulência', tag: 'Mapa Visual' },
-  { image: '/images/carrossel-meios-cultura.webp', title: 'Meios de Cultura Microbiológicos', tag: 'Mapa Visual' },
-  { image: '/images/carrossel-endosporos.webp', title: 'Formação de Endósporos', tag: 'Mapa Visual' },
-  { image: '/images/carrossel-microrganismos.webp', title: 'Classificação dos Microrganismos', tag: 'Mapa Visual' },
-  { image: '/images/carrossel-virus.webp', title: 'Vírus Envelopados x Não Envelopados', tag: 'Mapa Visual' },
-  { image: '/images/carrossel-enterobacterias.webp', title: 'Enterobactérias (Enterobacterales)', tag: 'Mapa Visual' },
+  { image: '/images/osteo/c1-escapula.png', title: 'Escápula', tag: 'Página Anatômica' },
+  { image: '/images/osteo/c1-umero.png', title: 'Úmero', tag: 'Página Anatômica' },
+  { image: '/images/osteo/c1-carpo.png', title: 'Carpo', tag: 'Página Anatômica' },
+  { image: '/images/osteo/c1-lado.png', title: 'Como Identificar o Lado', tag: 'Direito x Esquerdo' },
+  { image: '/images/osteo/c1-escapula-especies.png', title: 'Escápula Comparada entre Espécies', tag: 'Comparação' },
+  { image: '/images/osteo/c1-umero-especies.png', title: 'Úmero Comparado entre Espécies', tag: 'Comparação' },
+  { image: '/images/osteo/c1-comparacao-geral.png', title: 'Comparação Geral entre Espécies', tag: 'Comparação' },
+  { image: '/images/osteo/c1-mapa-toracico.png', title: 'Mapa Visual do Membro Torácico', tag: 'Mapa Visual' },
 ];
 
 const carrossel2 = [
-  { image: '/images/carrossel2-fungos-clinicos.png', title: 'Fungos de Importância Clínica', tag: 'Revisão Express' },
-  { image: '/images/carrossel2-virulencia-toxinas.png', title: 'Virulência, Toxinas e Relação Hospedeiro', tag: 'Revisão Express' },
-  { image: '/images/carrossel2-endogena-exogena.png', title: 'Infecção Endógena vs Exógena', tag: 'Não Confunda' },
-  { image: '/images/carrossel2-cocos-gram-positivos.png', title: 'Estafilococos vs Estreptococos vs Enterococos', tag: 'Não Confunda' },
-  { image: '/images/carrossel2-gram-coloracoes.png', title: 'Gram e Colorações Microbiológicas', tag: 'Revisão Express' },
-  { image: '/images/carrossel2-teste-memoria-virologia.png', title: 'Teste sua Memória: Virologia Essencial', tag: 'Teste sua Memória' },
-  { image: '/images/carrossel2-teste-memoria-final.png', title: 'Teste sua Memória: Desafio Final', tag: 'Teste sua Memória' },
-  { image: '/images/carrossel2-dengue.png', title: 'Vírus da Dengue', tag: 'Ficha Visual' },
+  { image: '/images/osteo/c2-carpo-especies.png', title: 'Carpo Comparado entre Espécies', tag: 'Comparação' },
+  { image: '/images/osteo/c2-metacarpos.png', title: 'Metacarpos Comparados', tag: 'Comparação' },
+  { image: '/images/osteo/c2-falanges.png', title: 'Falanges Comparadas', tag: 'Comparação' },
+  { image: '/images/osteo/c2-articulacoes.png', title: 'Articulações do Membro Torácico', tag: 'Página Anatômica' },
+  { image: '/images/osteo/c2-diferencas.png', title: 'Diferenças que Mais Caem entre Espécies', tag: 'Não Confunda' },
+  { image: '/images/osteo/c2-checklist.png', title: 'Checklist para Prova Prática', tag: 'Revisão' },
+  { image: '/images/osteo/c2-treino.png', title: 'Treino Prático de Identificação', tag: 'Teste' },
+  { image: '/images/osteo/c2-resumo.png', title: 'Resumo Visual', tag: 'Revisão' },
 ];
 
 export default function Page() {
   const offerRef = useRef<HTMLDivElement>(null);
   const handleCtaClick = () => offerRef.current?.scrollIntoView({ behavior: 'smooth' });
   return (
-    <main className="min-h-screen" style={{ backgroundColor: '#F7F7F5' }}>
+    <main className="min-h-screen" style={{ backgroundColor: '#F3EBDD' }}>
       <TopBar />
       <HeroSection onCtaClick={handleCtaClick} />
       <ProductCarousel
-        title="Conheça o Microbiologia Visual por Dentro"
-        subtitle="Tudo organizado visualmente para você entender melhor, revisar mais rápido e encontrar o que precisa com facilidade."
+        title="Conheça a Osteologia Veterinária por Dentro"
+        subtitle="Veja como ossos, acidentes ósseos, vistas anatômicas e diferenças entre espécies foram organizados para facilitar sua identificação e revisão."
         items={carrossel1}
         landscape={true}
-        bg="#FFFFFF"
+        bg="#FBF8F2"
       />
       <HowItWorks />
       <WhatYouGet />
       <SubjectsSection />
       <ProductCarousel
-        title="Cada Etapa Ajuda Você a Fixar Melhor o Conteúdo"
-        subtitle="O conteúdo aparece em diferentes formatos para facilitar a compreensão, a revisão e a memorização ao longo do estudo."
+        title="Veja Como a Identificação Fica Muito Mais Clara Quando Tudo Está Lado a Lado"
+        subtitle="Cada tipo de página resolve uma dúvida diferente para você reconhecer, diferenciar e revisar as estruturas ósseas com clareza."
         flowSteps={[
-          ['Mapa Visual', 'Entenda o assunto.'],
-          ['Não Confunda', 'Separe conceitos parecidos.'],
-          ['Ficha Visual', 'Memorize características importantes.'],
-          ['Revisão Express', 'Recupere rapidamente os pontos principais.'],
-          ['Teste sua Memória', 'Reforce o conteúdo estudado.'],
+          ['Identificação Visual', 'Veja o osso e localize suas estruturas.'],
+          ['Como Reconhecer', 'Descubra o que ajuda a reconhecer a peça.'],
+          ['Como Saber o Lado', 'Use os acidentes para diferenciar direita e esquerda.'],
+          ['Não Confunda', 'Compare estruturas semelhantes e evite erros.'],
+          ['Comparação entre Espécies', 'Observe canino, equino, bovino e suíno lado a lado.'],
         ]}
         items={carrossel2}
         reverse={true}
-        bg="#FFFFFF"
+        bg="#FBF8F2"
       />
       <Testimonials />
       <BonusSection />

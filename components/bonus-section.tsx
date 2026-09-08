@@ -5,27 +5,27 @@ import { Star } from 'lucide-react';
 const bonuses = [
   {
     label: 'BÔNUS 1',
-    name: 'Plano de Revisão de Microbiologia em 21 Dias',
+    name: 'Revisão Prática de Osteologia',
     description:
-      'Um roteiro prático para organizar seus estudos ao longo de 21 dias, indicando o que revisar, quais coleções utilizar e quando testar sua memória para manter uma sequência de estudo mais clara.',
+      'Uma coleção de páginas de revisão rápida com imagens limpas, pontos-chave e sínteses visuais para consultar antes das aulas e avaliações.',
     oldPrice: 'De R$ 19,90',
-    image: '/images/bonus/capa-bonus-01.png',
+    image: '/images/osteo/bonus-01.png',
   },
   {
     label: 'BÔNUS 2',
-    name: '30 Flashcards Essenciais de Microbiologia',
+    name: 'Teste Sua Identificação',
     description:
-      'Uma seleção de perguntas e respostas rápidas com conceitos, estruturas, microrganismos e diferenças importantes para revisar em poucos minutos e reforçar a memorização.',
-    oldPrice: 'De R$ 27,00',
-    image: '/images/bonus/capa-bonus-02.png',
+      'Exercícios visuais com ossos e estruturas sem identificação, setas numeradas e gabarito para você testar se realmente consegue reconhecer o que estudou.',
+    oldPrice: 'De R$ 24,90',
+    image: '/images/osteo/bonus-02.png',
   },
   {
     label: 'BÔNUS 3',
-    name: 'Glossário de Microbiologia',
+    name: 'Flashcards de Acidentes Ósseos',
     description:
-      'Um guia de consulta com 50 termos e expressões importantes da microbiologia explicados de forma simples e direta para recorrer sempre que surgir alguma dúvida durante os estudos.',
-    oldPrice: 'De R$ 24,90',
-    image: '/images/bonus/capa-bonus-03.png',
+      'Cards rápidos com imagens, nomes e perguntas de identificação para reforçar os principais acidentes ósseos e pontos de referência anatômicos.',
+    oldPrice: 'De R$ 19,90',
+    image: '/images/osteo/bonus-03.png',
   },
 ];
 
@@ -33,7 +33,7 @@ function StarRow() {
   return (
     <div className="flex items-center gap-0.5" aria-hidden="true">
       {Array.from({ length: 5 }).map((_, i) => (
-        <Star key={i} size={14} fill="#E1B343" strokeWidth={0} />
+        <Star key={i} size={14} fill="#9D4E35" strokeWidth={0} />
       ))}
     </div>
   );
@@ -41,18 +41,18 @@ function StarRow() {
 
 export function BonusSection() {
   return (
-    <section className="w-full py-16 md:py-24 lg:py-32" style={{ backgroundColor: '#4F46A8' }}>
+    <section className="w-full py-16 md:py-24 lg:py-32" style={{ backgroundColor: '#2F2925' }}>
       <div className="mobile-content">
         {/* Cabeçalho */}
         <div className="flex flex-col items-center text-center gap-3 md:gap-4 mb-10 md:mb-14">
-          <span className="font-grotesk text-xs sm:text-sm font-bold uppercase tracking-[0.2em]" style={{ color: '#E1B343' }}>
-            Exclusivo do Plano Completo
+          <span className="font-grotesk text-xs sm:text-sm font-bold uppercase tracking-[0.2em]" style={{ color: '#D8845E' }}>
+            Bônus Inclusos
           </span>
-          <h2 className="font-grotesk text-3xl sm:text-4xl md:text-5xl leading-tight text-balance" style={{ color: '#FFFFFF' }}>
-            Receba 3 Bônus para Completar Sua Revisão
+          <h2 className="font-grotesk text-3xl sm:text-4xl md:text-5xl leading-tight text-balance" style={{ color: '#FBF8F2' }}>
+            Materiais Extras para Reforçar Sua Identificação
           </h2>
-          <p className="text-sm sm:text-base md:text-lg leading-relaxed max-w-2xl" style={{ color: 'rgba(255,255,255,0.90)' }}>
-            Materiais complementares para agilizar a consulta, reforçar a fixação e tornar sua revisão de microbiologia ainda mais prática.
+          <p className="text-sm sm:text-base md:text-lg leading-relaxed max-w-2xl" style={{ color: 'rgba(251,248,242,0.90)' }}>
+            Recursos complementares pensados para transformar a consulta em revisão ativa e preparar você para identificar as estruturas sem depender da legenda.
           </p>
         </div>
 
@@ -63,16 +63,16 @@ export function BonusSection() {
               key={bonus.label}
               className="bonus-card flex w-full flex-col rounded-[20px] p-5 sm:p-6"
               style={{
-                backgroundColor: '#FFFFFF',
-                border: '1px solid rgba(79,70,168,0.15)',
-                boxShadow: '0 12px 30px rgba(29, 26, 43, 0.08)',
+                backgroundColor: '#FBF8F2',
+                border: '1px solid rgba(90,58,39,0.15)',
+                boxShadow: '0 12px 30px rgba(47, 41, 37, 0.28)',
                 transition: 'all 250ms ease',
               }}
             >
               {/* Badge */}
               <span
                 className="self-start rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-wide"
-                style={{ backgroundColor: '#4F46A8', color: '#FFFFFF' }}
+                style={{ backgroundColor: '#5A3A27', color: '#FBF8F2' }}
               >
                 {bonus.label}
               </span>
@@ -93,23 +93,23 @@ export function BonusSection() {
               </div>
 
               {/* Nome */}
-              <h3 className="mt-3 font-grotesk text-base sm:text-lg leading-snug" style={{ color: '#4F46A8' }}>
+              <h3 className="mt-3 font-grotesk text-base sm:text-lg leading-snug" style={{ color: '#5A3A27' }}>
                 {bonus.name}
               </h3>
 
               {/* Descrição */}
-              <p className="mt-2 flex-1 text-sm leading-relaxed" style={{ color: '#667179' }}>
+              <p className="mt-2 flex-1 text-sm leading-relaxed" style={{ color: '#8A7862' }}>
                 {bonus.description}
               </p>
 
               {/* Preço + selo */}
-              <div className="mt-5 flex items-center justify-between gap-3 border-t pt-4" style={{ borderColor: 'rgba(79,70,168,0.15)' }}>
-                <span className="text-sm line-through" style={{ color: '#667179' }}>
+              <div className="mt-5 flex items-center justify-between gap-3 border-t pt-4" style={{ borderColor: 'rgba(90,58,39,0.15)' }}>
+                <span className="text-sm line-through" style={{ color: '#8A7862' }}>
                   {bonus.oldPrice}
                 </span>
                 <span
                   className="rounded-full px-3 py-1.5 text-xs font-bold uppercase tracking-wide"
-                  style={{ backgroundColor: '#16C784', color: '#FFFFFF' }}
+                  style={{ backgroundColor: '#22C55E', color: '#FFFFFF' }}
                 >
                   Hoje grátis
                 </span>
@@ -117,19 +117,13 @@ export function BonusSection() {
             </div>
           ))}
         </div>
-
-        {/* Reforço de inclusão */}
-        <p className="mt-10 text-center text-sm sm:text-base" style={{ color: 'rgba(255,255,255,0.90)' }}>
-          {' '}
-          <span className="font-bold" style={{ color: '#E1B343' }}></span>
-        </p>
       </div>
 
       <style>{`
-        bonus-card:hover {
+        .bonus-card:hover {
           transform: translateY(-4px);
-          border-color: #E1B343;
-          box-shadow: 0 20px 42px rgba(29, 26, 43, 0.14);
+          border-color: #9D4E35;
+          box-shadow: 0 20px 42px rgba(47, 41, 37, 0.34);
         }
       `}</style>
     </section>

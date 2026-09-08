@@ -7,37 +7,49 @@ export function FAQ() {
 
   const faqItems = [
     {
-      q: 'Qual é a diferença entre o Plano Básico e o Plano Completo?',
-      a: 'O Plano Básico inclui os 40 Mapas Visuais de Microbiologia. Já o Plano Completo dá acesso às 5 coleções, com mais de 140 recursos visuais, além dos 3 bônus exclusivos.',
+      q: 'Para quem é a Osteologia Veterinária?',
+      a: 'O material foi desenvolvido principalmente para estudantes de Medicina Veterinária que estão cursando Anatomia/Osteologia e querem facilitar a identificação de ossos, acidentes ósseos, vistas e diferenças entre espécies.',
+    },
+    {
+      q: 'O material substitui livros e aulas da faculdade?',
+      a: 'Não. Ele funciona como um material visual complementar de estudo e revisão, ajudando você a organizar e reconhecer melhor as estruturas estudadas nas aulas e livros.',
+    },
+    {
+      q: 'Quais espécies aparecem no material?',
+      a: 'As principais comparações trabalham canino, equino, bovino e suíno, destacando diferenças morfológicas importantes quando aplicável.',
     },
     {
       q: 'O material é físico ou digital?',
-      a: 'O Microbiologia Visual é um produto 100% digital. Nenhum material físico será enviado para o seu endereço.',
+      a: '100% digital. Nenhum material físico será enviado para o seu endereço.',
+    },
+    {
+      q: 'Posso acessar pelo celular?',
+      a: 'Sim. O material poderá ser consultado pelo celular, tablet ou computador.',
+    },
+    {
+      q: 'Posso imprimir?',
+      a: 'Sim. Caso o formato de entrega permita download em PDF, as páginas poderão ser impressas para uso pessoal.',
     },
     {
       q: 'Como receberei o acesso?',
-      a: 'Após a confirmação do pagamento, você receberá as instruções de acesso ao material de forma digital.',
-    },
-    {
-      q: 'Posso acessar pelo celular e imprimir as páginas?',
-      a: 'Sim. Você pode acessar o material pelo celular, tablet ou computador e também imprimir as páginas para uso nos seus estudos, caso prefira.',
+      a: 'O acesso é liberado após a confirmação do pagamento, através dos dados cadastrados na compra.',
     },
     {
       q: 'Por quanto tempo terei acesso?',
-      a: 'O acesso ao material é vitalício, permitindo que você volte aos conteúdos sempre que precisar estudar ou revisar.',
+      a: 'Acesso vitalício, permitindo que você volte aos conteúdos sempre que precisar estudar ou revisar.',
     },
     {
-      q: 'Como funciona a garantia de 7 dias?',
-      a: 'Você terá 7 dias para conhecer o material. Se dentro desse prazo entender que ele não atende às suas expectativas, poderá solicitar o reembolso dentro do período de garantia.',
+      q: 'Como funciona a garantia?',
+      a: 'Você possui 7 dias após a compra para conhecer o material e solicitar reembolso caso ele não atenda às suas expectativas.',
     },
   ];
 
   return (
-    <section className="w-full py-14 px-0" style={{ backgroundColor: '#4F46A8' }}>
+    <section className="w-full py-14 px-0" style={{ backgroundColor: '#2F2925' }}>
       <div className="mobile-content">
         <h2
-          className="font-grotesk text-center uppercase"
-          style={{ color: '#FFFFFF', fontSize: '32px', fontWeight: 700, marginBottom: '28px', lineHeight: 1.2 }}
+          className="font-grotesk text-center"
+          style={{ color: '#FBF8F2', fontSize: '32px', fontWeight: 600, marginBottom: '28px', lineHeight: 1.2 }}
         >
           Perguntas Frequentes
         </h2>
@@ -49,11 +61,11 @@ export function FAQ() {
               <div
                 key={idx}
                 style={{
-                  backgroundColor: '#FFFFFF',
-                  border: '1px solid rgba(79,70,168,0.18)',
+                  backgroundColor: '#FBF8F2',
+                  border: '1px solid rgba(90,58,39,0.18)',
                   borderRadius: '16px',
                   overflow: 'hidden',
-                  boxShadow: '0 5px 14px rgba(29, 26, 43, 0.08)',
+                  boxShadow: '0 5px 14px rgba(47, 41, 37, 0.18)',
                   width: '100%',
                 }}
               >
@@ -66,7 +78,7 @@ export function FAQ() {
                   <span
                     className="text-left"
                     style={{
-                      color: '#1D252C',
+                      color: '#2F2925',
                       fontSize: '15px',
                       fontWeight: 700,
                       lineHeight: 1.35,
@@ -78,7 +90,7 @@ export function FAQ() {
                   <span
                     className="transition-transform duration-200"
                     style={{
-                      color: '#4F46A8',
+                      color: '#9D4E35',
                       fontSize: '20px',
                       fontWeight: 700,
                       flexShrink: 0,
@@ -100,14 +112,14 @@ export function FAQ() {
                 >
                   <div
                     style={{
-                      borderTop: '1px solid rgba(79,70,168,0.18)',
-                      backgroundColor: '#F7F7F5',
+                      borderTop: '1px solid rgba(90,58,39,0.18)',
+                      backgroundColor: '#F3EBDD',
                       padding: '19px 18px',
                     }}
                   >
                     <p
                       className="text-left"
-                      style={{ color: '#1D252C', fontSize: '15px', lineHeight: 1.6 }}
+                      style={{ color: '#2F2925', fontSize: '15px', lineHeight: 1.6 }}
                     >
                       {item.a}
                     </p>
