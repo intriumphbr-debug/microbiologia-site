@@ -23,7 +23,7 @@ export function Guarantee() {
 
             <div className="space-y-3 sm:space-y-4 text-sm sm:text-base" style={{ color: '#8A7862' }}>
               <p className="leading-relaxed">
-                Acesse a Osteologia Veterinária, explore os volumes e veja se o formato de estudo faz sentido para você. Se dentro de 7 dias entender que o material não atende às suas expectativas, poderá solicitar o reembolso dentro do prazo de garantia.
+                Acesse a Osteologia Veterinária, explore os volumes e veja como o material funciona na prática. Se dentro de 7 dias você entender que ele não atende às suas expectativas, poderá solicitar o reembolso dentro do prazo de garantia.
               </p>
             </div>
           </div>
