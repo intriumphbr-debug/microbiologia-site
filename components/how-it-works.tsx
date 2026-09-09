@@ -13,7 +13,7 @@ export function HowItWorks() {
             Estudar Osteologia Pode Ser Muito Mais Visual
           </h2>
           <p className="text-sm sm:text-base md:text-lg leading-relaxed max-w-2xl" style={{ color: 'rgba(251,248,242,0.78)' }}>
-            Em quatro etapas, você aprende a observar a peça, localizar os pontos de referência, diferenciar estruturas e reforçar sua identificação.
+            Em quatro etapas, você aprende a observar cada osso, localizar estruturas importantes, comparar espécies e reforçar sua identificação.
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 items-stretch">
