@@ -7,40 +7,36 @@ export function FAQ() {
 
   const faqItems = [
     {
-      q: 'Para quem é a Osteologia Veterinária?',
-      a: 'O material foi desenvolvido principalmente para estudantes de Medicina Veterinária que estão cursando Anatomia/Osteologia e querem facilitar a identificação de ossos, acidentes ósseos, vistas e diferenças entre espécies.',
-    },
-    {
-      q: 'O material substitui livros e aulas da faculdade?',
-      a: 'Não. Ele funciona como um material visual complementar de estudo e revisão, ajudando você a organizar e reconhecer melhor as estruturas estudadas nas aulas e livros.',
+      q: 'Para quem é este material de Osteologia Veterinária?',
+      a: 'O material foi criado principalmente para estudantes de Medicina Veterinária que querem estudar e revisar Osteologia de forma mais visual, organizada e prática.',
     },
     {
       q: 'Quais espécies aparecem no material?',
-      a: 'As principais comparações trabalham canino, equino, bovino e suíno, destacando diferenças morfológicas importantes quando aplicável.',
+      a: 'O conteúdo apresenta comparações entre canino, equino, bovino e suíno, destacando estruturas e diferenças anatômicas importantes entre as espécies.',
+    },
+    {
+      q: 'O material substitui livros e aulas da faculdade?',
+      a: 'Não. Ele funciona como um material complementar de estudo e revisão, ajudando você a visualizar melhor as estruturas e organizar os principais conteúdos de Osteologia.',
     },
     {
       q: 'O material é físico ou digital?',
-      a: '100% digital. Nenhum material físico será enviado para o seu endereço.',
+      a: 'O material é 100% digital. Após a confirmação da compra, você receberá acesso para consultar os conteúdos online.',
     },
     {
       q: 'Posso acessar pelo celular?',
-      a: 'Sim. O material poderá ser consultado pelo celular, tablet ou computador.',
+      a: 'Sim. Você pode acessar pelo celular, tablet ou computador sempre que precisar estudar ou revisar.',
     },
     {
       q: 'Posso imprimir?',
-      a: 'Sim. Caso o formato de entrega permita download em PDF, as páginas poderão ser impressas para uso pessoal.',
+      a: 'Sim. As páginas podem ser utilizadas digitalmente e também impressas para estudo pessoal.',
     },
     {
-      q: 'Como receberei o acesso?',
-      a: 'O acesso é liberado após a confirmação do pagamento, através dos dados cadastrados na compra.',
-    },
-    {
-      q: 'Por quanto tempo terei acesso?',
-      a: 'Acesso vitalício, permitindo que você volte aos conteúdos sempre que precisar estudar ou revisar.',
+      q: 'Como receberei o acesso e por quanto tempo poderei usar?',
+      a: 'Após a confirmação do pagamento, você receberá as instruções de acesso no e-mail informado na compra. O acesso é vitalício, para consultar o material sempre que precisar.',
     },
     {
       q: 'Como funciona a garantia?',
-      a: 'Você possui 7 dias após a compra para conhecer o material e solicitar reembolso caso ele não atenda às suas expectativas.',
+      a: 'Você terá 7 dias de garantia após a compra. Dentro desse período, caso o material não atenda às suas expectativas, poderá solicitar o reembolso conforme as regras da plataforma de pagamento.',
     },
   ];
 
