@@ -31,8 +31,8 @@ export function HeroSection({ onCtaClick }: { onCtaClick: () => void }) {
           <div className="w-full flex justify-center py-2 sm:py-4 md:py-6 overflow-visible">
             <div className="w-full max-w-2xl flex justify-center items-center">
               <img
-                src="/images/osteo/hero-mockup.png"
-                alt="Coleção Osteologia Veterinária: volumes empilhados e páginas internas com escápula, fêmur, crânio e vértebra"
+                src="/images/osteo/hero-colecao.webp"
+                alt="Coleção Osteologia Veterinária: volumes principais, bônus e páginas internas com crânio, vértebras e ossos dos membros"
                 className="w-full h-auto object-contain"
                 style={{ filter: 'drop-shadow(0 24px 45px rgba(90, 58, 39, 0.25))' }}
               />

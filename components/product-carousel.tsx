@@ -21,7 +21,7 @@ interface ProductCarouselProps {
 function CarouselCard({ title, image, tag }: { title: string; image: string; tag?: string }) {
   if (image) {
     return (
-      <div className="relative w-full h-full rounded-2xl overflow-hidden" style={{ backgroundColor: '#FFFFFF' }}>
+      <div className="relative w-full h-full rounded-2xl overflow-hidden" style={{ backgroundColor: '#FBF8F2' }}>
         <img
           src={image}
           alt={title}

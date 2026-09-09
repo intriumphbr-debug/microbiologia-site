@@ -17,14 +17,14 @@ import { Footer } from '@/components/footer';
 
 // Páginas internas reais da coleção de Osteologia Veterinária
 const carrossel1 = [
-  { image: '/images/osteo/c1-escapula.png', title: 'Escápula', tag: 'Página Anatômica' },
-  { image: '/images/osteo/c1-umero.png', title: 'Úmero', tag: 'Página Anatômica' },
-  { image: '/images/osteo/c1-carpo.png', title: 'Carpo', tag: 'Página Anatômica' },
-  { image: '/images/osteo/c1-lado.png', title: 'Como Identificar o Lado', tag: 'Direito x Esquerdo' },
-  { image: '/images/osteo/c1-escapula-especies.png', title: 'Escápula Comparada entre Espécies', tag: 'Comparação' },
-  { image: '/images/osteo/c1-umero-especies.png', title: 'Úmero Comparado entre Espécies', tag: 'Comparação' },
-  { image: '/images/osteo/c1-comparacao-geral.png', title: 'Comparação Geral entre Espécies', tag: 'Comparação' },
-  { image: '/images/osteo/c1-mapa-toracico.png', title: 'Mapa Visual do Membro Torácico', tag: 'Mapa Visual' },
+  { image: '/images/osteo/pg-costela.webp', title: 'Como Reconhecer e Orientar uma Costela', tag: 'Vol. 5 · Tórax' },
+  { image: '/images/osteo/pg-vertebras-toracicas.webp', title: 'Vértebras Torácicas — Comparação entre Espécies', tag: 'Vol. 4 · Coluna' },
+  { image: '/images/osteo/pg-cranio-ventral.webp', title: 'Crânio — Vista Ventral', tag: 'Vol. 5 · Crânio' },
+  { image: '/images/osteo/pg-vertebras-cervicais.webp', title: 'Vértebras Cervicais — Comparação entre Espécies', tag: 'Vol. 4 · Coluna' },
+  { image: '/images/osteo/pg-vistas-cranio.webp', title: 'Como Identificar as Vistas do Crânio', tag: 'Vol. 5 · Crânio' },
+  { image: '/images/osteo/pg-cranio.webp', title: 'Crânio — Estrutura e Comparação', tag: 'Vol. 6 · Crânio' },
+  { image: '/images/osteo/pg-mapa-torax.webp', title: 'Mapa Visual do Tórax Veterinário', tag: 'Vol. 5 · Tórax' },
+  { image: '/images/osteo/pg-sacro.webp', title: 'Sacro — Identificação e Comparação', tag: 'Vol. 3 · Membro Pélvico' },
 ];
 
 const carrossel2 = [
@@ -49,7 +49,6 @@ export default function Page() {
         title="Conheça a Osteologia Veterinária por Dentro"
         subtitle="Veja como ossos, acidentes ósseos, vistas anatômicas e diferenças entre espécies foram organizados para facilitar sua identificação e revisão."
         items={carrossel1}
-        landscape={true}
         bg="#FBF8F2"
       />
       <HowItWorks />
