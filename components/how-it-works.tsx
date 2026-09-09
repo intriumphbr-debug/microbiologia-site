@@ -1,6 +1,6 @@
 export function HowItWorks() {
   const steps = [
-    ['1', 'OBSERVE', 'Veja o formato geral do osso, suas extremidades e os principais pontos de referência.'],
+    ['1', 'OBSERVE', 'Analise o formato geral do osso, suas extremidades e os principais pontos de referência.'],
     ['2', 'IDENTIFIQUE', 'Localize acidentes ósseos, superfícies articulares e estruturas importantes diretamente na imagem.'],
     ['3', 'COMPARE', 'Observe diferentes vistas e compare as particularidades entre canino, equino, bovino e suíno.'],
     ['4', 'FIXE', 'Retorne às imagens, revise rapidamente e teste se reconhece cada estrutura sem depender da legenda.'],
