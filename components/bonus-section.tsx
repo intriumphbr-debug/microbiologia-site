@@ -5,26 +5,26 @@ import { Star } from 'lucide-react';
 const bonuses = [
   {
     label: 'BÔNUS 1',
-    name: 'Revisão Prática de Osteologia',
+    name: 'Revisão Express de Osteologia',
     description:
-      'Uma coleção de páginas de revisão rápida com imagens limpas, pontos-chave e sínteses visuais para consultar antes das aulas e avaliações.',
-    oldPrice: 'De R$ 19,90',
+      'Um material de consulta rápida com os principais pontos da osteologia organizados de forma visual e objetiva para revisar o conteúdo antes das aulas, provas e avaliações.',
+    oldPrice: 'De R$ 17,00',
     image: '/images/osteo/bonus-01.png',
   },
   {
     label: 'BÔNUS 2',
     name: 'Teste Sua Identificação',
     description:
-      'Exercícios visuais com ossos e estruturas sem identificação, setas numeradas e gabarito para você testar se realmente consegue reconhecer o que estudou.',
-    oldPrice: 'De R$ 24,90',
+      'Coleção de exercícios visuais para praticar a identificação de ossos, estruturas e acidentes ósseos, acompanhados de gabarito para conferir as respostas.',
+    oldPrice: 'De R$ 19,90',
     image: '/images/osteo/bonus-02.png',
   },
   {
     label: 'BÔNUS 3',
-    name: 'Flashcards de Acidentes Ósseos',
+    name: 'Flashcards de Osteologia Veterinária',
     description:
-      'Cards rápidos com imagens, nomes e perguntas de identificação para reforçar os principais acidentes ósseos e pontos de referência anatômicos.',
-    oldPrice: 'De R$ 19,90',
+      'Cartões de estudo desenvolvidos para facilitar a memorização das principais estruturas ósseas através de revisões rápidas, práticas e repetitivas.',
+    oldPrice: 'De R$ 24,00',
     image: '/images/osteo/bonus-03.png',
   },
 ];
