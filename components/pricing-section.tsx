@@ -7,19 +7,17 @@ const PRICE = 'R$ 19,90';
 const TOTAL_PRICE = 'R$ 89,70';
 const CHECKOUT_URL = 'https://pay.cakto.com.br/buy5dpo_1080833';
 
-/* O que está incluído na oferta */
-const includedFeatures: [string, string][] = [
-  ['≈150', 'páginas visuais de Osteologia'],
-  ['6', 'volumes: Fundamentos, Membro Torácico, Membro Pélvico, Coluna Vertebral, Tórax e Crânio'],
-  ['4', 'espécies: canino, equino, bovino e suíno'],
-];
+/* O que está incluído na oferta (destaque principal do pacote) */
+const highlightFeature: [string, string] = ['+140', 'Recursos Visuais de Osteologia'];
 
-const includedList = [
-  'Diferentes vistas anatômicas',
-  'Identificação dos principais acidentes ósseos',
-  'Orientação de peças (direita x esquerda)',
-  'Páginas "Como Reconhecer" e "Não Confunda"',
-  'Comparações entre espécies',
+/* Conteúdos por volume */
+const includedFeatures: [string, string][] = [
+  ['10 páginas', 'Fundamentos'],
+  ['32 páginas', 'Membro Torácico'],
+  ['32 páginas', 'Membro Pélvico'],
+  ['22 páginas', 'Coluna Vertebral'],
+  ['12 páginas', 'Tórax'],
+  ['40 páginas', 'Crânio'],
 ];
 
 const bonuses = [
@@ -85,8 +83,21 @@ export function PricingSection() {
               />
             </div>
 
-            {/* Destaques principais */}
+            {/* Destaque principal do pacote */}
             <ul className="mt-6 space-y-3.5">
+              <li className="flex items-start gap-3">
+                <span
+                  className="mt-0.5 flex shrink-0 items-center justify-center rounded-full"
+                  style={{ width: '24px', height: '24px', backgroundColor: '#22C55E', color: '#FFFFFF' }}
+                >
+                  <Check size={15} strokeWidth={3} aria-hidden="true" />
+                </span>
+                <span className="text-base sm:text-lg leading-snug" style={{ color: '#FBF8F2' }}>
+                  <span className="font-bold" style={{ color: '#22C55E' }}>{highlightFeature[0]}</span>{' '}
+                  <span className="font-semibold">{highlightFeature[1]}</span>
+                </span>
+              </li>
+
               {includedFeatures.map(([num, rest]) => (
                 <li key={rest} className="flex items-start gap-3">
                   <span
@@ -96,24 +107,7 @@ export function PricingSection() {
                     <Check size={14} strokeWidth={3} aria-hidden="true" />
                   </span>
                   <span className="text-sm sm:text-base leading-snug" style={{ color: '#FBF8F2' }}>
-                    <span className="font-bold">{num}</span> {rest}
-                  </span>
-                </li>
-              ))}
-            </ul>
-
-            {/* Lista de inclusões */}
-            <ul className="mt-4 space-y-3">
-              {includedList.map((item) => (
-                <li key={item} className="flex items-start gap-3">
-                  <span
-                    className="mt-0.5 flex shrink-0 items-center justify-center rounded-full"
-                    style={{ width: '22px', height: '22px', backgroundColor: 'rgba(34,197,94,0.16)', color: '#22C55E' }}
-                  >
-                    <Check size={13} strokeWidth={3} aria-hidden="true" />
-                  </span>
-                  <span className="text-sm sm:text-base leading-snug" style={{ color: 'rgba(251,248,242,0.92)' }}>
-                    {item}
+                    <span className="font-bold">{num}</span> — {rest}
                   </span>
                 </li>
               ))}
