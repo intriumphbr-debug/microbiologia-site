@@ -19,13 +19,13 @@ export function HeroSection({ onCtaClick }: { onCtaClick: () => void }) {
               Osteologia Veterinária
             </span>
             <h1 className="font-grotesk text-4xl sm:text-5xl md:text-6xl leading-[1.08] text-balance text-center max-w-2xl" style={{ color: '#5A3A27' }}>
-              Osteologia Veterinária de um Jeito Muito Mais Fácil de Visualizar e Revisar
+              Guia Visual de Osteologia Veterinária
             </h1>
             <p className="text-sm sm:text-base leading-relaxed text-pretty text-center max-w-md sm:max-w-lg" style={{ color: '#8A7862' }}>
-              Tenha os principais ossos, acidentes ósseos, vistas anatômicas e diferenças entre espécies organizados visualmente para estudar com mais clareza e revisar com muito mais praticidade.
+              Estude os principais conteúdos de osteologia com imagens, identificações anatômicas, comparações entre espécies e revisões visuais em um só material.
             </p>
             <p className="text-xs sm:text-sm leading-relaxed text-pretty text-center max-w-md" style={{ color: '#8A7862' }}>
-              Veja cada estrutura em detalhes, compare espécies e transforme nomes difíceis de memorizar em referências visuais muito mais fáceis de reconhecer.
+              
             </p>
           </div>
           <div className="w-full flex justify-center py-2 sm:py-4 md:py-6 overflow-visible">
