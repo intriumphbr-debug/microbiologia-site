@@ -39,10 +39,10 @@ export function Testimonials() {
       <div className="mobile-content">
         <div className="flex flex-col items-center text-center gap-4 mb-12 md:mb-16">
           <h2 className="font-grotesk text-3xl sm:text-4xl md:text-5xl leading-tight text-pretty" style={{ color: '#5A3A27' }}>
-            Relatos de Estudantes que Utilizam o Material
+            Relatos de quem já Utiliza o Material
           </h2>
           <p className="text-sm sm:text-base md:text-lg leading-relaxed max-w-2xl" style={{ color: '#8A7862' }}>
-            Veja como outros estudantes passaram a revisar Osteologia com mais organização e clareza visual.
+            Veja as experiências de quem passou a estudar e revisar osteologia com mais clareza.
           </p>
         </div>
 
