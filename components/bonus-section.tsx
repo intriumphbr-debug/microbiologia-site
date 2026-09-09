@@ -9,7 +9,7 @@ const bonuses = [
     description:
       'Um material de consulta rápida com os principais pontos da osteologia organizados de forma visual e objetiva para revisar o conteúdo antes das aulas, provas e avaliações.',
     oldPrice: 'De R$ 17,00',
-    image: '/images/osteo/bonus-01.png',
+    image: '/images/osteo/bonus-revisao-express.webp',
   },
   {
     label: 'BÔNUS 2',
@@ -17,7 +17,7 @@ const bonuses = [
     description:
       'Coleção de exercícios visuais para praticar a identificação de ossos, estruturas e acidentes ósseos, acompanhados de gabarito para conferir as respostas.',
     oldPrice: 'De R$ 19,90',
-    image: '/images/osteo/bonus-02.png',
+    image: '/images/osteo/bonus-teste-identificacao.webp',
   },
   {
     label: 'BÔNUS 3',
@@ -25,7 +25,7 @@ const bonuses = [
     description:
       'Cartões de estudo desenvolvidos para facilitar a memorização das principais estruturas ósseas através de revisões rápidas, práticas e repetitivas.',
     oldPrice: 'De R$ 24,00',
-    image: '/images/osteo/bonus-03.png',
+    image: '/images/osteo/bonus-flashcards.webp',
   },
 ];
 
