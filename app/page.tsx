@@ -47,7 +47,7 @@ export default function Page() {
       <HeroSection onCtaClick={handleCtaClick} />
       <ProductCarousel
         title="Conheça a Osteologia Veterinária por Dentro"
-        subtitle="Veja como ossos, acidentes ósseos, vistas anatômicas e diferenças entre espécies foram organizados para facilitar sua identificação e revisão."
+        subtitle="Veja como o conteúdo foi organizado para você bater o olho, identificar a estrutura e entender exatamente o que está estudando."
         items={carrossel1}
         bg="#FBF8F2"
       />
