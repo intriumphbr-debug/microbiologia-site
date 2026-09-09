@@ -33,7 +33,7 @@ function StarRow() {
   return (
     <div className="flex items-center gap-0.5" aria-hidden="true">
       {Array.from({ length: 5 }).map((_, i) => (
-        <Star key={i} size={14} fill="#9D4E35" strokeWidth={0} />
+        <Star key={i} size={14} fill="#FBBF24" strokeWidth={0} />
       ))}
     </div>
   );
