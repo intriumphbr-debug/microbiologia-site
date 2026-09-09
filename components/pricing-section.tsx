@@ -60,7 +60,7 @@ export function PricingSection() {
             {/* Badge OFERTA ESPECIAL */}
             <div
               className="absolute left-1/2 top-0 flex -translate-x-1/2 -translate-y-1/2 items-center gap-1.5 whitespace-nowrap rounded-full px-4 py-1.5 text-[11px] font-bold uppercase tracking-wide"
-              style={{ backgroundColor: '#9D4E35', color: '#FBF8F2', boxShadow: '0 6px 16px rgba(157, 78, 53, 0.4)' }}
+              style={{ backgroundColor: '#22C55E', color: '#FFFFFF', boxShadow: '0 6px 16px rgba(34, 197, 94, 0.4)' }}
             >
               <Star size={12} strokeWidth={2.5} fill="#FBF8F2" aria-hidden="true" />
               Oferta Especial
@@ -93,7 +93,7 @@ export function PricingSection() {
                   <Check size={15} strokeWidth={3} aria-hidden="true" />
                 </span>
                 <span className="text-base sm:text-lg leading-snug" style={{ color: '#FBF8F2' }}>
-                  <span className="font-bold" style={{ color: '#22C55E' }}>{highlightFeature[0]}</span>{' '}
+                  <span className="font-bold" style={{ color: '#FBF8F2' }}>{highlightFeature[0]}</span>{' '}
                   <span className="font-semibold">{highlightFeature[1]}</span>
                 </span>
               </li>
