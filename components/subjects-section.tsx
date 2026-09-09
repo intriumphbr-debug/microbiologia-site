@@ -111,10 +111,10 @@ export function SubjectsSection() {
       <div className="mobile-content">
         <div className="mx-auto mb-10 flex max-w-3xl flex-col items-center gap-4 text-center md:mb-14">
           <h2 className="font-grotesk text-3xl leading-tight text-pretty sm:text-4xl md:text-5xl" style={{ color: '#5A3A27' }}>
-            Osteologia Organizada para Você Saber Exatamente o Que Está Vendo
+            Veja Tudo o Que Você Vai Encontrar no Material
           </h2>
           <p className="max-w-2xl text-sm leading-relaxed sm:text-base md:text-lg" style={{ color: '#8A7862' }}>
-            Cada região foi separada de forma lógica para que você consiga sair do reconhecimento geral e chegar aos detalhes anatômicos sem se perder.
+            O conteúdo foi dividido por regiões anatômicas para você localizar rapidamente o que precisa estudar e entender cada estrutura com mais clareza.
           </p>
         </div>
 
