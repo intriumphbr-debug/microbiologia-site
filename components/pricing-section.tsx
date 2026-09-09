@@ -78,8 +78,8 @@ export function PricingSection() {
             {/* Mockup grande */}
             <div className="mt-5 flex justify-center">
               <img
-                src="/images/osteo/pricing-mockup.png"
-                alt="Coleção Osteologia Veterinária completa com os 6 volumes, os três bônus e o selo de garantia de 7 dias"
+                src="/images/osteo/pricing-colecao.webp"
+                alt="Coleção Osteologia Veterinária completa com os volumes, os três bônus e o selo de garantia de 7 dias"
                 className="w-full max-w-[440px] h-auto object-contain drop-shadow-xl"
                 loading="lazy"
               />

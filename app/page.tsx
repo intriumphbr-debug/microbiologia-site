@@ -28,14 +28,14 @@ const carrossel1 = [
 ];
 
 const carrossel2 = [
-  { image: '/images/osteo/c2-carpo-especies.png', title: 'Carpo Comparado entre Espécies', tag: 'Comparação' },
-  { image: '/images/osteo/c2-metacarpos.png', title: 'Metacarpos Comparados', tag: 'Comparação' },
-  { image: '/images/osteo/c2-falanges.png', title: 'Falanges Comparadas', tag: 'Comparação' },
-  { image: '/images/osteo/c2-articulacoes.png', title: 'Articulações do Membro Torácico', tag: 'Página Anatômica' },
-  { image: '/images/osteo/c2-diferencas.png', title: 'Diferenças que Mais Caem entre Espécies', tag: 'Não Confunda' },
-  { image: '/images/osteo/c2-checklist.png', title: 'Checklist para Prova Prática', tag: 'Revisão' },
-  { image: '/images/osteo/c2-treino.png', title: 'Treino Prático de Identificação', tag: 'Teste' },
-  { image: '/images/osteo/c2-resumo.png', title: 'Resumo Visual', tag: 'Revisão' },
+  { image: '/images/osteo/pg-denticao.webp', title: 'Dentição e Arcadas Dentárias', tag: 'Vol. 6 · Crânio' },
+  { image: '/images/osteo/pg-cavidade-nasal.webp', title: 'Cavidade Nasal e Conchas', tag: 'Vol. 6 · Crânio' },
+  { image: '/images/osteo/pg-maxila.webp', title: 'Maxila, Incisivo e Zigomático', tag: 'Vol. 6 · Crânio' },
+  { image: '/images/osteo/pg-neurocranio.webp', title: 'Neurocrânio e Viscerocrânio', tag: 'Vol. 6 · Crânio' },
+  { image: '/images/osteo/pg-base-cranio.webp', title: 'Base do Crânio', tag: 'Vol. 6 · Crânio' },
+  { image: '/images/osteo/pg-seios-paranasais.webp', title: 'Seios Paranasais', tag: 'Vol. 6 · Crânio' },
+  { image: '/images/osteo/pg-arcadas-dentarias.webp', title: 'Arcadas Dentárias e Tipos de Dentes', tag: 'Vol. 6 · Crânio' },
+  { image: '/images/osteo/pg-orbita.webp', title: 'Órbita e Cavidade Orbital', tag: 'Vol. 6 · Crânio' },
 ];
 
 export default function Page() {
