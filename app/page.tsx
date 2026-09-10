@@ -55,14 +55,14 @@ export default function Page() {
       <WhatYouGet />
       <SubjectsSection />
       <ProductCarousel
-        title="Veja Como a Identificação Fica Muito Mais Clara Quando Tudo Está Lado a Lado"
-        subtitle="Cada tipo de página resolve uma dúvida diferente para você reconhecer, diferenciar e revisar as estruturas ósseas com clareza."
+        title="Identifique, Compare e Diferencie com Mais Clareza"
+        subtitle="Cada tipo de página ajuda você a reconhecer estruturas, comparar diferenças e revisar os pontos que mais geram dúvida."
         flowSteps={[
-          ['Identificação Visual', 'Veja o osso e localize suas estruturas.'],
-          ['Como Reconhecer', 'Descubra o que ajuda a reconhecer a peça.'],
-          ['Como Saber o Lado', 'Use os acidentes para diferenciar direita e esquerda.'],
-          ['Não Confunda', 'Compare estruturas semelhantes e evite erros.'],
-          ['Comparação entre Espécies', 'Observe canino, equino, bovino e suíno lado a lado.'],
+          ['Identificação Visual', 'Veja o osso e identifique suas principais estruturas.'],
+          ['Como Reconhecer', 'Entenda quais características ajudam a reconhecer cada peça.'],
+          ['Como Saber o Lado', 'Use os acidentes ósseos para diferenciar direita e esquerda.'],
+          ['Não Confunda', 'Compare estruturas parecidas e veja o que diferencia uma da outra.'],
+          ['Comparação entre Espécies', 'Compare canino, equino, bovino e suíno lado a lado.'],
         ]}
         items={carrossel2}
         reverse={true}
