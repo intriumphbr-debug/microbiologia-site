@@ -111,13 +111,8 @@ export function ProductCarousel({ title, subtitle, note, flowSteps, items, rever
                     }}
                   >
                     <p
-                      className="font-grotesk text-sm sm:text-base font-bold tracking-wide"
-                      style={{
-                        color: '#FFFFFF',
-                        textShadow: 'none',
-                        WebkitFontSmoothing: 'antialiased',
-                        MozOsxFontSmoothing: 'grayscale',
-                      }}
+                      className="font-grotesk text-sm sm:text-base"
+                      style={{ color: '#FFFFFF', textShadow: 'none' }}
                     >
                       {name}
                     </p>
