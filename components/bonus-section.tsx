@@ -49,10 +49,10 @@ export function BonusSection() {
             Bônus Inclusos
           </span>
           <h2 className="font-grotesk text-3xl sm:text-4xl md:text-5xl leading-tight text-balance" style={{ color: '#FBF8F2' }}>
-            Materiais Extras para Reforçar Sua Identificação
+            Além do Material Principal, Você Recebe Mais 3 Bônus
           </h2>
           <p className="text-sm sm:text-base md:text-lg leading-relaxed max-w-2xl" style={{ color: 'rgba(251,248,242,0.90)' }}>
-            Recursos complementares pensados para transformar a consulta em revisão ativa e preparar você para identificar as estruturas sem depender da legenda.
+            Recursos extras para complementar seus estudos e reforçar os principais conteúdos de Osteologia.
           </p>
         </div>
 
