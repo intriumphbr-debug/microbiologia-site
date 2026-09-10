@@ -17,10 +17,10 @@ export function FinalCta() {
         <div className="mobile-content flex flex-col items-center gap-4">
           <div className="text-center space-y-3 mb-4 w-full">
             <h2 className="w-full font-grotesk text-2xl sm:text-3xl md:text-4xl leading-tight text-pretty" style={{ color: '#FBF8F2', boxSizing: 'border-box' }}>
-              Pare de Estudar Osteologia Só por Nomes e Comece a Enxergar as Estruturas
+              Chega de Travar na Hora de Identificar as Estruturas
             </h2>
             <p className="text-sm sm:text-base md:text-lg max-w-2xl" style={{ color: 'rgba(251,248,242,0.78)' }}>
-              Tenha ossos, acidentes ósseos, diferentes vistas e comparações entre espécies organizados visualmente em uma coleção feita para facilitar sua identificação e revisão.
+              Tenha ossos, acidentes ósseos, vistas e comparações entre espécies prontos para consultar sempre que precisar.
             </p>
           </div>
 
