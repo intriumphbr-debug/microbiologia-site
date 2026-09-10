@@ -1,157 +1,120 @@
-import { Dna, Microscope, FlaskConical, Biohazard, Sprout, Atom } from 'lucide-react';
+import { Bone, Compass, Layers, Boxes, Skull } from 'lucide-react';
 
 type Block = {
   badge: string;
   title: string;
-  icon: typeof Dna;
+  icon: typeof Bone;
   accent: string;
   items: string[];
   description: string;
 };
 
+const accent = '#9D4E35';
+
 const blocks: Block[] = [
   {
     badge: 'FUNDAMENTOS',
-    title: 'Fundamentos de Microbiologia',
-    icon: Dna,
-    accent: '#4F46A8',
+    title: 'Fundamentos',
+    icon: Compass,
+    accent,
     items: [
-      'Estrutura da célula bacteriana',
-      'Morfologia bacteriana',
-      'Cocos, bacilos, espirilos e vibriões',
-      'Gram-positivas x Gram-negativas',
-      'Crescimento microbiano',
-      'Curva de crescimento bacteriano',
-      'Nutrição bacteriana',
-      'Necessidades de oxigênio',
-      'Reprodução bacteriana',
-      'Endósporos',
-      'Biofilme',
+      'Divisão do esqueleto',
+      'Classificação dos ossos',
+      'Termos de posição e direção',
+      'Planos anatômicos',
+      'Principais acidentes ósseos',
+      'Orientação de peças',
     ],
-    description: 'Construa uma base visual antes de avançar para microrganismos e identificação.',
+    description: 'Construa a base visual e a linguagem necessária antes de avançar para as regiões.',
   },
   {
-    badge: 'BACTERIOLOGIA',
-    title: 'Bacteriologia',
-    icon: Microscope,
-    accent: '#4F46A8',
+    badge: 'MEMBRO TORÁCICO',
+    title: 'Membro Torácico',
+    icon: Bone,
+    accent,
     items: [
-      'Staphylococcus',
-      'Streptococcus',
-      'Enterococcus',
-      'Escherichia coli',
-      'Salmonella',
-      'Shigella',
-      'Klebsiella',
-      'Neisseria',
-      'Pseudomonas',
-      'Acinetobacter',
-      'Bacillus',
-      'Clostridium / Clostridioides',
-      'Listeria',
-      'Mycobacterium',
+      'Escápula',
+      'Úmero',
+      'Rádio',
+      'Ulna',
+      'Carpo',
+      'Metacarpos',
+      'Falanges',
+      'Vistas e acidentes ósseos',
     ],
-    description: 'Revise características, diferenças e pontos importantes dos principais grupos bacterianos trabalhados no material.',
+    description: 'Reconheça e oriente os ossos do membro torácico com diferentes vistas e comparações.',
   },
   {
-    badge: 'LABORATÓRIO',
-    title: 'Identificação Laboratorial',
-    icon: FlaskConical,
-    accent: '#4F46A8',
+    badge: 'MEMBRO PÉLVICO',
+    title: 'Membro Pélvico',
+    icon: Bone,
+    accent,
     items: [
-      'Microscopia',
-      'Coloração de Gram',
-      'Ziehl-Neelsen e outras colorações',
-      'Meios de cultura',
-      'Ágar sangue',
-      'Ágar chocolate',
-      'MacConkey',
-      'EMB',
-      'Hemólise',
-      'Catalase',
-      'Coagulase',
-      'Oxidase',
-      'Urease',
-      'Indol',
-      'Coleta e identificação microbiológica',
+      'Pelve',
+      'Fêmur',
+      'Patela',
+      'Tíbia',
+      'Fíbula',
+      'Tarso',
+      'Metatarsos',
+      'Falanges',
     ],
-    description: 'Visualize a lógica por trás de meios, colorações e testes utilizados para diferenciar microrganismos.',
+    description: 'Identifique as estruturas do membro pélvico e as principais diferenças entre espécies.',
   },
   {
-    badge: 'VIRULÊNCIA & RESISTÊNCIA',
-    title: 'Virulência, Infecção e Resistência',
-    icon: Biohazard,
-    accent: '#4F46A8',
+    badge: 'COLUNA VERTEBRAL',
+    title: 'Coluna Vertebral',
+    icon: Layers,
+    accent,
     items: [
-      'Fatores de virulência',
-      'Cápsula',
-      'Biofilme',
-      'Toxinas bacterianas',
-      'Exotoxina x endotoxina',
-      'Colonização x infecção',
-      'Relação microrganismo-hospedeiro',
-      'Transferência horizontal de genes',
-      'Plasmídeos',
-      'Resistência antimicrobiana',
-      'Antibiograma',
+      'Vértebras cervicais',
+      'Vértebras torácicas',
+      'Vértebras lombares',
+      'Vértebras sacrais',
+      'Vértebras caudais',
+      'Atlas e áxis',
     ],
-    description: 'Entenda como microrganismos causam doença, persistem, trocam material genético e desenvolvem resistência.',
+    description: 'Diferencie regiões e características vertebrais, incluindo as duas primeiras cervicais.',
   },
   {
-    badge: 'MICOLOGIA',
-    title: 'Micologia',
-    icon: Sprout,
-    accent: '#4F46A8',
+    badge: 'TÓRAX',
+    title: 'Tórax',
+    icon: Boxes,
+    accent,
     items: [
-      'Reino Fungi',
-      'Estrutura dos fungos',
-      'Leveduras',
-      'Fungos filamentosos',
-      'Fungos dimórficos',
-      'Candida albicans',
-      'Cryptococcus neoformans',
-      'Aspergillus fumigatus',
-      'Histoplasma capsulatum',
-      'Paracoccidioides',
-      'Sporothrix schenckii',
-      'Dermatófitos',
-      'Classificação das micoses',
+      'Costelas',
+      'Esterno',
+      'Principais acidentes',
+      'Relações anatômicas',
     ],
-    description: 'Revise estruturas, grupos e fungos de importância microbiológica e clínica.',
+    description: 'Organize visualmente o esqueleto torácico e suas relações anatômicas.',
   },
   {
-    badge: 'VIROLOGIA',
-    title: 'Virologia',
-    icon: Atom,
-    accent: '#4F46A8',
+    badge: 'CRÂNIO',
+    title: 'Crânio',
+    icon: Skull,
+    accent,
     items: [
-      'Estrutura viral',
-      'DNA x RNA',
-      'Vírus envelopados x não envelopados',
-      'Capsídeo',
-      'Replicação viral',
-      'Ciclo viral',
-      'Influenza',
-      'HIV',
-      'Herpes simplex',
-      'HPV',
-      'Hepatite B',
-      'Dengue',
+      'Vistas do crânio',
+      'Principais ossos do crânio',
+      'Estruturas cranianas',
+      'Mandíbula',
+      'Diferenças entre espécies',
     ],
-    description: 'Organize visualmente os principais fundamentos de virologia e exemplos importantes.',
+    description: 'Facilite a identificação de uma das regiões mais complexas da Osteologia.',
   },
 ];
 
 export function SubjectsSection() {
   return (
-    <section className="w-full py-16 md:py-24" style={{ backgroundColor: '#F7F7F5' }}>
+    <section className="w-full py-16 md:py-24" style={{ backgroundColor: '#F3EBDD' }}>
       <div className="mobile-content">
         <div className="mx-auto mb-10 flex max-w-3xl flex-col items-center gap-4 text-center md:mb-14">
-          <h2 className="font-grotesk text-3xl leading-tight text-pretty sm:text-4xl md:text-5xl" style={{ color: '#4F46A8' }}>
-            Microbiologia Organizada para Facilitar Seus Estudos
+          <h2 className="font-grotesk text-3xl leading-tight text-pretty sm:text-4xl md:text-5xl" style={{ color: '#5A3A27' }}>
+            Veja Tudo o Que Você Vai Encontrar no Material
           </h2>
-          <p className="max-w-2xl text-sm leading-relaxed sm:text-base md:text-lg" style={{ color: '#667179' }}>
-            Fundamentos, bacteriologia, laboratório, resistência, micologia e virologia organizados por tema para facilitar seus estudos.
+          <p className="max-w-2xl text-sm leading-relaxed sm:text-base md:text-lg" style={{ color: '#8A7862' }}>
+            O conteúdo foi dividido por regiões anatômicas para você localizar rapidamente o que precisa estudar e entender cada estrutura com mais clareza.
           </p>
         </div>
 
@@ -161,8 +124,8 @@ export function SubjectsSection() {
             return (
               <article
                 key={block.badge}
-                className="flex flex-col rounded-[18px] border bg-white p-6 sm:p-7"
-                style={{ borderColor: 'rgba(79,70,168,0.15)', boxShadow: '0 8px 24px rgba(29,26,43,0.06)' }}
+                className="flex flex-col rounded-[18px] border p-6 sm:p-7"
+                style={{ backgroundColor: '#FBF8F2', borderColor: 'rgba(90,58,39,0.15)', boxShadow: '0 8px 24px rgba(47,41,37,0.06)' }}
               >
                 <div className="flex items-center gap-3">
                   <span
@@ -178,7 +141,7 @@ export function SubjectsSection() {
                     >
                       {block.badge}
                     </span>
-                    <h3 className="font-grotesk text-lg leading-tight sm:text-xl" style={{ color: '#4F46A8' }}>
+                    <h3 className="font-grotesk text-lg leading-tight sm:text-xl" style={{ color: '#5A3A27' }}>
                       {block.title}
                     </h3>
                   </div>
@@ -186,7 +149,7 @@ export function SubjectsSection() {
 
                 <ul className="mt-5 grid grid-cols-1 gap-x-4 gap-y-2 sm:grid-cols-2">
                   {block.items.map((item) => (
-                    <li key={item} className="flex items-start gap-2 text-sm" style={{ color: '#1D252C' }}>
+                    <li key={item} className="flex items-start gap-2 text-sm" style={{ color: '#2F2925' }}>
                       <span
                         className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full"
                         style={{ backgroundColor: block.accent }}
@@ -197,7 +160,7 @@ export function SubjectsSection() {
                   ))}
                 </ul>
 
-                <p className="mt-5 border-t pt-4 text-sm leading-relaxed" style={{ color: '#667179', borderColor: 'rgba(79,70,168,0.15)' }}>
+                <p className="mt-5 border-t pt-4 text-sm leading-relaxed" style={{ color: '#8A7862', borderColor: 'rgba(90,58,39,0.15)' }}>
                   {block.description}
                 </p>
               </article>

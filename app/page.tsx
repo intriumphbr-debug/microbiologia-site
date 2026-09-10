@@ -15,59 +15,58 @@ import { FAQ } from '@/components/faq';
 import { FinalCta } from '@/components/final-cta';
 import { Footer } from '@/components/footer';
 
-// Páginas reais das coleções (substitua `image` pelos arquivos do Microbiologia Visual)
+// Páginas internas reais da coleção de Osteologia Veterinária
 const carrossel1 = [
-  { image: '/images/carrossel-classificacao-bacterias.webp', title: 'Classificação Geral das Bactérias', tag: 'Mapa Visual' },
-  { image: '/images/carrossel-micoses.webp', title: 'Classificação das Micoses', tag: 'Mapa Visual' },
-  { image: '/images/carrossel-virulencia.webp', title: 'Fatores de Virulência', tag: 'Mapa Visual' },
-  { image: '/images/carrossel-meios-cultura.webp', title: 'Meios de Cultura Microbiológicos', tag: 'Mapa Visual' },
-  { image: '/images/carrossel-endosporos.webp', title: 'Formação de Endósporos', tag: 'Mapa Visual' },
-  { image: '/images/carrossel-microrganismos.webp', title: 'Classificação dos Microrganismos', tag: 'Mapa Visual' },
-  { image: '/images/carrossel-virus.webp', title: 'Vírus Envelopados x Não Envelopados', tag: 'Mapa Visual' },
-  { image: '/images/carrossel-enterobacterias.webp', title: 'Enterobactérias (Enterobacterales)', tag: 'Mapa Visual' },
+  { image: '/images/osteo/pg-costela.webp', title: 'Como Reconhecer e Orientar uma Costela', tag: 'Vol. 5 · Tórax' },
+  { image: '/images/osteo/pg-vertebras-toracicas.webp', title: 'Vértebras Torácicas — Comparação entre Espécies', tag: 'Vol. 4 · Coluna' },
+  { image: '/images/osteo/pg-cranio-ventral.webp', title: 'Crânio — Vista Ventral', tag: 'Vol. 5 · Crânio' },
+  { image: '/images/osteo/pg-vertebras-cervicais.webp', title: 'Vértebras Cervicais — Comparação entre Espécies', tag: 'Vol. 4 · Coluna' },
+  { image: '/images/osteo/pg-vistas-cranio.webp', title: 'Como Identificar as Vistas do Crânio', tag: 'Vol. 5 · Crânio' },
+  { image: '/images/osteo/pg-cranio.webp', title: 'Crânio — Estrutura e Comparação', tag: 'Vol. 6 · Crânio' },
+  { image: '/images/osteo/pg-mapa-torax.webp', title: 'Mapa Visual do Tórax Veterinário', tag: 'Vol. 5 · Tórax' },
+  { image: '/images/osteo/pg-sacro.webp', title: 'Sacro — Identificação e Comparação', tag: 'Vol. 3 · Membro Pélvico' },
 ];
 
 const carrossel2 = [
-  { image: '/images/carrossel2-fungos-clinicos.png', title: 'Fungos de Importância Clínica', tag: 'Revisão Express' },
-  { image: '/images/carrossel2-virulencia-toxinas.png', title: 'Virulência, Toxinas e Relação Hospedeiro', tag: 'Revisão Express' },
-  { image: '/images/carrossel2-endogena-exogena.png', title: 'Infecção Endógena vs Exógena', tag: 'Não Confunda' },
-  { image: '/images/carrossel2-cocos-gram-positivos.png', title: 'Estafilococos vs Estreptococos vs Enterococos', tag: 'Não Confunda' },
-  { image: '/images/carrossel2-gram-coloracoes.png', title: 'Gram e Colorações Microbiológicas', tag: 'Revisão Express' },
-  { image: '/images/carrossel2-teste-memoria-virologia.png', title: 'Teste sua Memória: Virologia Essencial', tag: 'Teste sua Memória' },
-  { image: '/images/carrossel2-teste-memoria-final.png', title: 'Teste sua Memória: Desafio Final', tag: 'Teste sua Memória' },
-  { image: '/images/carrossel2-dengue.png', title: 'Vírus da Dengue', tag: 'Ficha Visual' },
+  { image: '/images/osteo/pg-denticao.webp', title: 'Dentição e Arcadas Dentárias', tag: 'Vol. 6 · Crânio' },
+  { image: '/images/osteo/pg-cavidade-nasal.webp', title: 'Cavidade Nasal e Conchas', tag: 'Vol. 6 · Crânio' },
+  { image: '/images/osteo/pg-maxila.webp', title: 'Maxila, Incisivo e Zigomático', tag: 'Vol. 6 · Crânio' },
+  { image: '/images/osteo/pg-neurocranio.webp', title: 'Neurocrânio e Viscerocrânio', tag: 'Vol. 6 · Crânio' },
+  { image: '/images/osteo/pg-base-cranio.webp', title: 'Base do Crânio', tag: 'Vol. 6 · Crânio' },
+  { image: '/images/osteo/pg-seios-paranasais.webp', title: 'Seios Paranasais', tag: 'Vol. 6 · Crânio' },
+  { image: '/images/osteo/pg-arcadas-dentarias.webp', title: 'Arcadas Dentárias e Tipos de Dentes', tag: 'Vol. 6 · Crânio' },
+  { image: '/images/osteo/pg-orbita.webp', title: 'Órbita e Cavidade Orbital', tag: 'Vol. 6 · Crânio' },
 ];
 
 export default function Page() {
   const offerRef = useRef<HTMLDivElement>(null);
   const handleCtaClick = () => offerRef.current?.scrollIntoView({ behavior: 'smooth' });
   return (
-    <main className="min-h-screen" style={{ backgroundColor: '#F7F7F5' }}>
+    <main className="min-h-screen" style={{ backgroundColor: '#F3EBDD' }}>
       <TopBar />
       <HeroSection onCtaClick={handleCtaClick} />
       <ProductCarousel
-        title="Conheça o Microbiologia Visual por Dentro"
-        subtitle="Tudo organizado visualmente para você entender melhor, revisar mais rápido e encontrar o que precisa com facilidade."
+        title="Conheça a Osteologia Veterinária por Dentro"
+        subtitle="Veja como o conteúdo foi organizado para você bater o olho, identificar a estrutura e entender exatamente o que está estudando."
         items={carrossel1}
-        landscape={true}
-        bg="#FFFFFF"
+        bg="#FBF8F2"
       />
       <HowItWorks />
       <WhatYouGet />
       <SubjectsSection />
       <ProductCarousel
-        title="Cada Etapa Ajuda Você a Fixar Melhor o Conteúdo"
-        subtitle="O conteúdo aparece em diferentes formatos para facilitar a compreensão, a revisão e a memorização ao longo do estudo."
+        title="Identifique, Compare e Diferencie com Mais Clareza"
+        subtitle="Cada tipo de página ajuda você a reconhecer estruturas, comparar diferenças e revisar os pontos que mais geram dúvida."
         flowSteps={[
-          ['Mapa Visual', 'Entenda o assunto.'],
-          ['Não Confunda', 'Separe conceitos parecidos.'],
-          ['Ficha Visual', 'Memorize características importantes.'],
-          ['Revisão Express', 'Recupere rapidamente os pontos principais.'],
-          ['Teste sua Memória', 'Reforce o conteúdo estudado.'],
+          ['Identificação Visual', 'Veja o osso e identifique suas principais estruturas.'],
+          ['Como Reconhecer', 'Entenda quais características ajudam a reconhecer cada peça.'],
+          ['Como Saber o Lado', 'Use os acidentes ósseos para diferenciar direita e esquerda.'],
+          ['Não Confunda', 'Compare estruturas parecidas e veja o que diferencia uma da outra.'],
+          ['Comparação entre Espécies', 'Compare canino, equino, bovino e suíno lado a lado.'],
         ]}
         items={carrossel2}
         reverse={true}
-        bg="#FFFFFF"
+        bg="#FBF8F2"
       />
       <Testimonials />
       <BonusSection />

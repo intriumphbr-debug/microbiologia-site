@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter, Oswald } from 'next/font/google'
+import { Inter, Anton } from 'next/font/google'
 import Script from 'next/script'
 import './globals.css'
 
@@ -8,32 +8,32 @@ const inter = Inter({
   subsets: ['latin'],
 })
 
-const oswald = Oswald({
-  variable: '--font-oswald',
+const anton = Anton({
+  variable: '--font-anton',
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
+  weight: ['400'],
 })
 
 export const metadata: Metadata = {
-  title: 'Microbiologia Visual | +140 Recursos Visuais para Estudar e Revisar',
+  title: 'Osteologia Veterinária | Coleção Visual de Ossos, Acidentes e Espécies',
   description:
-    'Um sistema visual de estudo e revisão de Microbiologia com até 140 recursos em 5 coleções: mapas visuais, comparativos, fichas, revisões express e testes de memória. Acesso imediato.',
+    'Uma coleção visual de Osteologia Veterinária com 6 volumes e cerca de 150 páginas: ossos, acidentes ósseos, vistas anatômicas e comparações entre canino, equino, bovino e suíno. Acesso imediato.',
   generator: 'v0.app',
 
   openGraph: {
-    title: 'Microbiologia Visual | +140 Recursos Visuais para Estudar e Revisar',
+    title: 'Osteologia Veterinária | Coleção Visual de Ossos, Acidentes e Espécies',
     description:
-      'Mapas visuais, comparativos, fichas de revisão, resumos express e testes de memória para organizar a microbiologia. Acesso imediato e 7 dias de garantia.',
+      'Ossos, acidentes ósseos, vistas anatômicas e diferenças entre espécies organizados visualmente para estudar com clareza e revisar antes da prova prática. Acesso imediato e 7 dias de garantia.',
     type: 'website',
     locale: 'pt_BR',
-    siteName: 'Microbiologia Visual',
+    siteName: 'Osteologia Veterinária',
   },
 
   twitter: {
     card: 'summary_large_image',
-    title: 'Microbiologia Visual',
+    title: 'Osteologia Veterinária',
     description:
-      '+140 recursos visuais para estudar, revisar e organizar a microbiologia. Acesso imediato e 7 dias de garantia.',
+      'Coleção visual de Osteologia Veterinária para reconhecer, identificar e revisar as estruturas ósseas. Acesso imediato e 7 dias de garantia.',
   },
 
   icons: {
@@ -63,7 +63,7 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={`${inter.variable} ${oswald.variable} bg-background`}
+      className={`${inter.variable} ${anton.variable} bg-background`}
     >
       <head>
         <Script
