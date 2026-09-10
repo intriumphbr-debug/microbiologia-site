@@ -110,7 +110,15 @@ export function ProductCarousel({ title, subtitle, note, flowSteps, items, rever
                       boxShadow: '0 8px 20px rgba(47, 41, 37, 0.14)',
                     }}
                   >
-                    <p className="font-grotesk text-sm sm:text-base font-bold tracking-wide" style={{ color: '#FFFFFF' }}>
+                    <p
+                      className="font-grotesk text-sm sm:text-base font-bold tracking-wide"
+                      style={{
+                        color: '#FFFFFF',
+                        textShadow: 'none',
+                        WebkitFontSmoothing: 'antialiased',
+                        MozOsxFontSmoothing: 'grayscale',
+                      }}
+                    >
                       {name}
                     </p>
                     <p className="mt-0.5 text-xs sm:text-sm" style={{ color: 'rgba(251,248,242,0.8)' }}>
