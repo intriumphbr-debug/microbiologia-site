@@ -52,7 +52,7 @@ export function FinalCta() {
           QUERO ACESSAR A OSTEOLOGIA VETERINÁRIA
         </button>
         <p className="text-xs sm:text-sm text-center" style={{ color: 'rgba(251,248,242,0.7)' }}>
-          Acesso imediato • Pagamento único de R$ 19,90 • 7 dias de garantia
+          
         </p>
       </div>
     </section>
