@@ -67,7 +67,7 @@ export function HeroSection({ onCtaClick }: { onCtaClick: () => void }) {
             <p className="text-xs sm:text-sm text-center" style={{ color: '#8A7862' }}>Acesso imediato após a confirmação do pagamento.</p>
           </div>
           <div className="flex flex-wrap justify-center gap-3 sm:gap-6 pt-2">
-            {['Pagamento único', 'Consulte quando precisar', 'Material 100% digital', 'Acesso imediato'].map((label) => <div key={label} className="flex items-center gap-1.5 text-xs sm:text-sm font-medium" style={{ color: '#2F2925' }}><span className="rounded-full flex items-center justify-center" style={{ backgroundColor: '#22C55E', color: '#FFFFFF', width: '18px', height: '18px' }}><Check size={11} strokeWidth={3} aria-hidden="true" /></span>{label}</div>)}
+            {['Pagamento único', 'Consulte quando precisar', '7 dias de garantia', 'Acesso imediato'].map((label) => <div key={label} className="flex items-center gap-1.5 text-xs sm:text-sm font-medium" style={{ color: '#2F2925' }}><span className="rounded-full flex items-center justify-center" style={{ backgroundColor: '#22C55E', color: '#FFFFFF', width: '18px', height: '18px' }}><Check size={11} strokeWidth={3} aria-hidden="true" /></span>{label}</div>)}
           </div>
         </div>
       </div>
