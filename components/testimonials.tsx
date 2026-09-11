@@ -14,19 +14,19 @@ function StarRow() {
 
 const depoimentos = [
   {
-    text: 'Antes da prova eu ficava voltando em várias partes da matéria e ainda confundia algumas estruturas. Com o material visual ficou muito mais fácil revisar os principais pontos e lembrar onde cada coisa estava.',
+    text: 'Eu sempre me perdia quando precisava revisar Osteologia porque tinha muita coisa espalhada entre slides, anotações e livros. Ter tudo organizado visualmente em um só material facilitou muito meus estudos.',
     name: 'Mariana Alves',
     role: 'Estudante de Medicina Veterinária',
     image: '/images/osteo/depoimento-mariana.webp',
   },
   {
-    text: 'O que mais me ajudou foi conseguir comparar as estruturas lado a lado. Eu tinha bastante dificuldade para diferenciar alguns ossos e acidentes ósseos, e visualmente ficou muito mais claro.',
+    text: 'Usei principalmente nos dias antes da prova e foi o que mais gostei. Em poucos minutos eu conseguia passar pelos pontos mais importantes sem precisar reler páginas e páginas de conteúdo.',
     name: 'Camila Rocha',
     role: 'Estudante de Medicina Veterinária',
     image: '/images/osteo/depoimento-camila.webp',
   },
   {
-    text: 'Eu usava muito texto e acabava decorando os nomes sem conseguir visualizar direito. Com as imagens organizadas, comecei a reconhecer melhor as estruturas e revisar de forma muito mais rápida.',
+    text: 'O material ficou muito mais prático do que eu imaginava. Abro no celular, escolho a parte que quero estudar e já consigo revisar sem ficar procurando imagem e explicação em vários lugares diferentes.',
     name: 'Lucas Ferreira',
     role: 'Estudante de Medicina Veterinária',
     image: '/images/osteo/depoimento-lucas.webp',
